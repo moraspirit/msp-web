@@ -1,92 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>MoraSpirit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+
+
+    <link href="{{ URL::asset('css/reset.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/animate.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/lightbox.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/main.css')}}" rel="stylesheet">
-    <link id="css-preset" href="{{ URL::asset('css/presets/preset1.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/responsive.css')}}" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="images/favicon.ico">
-</head><!--/head-->
-
+    <title>Horizontal Timeline | CodyHouse</title>
+</head>
 <body>
+<div class="cd-horizontal-timeline">
+    <div class="timeline">
+        <div class="events-wrapper">
+            <div class="events">
+                <ol>
+                    <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+                    <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+                    <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+                    <li><a href="#0" data-date="20/05/2014">20 May</a></li>
+                    <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+                    <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+                    <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+                    <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+                    <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+                    <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+                    <li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+                </ol>
 
-<!--.preloader-->
-<div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
-<!--/.preloader-->
+                <span class="filling-line" aria-hidden="true"></span>
+            </div> <!-- .events -->
+        </div> <!-- .events-wrapper -->
 
-<header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="item active" style="background-image: url(images/slider/i03.jpg)">
-                <div class="caption">
+        <ul class="cd-timeline-navigation">
+            <li><a href="#0" class="prev inactive">Prev</a></li>
+            <li><a href="#0" class="next">Next</a></li>
+        </ul> <!-- .cd-timeline-navigation -->
+    </div> <!-- .timeline -->
 
+    <div class="events-content">
+        <ol>
+            <li class="selected" data-date="16/01/2014">
+                <div class="well">
+                    <h2 class="panel-title">Horizontal Timeline</h2>
+                    <em>January 16th, 2014</em>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
                 </div>
-            </div>
+            </li>
 
-            <div class="item" style="background-image: url(images/slider/3.jpg)">
-                <div class="caption">
-
+            <li data-date="28/02/2014">
+                <div class="well" style="border-radius: 20px">
+                    <h2>Event title here</h2>
+                    <em>February 28th, 2014</em>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
                 </div>
-            </div>
-        </div>
+            </li>
 
-        <br/>
-        <br/>
+            <li data-date="20/04/2014">
+                <h2>Event title here</h2>
+                <em>March 20th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
-        <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
+            <li data-date="20/05/2014">
+                <h2>Event title here</h2>
+                <em>May 20th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
-    </div><!--/#home-slider-->
+            <li data-date="09/07/2014">
+                <h2>Event title here</h2>
+                <em>July 9th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
-</header><!--/#home-->
-<section id="services">
-    <div class="container">
-        <div class="jumbotron">
-            <h1>My First Bootstrap Page</h1>
-            <p>Resize this responsive page to see the effect!</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-        </div>
-    </div>
-</section><!--/#services-->
+            <li data-date="30/08/2014">
+                <h2>Event title here</h2>
+                <em>August 30th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
+            <li data-date="15/09/2014">
+                <h2>Event title here</h2>
+                <em>September 15th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
+            <li data-date="01/11/2014">
+                <h2>Event title here</h2>
+                <em>November 1st, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
+            <li data-date="10/12/2014">
+                <h2>Event title here</h2>
+                <em>December 10th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.inview.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/wow.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/mousescroll.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/smoothscroll.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.countTo.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/lightbox.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/main.js')}}"></script>
+            <li data-date="19/01/2015">
+                <h2>Event title here</h2>
+                <em>January 19th, 2015</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
 
+            <li data-date="03/03/2015">
+                <h2>Event title here</h2>
+                <em>March 3rd, 2015</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
+        </ol>
+    </div> <!-- .events-content -->
+</div>
+
+<script type="text/javascript" src="{{ URL::asset('js/main.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery-2.1.4.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.mobile.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/modernizr.js')}}"></script>
 </body>
 </html>

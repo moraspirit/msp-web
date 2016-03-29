@@ -14,6 +14,10 @@ Route::get('/', function(){
 	return view('events');
 });
 
+Route::get('/homepage',function(){
+    return view('homepage');
+});
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([

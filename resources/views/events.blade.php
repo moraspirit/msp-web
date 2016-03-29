@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>feedback system</title>
+    <title>MoraSpirit</title>
     <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/animate.min.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/font-awesome.min.css')}}" rel="stylesheet">
@@ -39,50 +39,39 @@
                 </div>
             </div>
         </div>
-        <a class="left-control" href="#home-slider" data-slide="prev"><i><</i></a>
-        <a class="right-control" href="#home-slider" data-slide="next"><i>></i></a>
+
+        <br/>
+        <br/>
 
         <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
 
     </div><!--/#home-slider-->
-    <div class="main-nav">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                </button>
-                <a class="navbar-brand" href="index"></a>
-            </div>
-            <div class="collapse navbar-collapse">
 
-            </div>
-        </div>
-    </div>
 </header><!--/#home-->
 <section id="services">
     <div class="container">
-        <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="row">
-                <div class="text-center col-sm-8 col-sm-offset-2">
-
-                </div>
+        <div class="jumbotron">
+            <h1>My First Bootstrap Page</h1>
+            <p>Resize this responsive page to see the effect!</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Column 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Column 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Column 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
             </div>
         </div>
-        <div class="text-center our-services">
-            <div class="row">
-                <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-
-                </div>
-                <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
-
-                </div>
-                <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
-                    <div class="service-info">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
+    </div>
 </section><!--/#services-->
 
 

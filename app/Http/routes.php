@@ -14,8 +14,13 @@ Route::get('/', function(){
 	return view('events');
 });
 
+
 Route::get('/homepage',function(){
     return view('homepage');
+});
+
+Route::get('/test', function(){
+	return view('Test');
 });
 
 Route::get('home', 'HomeController@index');

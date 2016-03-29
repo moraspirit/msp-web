@@ -15,16 +15,13 @@ Route::get('/', function(){
 });
 
 <<<<<<< HEAD
-=======
-
 Route::get('/homepage',function(){
     return view('homepage');
-});
-
+=======
 Route::get('/test', function(){
 	return view('Test');
+>>>>>>> 5834c4bebae4c88648196ad71c30f98c524ba041
 });
->>>>>>> 3be883de79be1d58ac65d6332bf5cda7796a0d86
 
 Route::get('home', 'HomeController@index');
 

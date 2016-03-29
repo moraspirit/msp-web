@@ -1,0 +1,71 @@
+.mytable-hover>tbody>tr:hover {
+    /*background-color: #f5f5f5*/
+    background-color: black
+}
+
+.body{
+    overflow-x: hidden;
+}
+div.mspheader {
+    min-height: 100px;
+    background-color: dimgrey;
+}
+
+div.news {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 50px;
+    background-color: antiquewhite;
+}
+
+div.recent_match {
+    margin-bottom: 0px;
+    min-height: 200px;
+    background-color: dimgrey;
+}
+
+div.under_recent_match {
+    min-height: 1px;
+    max-height: 1px;
+    background-color: dimgrey;
+}
+
+div.pnl {
+    /*background-color: aquamarine;*/
+    border-color: transparent;
+    
+}
+
+div.pnltop {
+    min-height: 50px;
+    max-height: 70px;
+}
+
+div.points {
+    background-color: dimgrey;
+}
+
+div.overall_points_pnltop {
+    min-height: 50px;
+    max-height: 70px;
+}
+
+div.overall_points_pnlbottom {
+    min-height: 50px;
+    max-height: 70px;
+}
+
+div.menwomen_points-pnltop {
+    min-height: 100px;
+    max-height: 120px;
+}
+
+div.champs_pnltop {
+    min-height: 50px;
+    max-height: 70px;
+}
+
+div.mspfooter{
+    min-height: 100px;
+    background-color: dimgrey;
+}

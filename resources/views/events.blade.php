@@ -1,34 +1,48 @@
-<html>
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
 
-
+    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/reset.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/style.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <title>Horizontal Timeline | CodyHouse</title>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/modernizr.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery-2.1.4.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.mobile.custom.min.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/main.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+
+    <title>MoraSpirit</title>
+    <style>
+        .divimage{
+            filter: blur(5px);
+        }
+    </style>
+
 </head>
 <body>
-<div class="cd-horizontal-timeline">
-    <div class="timeline">
+<div class="container">
+<section class="cd-horizontal-timeline" style="background-color: #c0c0c0;background-image: url(images/sports_7480.jpg);">
+    <div class="timeline" >
         <div class="events-wrapper">
             <div class="events">
                 <ol>
-                    <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
-                    <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
-                    <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
-                    <li><a href="#0" data-date="20/05/2014">20 May</a></li>
-                    <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
-                    <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
-                    <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
-                    <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
-                    <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
-                    <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
-                    <li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+                    <li><a href="#0" data-date="16/01/2014" class="selected"><label class="label label-success">16 Jan</label></a></li>
+                    <li><a href="#0" data-date="28/02/2014"><label class="label label-success">28 Feb</label></a></li>
+                    <li><a href="#0" data-date="20/04/2014"><label class="label label-success">20 Mar</label></a></li>
+                    <li><a href="#0" data-date="20/05/2014"><label class="label label-success">20 May</label></a></li>
+                    <li><a href="#0" data-date="09/07/2014"><label class="label label-success">09 Jul</label></a></li>
+                    <li><a href="#0" data-date="30/08/2014"><label class="label label-success">30 Aug</label></a></li>
+                    <li><a href="#0" data-date="15/09/2014"><label class="label label-success">15 Sep</label></a></li>
+                    <li><a href="#0" data-date="01/11/2014"><label class="label label-success">01 Nov</label></a></li>
+                    <li><a href="#0" data-date="10/12/2014"><label class="label label-success">10 Dec</label></a></li>
+                    <li><a href="#0" data-date="19/01/2015"><label class="label label-success">29 Jan</label></a></li>
+                    <li><a href="#0" data-date="03/03/2015"><label class="label label-success">3 Mar</label></a></li>
                 </ol>
 
                 <span class="filling-line" aria-hidden="true"></span>
@@ -44,39 +58,51 @@
     <div class="events-content">
         <ol>
             <li class="selected" data-date="16/01/2014">
-                <div class="well">
-                    <h2 class="panel-title">Horizontal Timeline</h2>
-                    <em>January 16th, 2014</em>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                    </p>
+                <div class="well" style="background-image: url(images/sports-hd-wallpapers-2_1.jpg);background-repeat: no-repeat;background-size: 80% auto; border-radius: 20px">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                        <h2 style="color: #c0c0c0"> {{  $str }}</h2>
+                        <em>January 16th, 2014</em>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                        </p>
+                    </div>
                 </div>
             </li>
 
             <li data-date="28/02/2014">
-                <div class="well" style="border-radius: 20px">
-                    <h2>Event title here</h2>
-                    <em>February 28th, 2014</em>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                    </p>
+                <div class="well" style="background-image: url(images/o_1a85kvgsv16el1ec1r1egmd1nuo19.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                        <h2 style="color: #c0c0c0">Horizontal Timeline</h2>
+                        <em>January 16th, 2014</em>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                        </p>
+                    </div>
                 </div>
             </li>
 
             <li data-date="20/04/2014">
-                <h2>Event title here</h2>
-                <em>March 20th, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
+                <div class="well" style="background-image: url(images/sports-hd-wallpapers-5.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                        <h2 style="color: #c0c0c0">Horizontal Timeline</h2>
+                        <em>January 16th, 2014</em>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                        </p>
+                    </div>
+                </div>
             </li>
 
             <li data-date="20/05/2014">
-                <h2>Event title here</h2>
-                <em>May 20th, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
+                <div class="well" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                        <h2 style="color: #c0c0c0">Horizontal Timeline</h2>
+                        <em>January 16th, 2014</em>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                        </p>
+                    </div>
+                </div>
             </li>
 
             <li data-date="09/07/2014">
@@ -136,13 +162,7 @@
             </li>
         </ol>
     </div> <!-- .events-content -->
+</section>
 </div>
-
-<script type="text/javascript" src="{{ URL::asset('js/main.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/jquery-2.1.4.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/jquery.mobile.custom.min.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/modernizr.js')}}"></script>
 </body>
 </html>

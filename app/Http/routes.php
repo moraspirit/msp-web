@@ -18,9 +18,7 @@ Route::get('/', function(){
 
 
 
-Route::get('/homepage',function(){
-    return view('homepage');
-});
+Route::get('/homepage','HomePageController@index');
 
 Route::get('/test', function(){
 	return view('Test');

@@ -52,6 +52,7 @@
         <div class="row points">
             <div class="container-fluid row overall_points_pnltop"></div>
             <div class="container-fluid row overall_points_pnltop"></div>
+            <div class="container-fluid row overall_points_pnltop"></div>
             <div class="col-sm-1"></div>
             
             <div class="col-sm-2">
@@ -194,8 +195,8 @@
     <div class="container-fluid">
         <div class="container-fluid row champs_pnltop"></div>
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+            
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2007</div>
                     <div class="panel-body text-center">
@@ -204,8 +205,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+            
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2009</div>
                     <div class="panel-body text-center">
@@ -214,8 +215,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+            
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2012</div>
                     <div class="panel-body text-center">
@@ -224,8 +225,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+            
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2016</div>
                     <div class="panel-body text-center">
@@ -234,18 +235,19 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
+            
 
         </div>
     </div>
+            <!--End of recent champions area-->
 
-
+            <!--Footer-->
     <div class="row">
         <div class="col-sm-12 text-center mspfooter ">
             <Strong></Strong>
         </div>
     </div>
-
+            <!--Footer end-->
 
     </div>
 

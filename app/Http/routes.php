@@ -11,8 +11,11 @@
 |
 */
 Route::get('/', function(){
-	return view('events');
+	$str = 'here is changed text';
+	return view('events')->with('str',$str);
 });
+
+
 
 
 Route::get('/homepage',function(){
@@ -22,6 +25,7 @@ Route::get('/homepage',function(){
 Route::get('/test', function(){
 	return view('Test');
 });
+
 
 Route::get('home', 'HomeController@index');
 

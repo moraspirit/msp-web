@@ -10,24 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function(){
-	$str = 'here is changed text';
-	return view('events')->with('str',$str);
-});
 
 
-
-
-Route::get('/homepage',function(){
+Route::get('/',function(){
     return view('homepage');
 });
 
-Route::get('/test', function(){
-	return view('Test');
+Route::get('/events', function(){
+	return view('events');
 });
-
-
-Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -7,11 +7,30 @@
     overflow-x: hidden;
 }
 div.mspheader {
-    min-height: 150px;
+    /*min-height: 150px;*/
     background-color: #ea2e2b;
     max-height: 150px;
+    min-height: 95px;
 }
-
+#logo {
+    float: left;
+}
+div.navbar{
+    float: right;
+    margin-right: 20px;
+}
+div.nav_btn{
+    width: auto;
+    padding: 0 10px 0 10px;
+    float: left;
+    display: inline;
+    color: #ffffff;
+    font-weight: bolder;
+    line-height: 40px;
+    text-align: center;
+    transition: all 0.5s;
+    transform: skew(-10deg);
+}
 div.news {
     margin-top: 0px;
     margin-bottom: 0px;

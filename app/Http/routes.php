@@ -11,10 +11,8 @@
 |
 */
 
+Route::get('/','HomePageController@index');
 
-Route::get('/',function(){
-    return view('homepage');
-});
 
 Route::get('/events', function(){
 	return view('events');

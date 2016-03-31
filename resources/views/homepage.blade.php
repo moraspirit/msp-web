@@ -11,10 +11,24 @@
 
 <body style="overflow-x: hidden;">
     <div class="container-fluid">
+        <!--MoraSpirit Header-->
+        <div class="">
         <div class="row">
-            <div class="col-sm-12 text-center mspheader ">
-                <Strong>This is Header</div>
+            <div class="col-sm-12 mspheader ">
+                <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+            <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="navbar">
+                    <div class="nav_btn"><a href=""> Home </a></div>
+                    <div class="nav_btn"><a href="/"> Events </a></div>
+                    <div class="nav_btn"><a href=""> Points </a></div>
+                    <div class="nav_btn"><a href=""> Draw </a></div>
+                    <div class="nav_btn"><a href=""> Live </a></div>
+                </div>
+            </div>
         </div>
+            </div>
+        <!--MoraSpirit Header-->
         <div class="row news">
             <div class="col-sm-12 text-center"><Strong>This is news area</div>
         </div>
@@ -49,13 +63,17 @@
         <div class="row">
             <div class="container-fluid under_recent_match"></div></div>
         <!--Area of overall score-->
-        <div class="row points">
+            
+        <div class="row points overalpoints">
+            <!--<div class="container-fluid row overall_points_pnltop"></div>
             <div class="container-fluid row overall_points_pnltop"></div>
-            <div class="container-fluid row overall_points_pnltop"></div>
+            <div class="container-fluid row overall_points_pnltop"></div>-->
+            
             <div class="col-sm-1"></div>
             
             <div class="col-sm-2">
                 <!--Men points table-->
+                <div class="container-fluid menwomen_points-pnltop">
                 <div class="panel panel-default panel-danger pnl">
                     <div class="panel-heading text-center"><span class="pre"> <span class="badge"> 1</span>&nbsp; UOM&nbsp; 
                         <span class="badge">500</span> </span></div>
@@ -90,11 +108,12 @@
 
                     </table>
                 </div>
-
+                    </div>
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-4">
                 <!--Overall points table-->
+                <div class="container-fluid overall_points_pnltop"></div>
                 <div class="panel panel-default panel-danger pnl">
                     <!--<span class="pre"> <span class="badge"> 1</span>&nbsp; UOM&nbsp; 
                         <span class="badge">1000</span> </span>-->
@@ -135,50 +154,50 @@
             </tbody>
 
         </table>
-    </div>
-    </div>
-    <div class="col-sm-1"></div>
-
-    <div class="col-sm-2">
-        <!--Women points table-->
-        <div class="panel panel-default panel-danger pnl">
-            <div class="panel-heading text-center"><span class="pre"><span class="badge"> 1</span>&nbsp; UOM&nbsp;
-                <span class="badge">500</span> </span>
+                </div>
             </div>
-            <table class="table table-striped mytable-hover">
-                <tbody>
-                    <tr>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">2</span></td>
-                        <td>UOP</td>
-                        <td><span class="badge">400</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></td>
-                        <td>UOC</td>
-                        <td><span class="badge">300</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">4</span></td>
-                        <td>UOR</td>
-                        <td><span class="badge">200</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 5</span></td>
-                        <td>Test</td>
-                        <td><span class="badge">100</span></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 6</span></td>
-                        <td>Test</td>
-                        <td><span class="badge">50</span></td>
-                    </tr>
-                </tbody>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2 ">
+        <!--Women points table-->
+        <div class="container-fluid menwomen_points-pnltop">
+            <div class="panel panel-default panel-danger pnl">
+                <div class="panel-heading text-center"><span class="pre"><span class="badge"> 1</span>&nbsp; UOM&nbsp;
+                    <span class="badge">500</span> </span>
+                </div>
+                <table class="table table-striped mytable-hover">
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">2</span></td>
+                            <td>UOP</td>
+                            <td><span class="badge">400</span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></td>
+                            <td>UOC</td>
+                            <td><span class="badge">300</span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">4</span></td>
+                            <td>UOR</td>
+                            <td><span class="badge">200</span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 5</span></td>
+                            <td>Test</td>
+                            <td><span class="badge">100</span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 6</span></td>
+                            <td>Test</td>
+                            <td><span class="badge">50</span></td>
+                        </tr>
+                    </tbody>
 
-            </table>
+                </table>
+            </div>
         </div>
-
     </div>
-    <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
 
     <div class="container-fluid overall_points_pnlbottom"></div>
 
@@ -194,8 +213,8 @@
     <div class="container-fluid">
         <div class="container-fluid row champs_pnltop"></div>
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2007</div>
                     <div class="panel-body text-center">
@@ -204,8 +223,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2009</div>
                     <div class="panel-body text-center">
@@ -214,8 +233,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2012</div>
                     <div class="panel-body text-center">
@@ -224,8 +243,8 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
+
+            <div class="col-sm-3">
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">2016</div>
                     <div class="panel-body text-center">
@@ -234,18 +253,20 @@
 
                 </div>
             </div>
-            <div class="col-sm-1"></div>
+
 
         </div>
     </div>
+    <!--End of recent champions area-->
 
-
+    <!--Footer-->
     <div class="row">
-        <div class="col-sm-12 text-center mspfooter ">
-            <Strong></Strong>
+        <div class="col-sm-12 text-center mspfooter">
+            <div class="container-fluid"></div>
+            <!--<Strong></Strong>-->
         </div>
     </div>
-
+    <!--Footer end-->
 
     </div>
 

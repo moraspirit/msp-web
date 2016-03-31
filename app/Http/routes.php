@@ -14,9 +14,7 @@
 Route::get('/','HomePageController@index');
 
 
-Route::get('/events', function(){
-	return view('events');
-});
+Route::get('/events','HomePageController@viewEvents');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

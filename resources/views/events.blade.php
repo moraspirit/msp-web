@@ -22,7 +22,7 @@
     <link href="{{ URL::asset('css/main.css')}}" rel="stylesheet">
     <link id="css-preset" href="{{ URL::asset('css/presets/preset1.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/responsive.css')}}" rel="stylesheet">
-
+    <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -32,35 +32,45 @@
             background-size: 100% auto;
             border-radius: 20px;
             text-align: center;
-            height: 400px;
+            height: 300px;
+        }
+        .popover {
+            background: rgba(10,10,10,0.5);
+        }
+
+        .popover.bottom .arrow:after {
+            border-bottom-color: rgba(10,10,10,0.5);
         }
     </style>
 </head><!--/head-->
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: rgba(0,0,0,0.9)">
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="images/moraspirit.png" alt="moraspirit" width="200"/></a>
+        <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+            <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
         </div>
-        <div>
+        <div class="navbar ">
+            <div class="nav_btn"><a href="/"> Home </a></div>
+            <div class="nav_btn"><a href="/events"> Events </a></div>
+            <div class="nav_btn"><a href=""> Points </a></div>
+            <div class="nav_btn"><a href=""> Draw </a></div>
+            <div class="nav_btn"><a href=""> Live </a></div>
+            <br>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">Timeline</a></li>
                     <li><a href="#calendar">Calendar</a></li>
-                    <li><a href="#About">About</a></li>
                 </ul>
             </div>
         </div>
+        </div>
     </div>
+
 </nav>
+<br>
 <!--<div class="row" style="height: 50%;background-image: url(images/sports_7480.jpg); background-size: 100%; background-repeat: no-repeat">-->
-<section id="home" class="cd-horizontal-timeline" style="background-image: url(images/sports_7480.jpg);background-size: 100% 85%;background-repeat: no-repeat;background-size: 100% 900px;margin-top: 0px; background-color: black">
+<section id="home" class="cd-horizontal-timeline" style="background-image: url(images/sports_7480.jpg);background-repeat: no-repeat;margin-top: 0px;background-size: 100% 100%">
     <div class="row">
         <div class="timeline" style="height: 75px">
             <div class="events-wrapper">
@@ -69,8 +79,8 @@
                         <li><a href="#0" data-date="01/03/2014" class="selected"><label class="label label-success" style="font-size: 100%">01 Mar</label></a></li>
                         <li><a href="#0" data-date="03/03/2014"><label class="label label-success" style="font-size: 100%">03 Mar</label></a></li>
                         <li><a href="#0" data-date="05/03/2014"><label class="label label-success" style="font-size: 100%">05 Mar</label></a></li>
-                        <li><a href="#0" data-date="06/03/2014"><label class="label label-success" style="font-size: 100%">07 Mar</label></a></li>
-                        <li><a href="#0" data-date="07/03/2014"><label class="label label-success" style="font-size: 100%">09 Mar</label></a></li>
+                        <li><a href="#0" data-date="07/03/2014"><label class="label label-success" style="font-size: 100%">07 Mar</label></a></li>
+                        <li><a href="#0" data-date="09/03/2014"><label class="label label-success" style="font-size: 100%">09 Mar</label></a></li>
                         <li><a href="#0" data-date="11/03/2014"><label class="label label-success" style="font-size: 100%">11 Mar</label></a></li>
                         <li><a href="#0" data-date="13/03/2014"><label class="label label-success" style="font-size: 100%">13 Mar</label></a></li>
                         <li><a href="#0" data-date="15/03/2014"><label class="label label-success" style="font-size: 100%">15 Mar</label></a></li>
@@ -92,13 +102,13 @@
 
     <div class="events-content">
         <ol>
-            <li class="selected" data-date="01/03/2014">
+            <li class="selected" data-date="01/03/2014" style="">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-2_1.jpg);">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
-                        <em class="text-shadow">January 16th, 2014</em>
+                        <em class="text-shadow" >January 16th, 2014</em>
                         <p class="text-shadow">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
                         </p>
                     </div>
 
@@ -106,8 +116,8 @@
             </li>
 
             <li data-date="03/03/2014">
-                <div class="well event-div" style="background-image: url(images/o_1a85kvgsv16el1ec1r1egmd1nuo19.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                <div class="well event-div" style="background-image: url(images/o_1a85kvgsv16el1ec1r1egmd1nuo19.jpg);background-repeat: no-repeat;background-size: 100% auto">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%" >
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -119,7 +129,7 @@
 
             <li data-date="05/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-5.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2) ; max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -131,7 +141,7 @@
 
             <li data-date="07/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -143,7 +153,7 @@
 
             <li data-date="09/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -155,7 +165,7 @@
 
             <li data-date="11/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -167,7 +177,7 @@
 
             <li data-date="13/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -179,7 +189,7 @@
 
             <li data-date="15/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -191,7 +201,7 @@
 
             <li data-date="17/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -203,7 +213,7 @@
 
             <li data-date="19/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -215,7 +225,7 @@
 
             <li data-date="21/03/2014">
                 <div class="well event-div" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
+                    <div class="well" style="background: rgba(122, 130, 136, 0.2); max-height: 100%">
                         <h2 class="text-shadow" style="color: #c0c0c0;">Horizontal Timeline</h2>
                         <em class="text-shadow">January 16th, 2014</em>
                         <p class="text-shadow">
@@ -234,30 +244,35 @@
 <!--</div>-->
 
 
-<section id="calendar">
+<section id="calendar" style="">
     <div class="container">
-        <div class="jumbotron">
-            <h1>My First Bootstrap Page</h1>
-            <p>Resize this responsive page to see the effect!</p>
+        <div class="row">
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
+            <button data-toggle="popover" data-trigger="hover" data-content="<img src='http://logok.org/wp-content/uploads/2014/04/Apple-logo-grey-880x625.png' width='100%' height='100%'/>" data-placement="auto top" class="btn" style="height: 150px; width: 155px;margin: 4px 4px 4px 4px;border-radius: 10px;background-color: rgba(240,40,40,0.5);border: 2px grey solid">Button 1</button>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover({
+                html: true,
+                trigger: 'hover'
+            });
+        });
+    </script>
 </section><!--/#services-->
 
 

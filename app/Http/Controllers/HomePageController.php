@@ -6,7 +6,9 @@ class HomePageController extends Controller {
         return view('homepage');
     }
     
-    
+    public function viewEvents(){
+        return view('events');
+    }
 }
     
     

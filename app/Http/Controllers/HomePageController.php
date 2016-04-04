@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\event;
+
 class HomePageController extends Controller {
     
     public function index(){
@@ -7,6 +9,7 @@ class HomePageController extends Controller {
     }
     
     public function viewEvents(){
+
         return view('events');
     }
 }

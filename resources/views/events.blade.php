@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/animate.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/lightbox.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/main.css')}}" rel="stylesheet">
@@ -20,6 +21,7 @@
     <link href="{{ URL::asset('css/font.default.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -44,20 +46,29 @@
             padding: 0px;
             margin: 0px;
         }
-        .tl-timeline {
-            max-height: 100%;
-            max-width: 100%;
+
+        .tl-timemarker-content{
+        background-color: #0b4e00;
         }
+        .tl-attribution{
+            display: none;
+        }
+
+        .tl-slide, .tl-slide-titleslide{
+            background-color: #83dfff;
+        }
+
     </style>
 </head><!--/head-->
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: rgba(0,0,0,0.9)">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
     <div class="container-fluid">
         <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
             <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
         </div>
-        <div class="navbar ">
+        <div class="navbar">
             <div class="nav_btn"><a href="/"> Home </a></div>
             <div class="nav_btn"><a href="/events"> Events </a></div>
             <div class="nav_btn"><a href=""> Points </a></div>
@@ -72,22 +83,24 @@
             </div>
         </div>
         </div>
-    </div>
 </nav>
+<br>
 
-  <section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center;" >
-    <div id="timeline"></div>
+<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center; background-color: #0a8897">
+
+<div class="container-fluid">
     <!-- JavaScript-->
       <script type="text/javascript" src="{{ URL::asset('js/timeline.js')}}"></script>
     <script>
         var timeline = new TL.Timeline('timeline', 'examples/welcome.json', {
-            theme_color: "",
+            theme_color: "#990000",
             ga_property_id: "UA-27829802-4"
         });
     </script>
+</div>
   </section>
 
-<section id="calender">
+<section id="calender" style="background-color: #0a8897">
 
     <div class="container">
         <h1>  Hi there  </h1>
@@ -95,6 +108,7 @@
 </section>
 
 <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery.inview.min.js')}}"></script>
@@ -103,6 +117,7 @@
 <script type="text/javascript" src="{{ URL::asset('js/smoothscroll.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery.countTo.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/lightbox.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 
 
 </body>

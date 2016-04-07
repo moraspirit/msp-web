@@ -16,6 +16,8 @@ Route::get('/','HomePageController@index');
 
 Route::get('/events','HomePageController@viewEvents');
 
+Route::get('/data','HomePageController@getData');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

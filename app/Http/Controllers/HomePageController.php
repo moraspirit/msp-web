@@ -13,10 +13,9 @@ class HomePageController extends Controller {
         return view('events');
     }
 
-    public function getData(){
+    public function viewCalendar(){
 
-        $results = DB::select('select * from events');
-        return $results;
+       return view('calendar');
     }
 }
     

@@ -25,7 +25,13 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="images/favicon.ico">
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+
     <style>
+
         .event-div{
             background-repeat: no-repeat;
             background-size: 100% auto;
@@ -58,10 +64,93 @@
             background-color: #83dfff;
         }
 
+        .cal-row-fluid cal-row-head{
+            background-color: #002a80;
+        }
+
+        #calendar {
+            width: 1340px;
+            align-content: center;
+            max-height: 50%;
+            margin-left: 4px;
+        }
+
+
     </style>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $('#calendar').fullCalendar({
+                defaultDate: '2016-01-12',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: 'Volleyball',
+                        start: '2016-01-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2016-01-07',
+                        end: '2016-01-10'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2016-01-09T16:00:00'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2016-01-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2016-01-11',
+                        end: '2016-01-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2016-01-12T10:30:00',
+                        end: '2016-01-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2016-01-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2016-01-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2016-01-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2016-01-12T20:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2016-01-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2016-01-28'
+                    }
+                ]
+            });
+
+        });
+
+    </script>
+
 </head><!--/head-->
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+<body data-spy="scroll"  data-offset="50" data-target=".navbar"  >
 
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
     <div class="container-fluid">
@@ -78,15 +167,14 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#calender" >Calendar</a></li>
+                    <li><a href="#calendar" >Calendar</a></li>
                 </ul>
             </div>
         </div>
         </div>
 </nav>
-<br>
 
-<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center; background-color: #0a8897">
+<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center" class="cd-horizontal-timeline">
 
 <div class="container-fluid">
     <!-- JavaScript-->
@@ -98,19 +186,12 @@
         });
     </script>
 </div>
-  </section>
-
-<section id="calender" style="background-color: #0a8897">
-
-    <div class="container">
-        <h1>  Hi there  </h1>
-    </div>
+</section>
+<section id="calculator" style="max-height: 50px">
+    <div id='calendar'></div>
 </section>
 
-<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery.inview.min.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/wow.min.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/mousescroll.js')}}"></script>

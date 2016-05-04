@@ -21,3 +21,10 @@ Thank you for considering contributing to the Laravel framework! The contributio
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+##configuration
+
+Add the project to C:/xampp/htdocs
+I think you have to install the composer https://getcomposer.org/
+Then open cmd on Project directory
+type - php artisan serve  (to run the project)

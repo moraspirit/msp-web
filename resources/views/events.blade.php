@@ -1,168 +1,205 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
-
-    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/reset.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/style.css')}}" rel="stylesheet">
-
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/modernizr.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery-2.1.4.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.mobile.custom.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/main.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>MoraSpirit</title>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/animate.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/lightbox.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/main.css')}}" rel="stylesheet">
+    <link id="css-preset" href="{{ URL::asset('css/presets/preset1.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/responsive.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/font.default.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+
     <style>
-        .divimage{
-            filter: blur(5px);
+
+        .event-div{
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            border-radius: 20px;
+            text-align: center;
+            height: 300px;
         }
+        .popover {
+            background: rgba(10,10,10,0.5);
+        }
+
+        .popover.bottom .arrow:after {
+            border-bottom-color: rgba(10,10,10,0.5);
+        }
+        html, body {
+            height:100%;
+            width:100%;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .tl-timemarker-content{
+        background-color: #0b4e00;
+        }
+        .tl-attribution{
+            display: none;
+        }
+
+        .tl-slide, .tl-slide-titleslide{
+            background-color: #83dfff;
+        }
+
+        .cal-row-fluid cal-row-head{
+            background-color: #002a80;
+        }
+
+        #calendar {
+            width: 1340px;
+            align-content: center;
+            max-height: 50%;
+            margin-left: 4px;
+        }
+
+
     </style>
 
-</head>
-<body>
-<div class="container">
-<section class="cd-horizontal-timeline" style="background-color: #c0c0c0;background-image: url(images/sports_7480.jpg);">
-    <div class="timeline" >
-        <div class="events-wrapper">
-            <div class="events">
-                <ol>
-                    <li><a href="#0" data-date="16/01/2014" class="selected"><label class="label label-success">16 Jan</label></a></li>
-                    <li><a href="#0" data-date="28/02/2014"><label class="label label-success">28 Feb</label></a></li>
-                    <li><a href="#0" data-date="20/04/2014"><label class="label label-success">20 Mar</label></a></li>
-                    <li><a href="#0" data-date="20/05/2014"><label class="label label-success">20 May</label></a></li>
-                    <li><a href="#0" data-date="09/07/2014"><label class="label label-success">09 Jul</label></a></li>
-                    <li><a href="#0" data-date="30/08/2014"><label class="label label-success">30 Aug</label></a></li>
-                    <li><a href="#0" data-date="15/09/2014"><label class="label label-success">15 Sep</label></a></li>
-                    <li><a href="#0" data-date="01/11/2014"><label class="label label-success">01 Nov</label></a></li>
-                    <li><a href="#0" data-date="10/12/2014"><label class="label label-success">10 Dec</label></a></li>
-                    <li><a href="#0" data-date="19/01/2015"><label class="label label-success">29 Jan</label></a></li>
-                    <li><a href="#0" data-date="03/03/2015"><label class="label label-success">3 Mar</label></a></li>
-                </ol>
+    <script>
 
-                <span class="filling-line" aria-hidden="true"></span>
-            </div> <!-- .events -->
-        </div> <!-- .events-wrapper -->
+        $(document).ready(function() {
 
-        <ul class="cd-timeline-navigation">
-            <li><a href="#0" class="prev inactive">Prev</a></li>
-            <li><a href="#0" class="next">Next</a></li>
-        </ul> <!-- .cd-timeline-navigation -->
-    </div> <!-- .timeline -->
+            $('#calendar').fullCalendar({
+                defaultDate: '2016-01-12',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: 'Volleyball',
+                        start: '2016-01-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2016-01-07',
+                        end: '2016-01-10'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2016-01-09T16:00:00'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2016-01-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2016-01-11',
+                        end: '2016-01-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2016-01-12T10:30:00',
+                        end: '2016-01-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2016-01-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2016-01-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2016-01-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2016-01-12T20:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2016-01-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2016-01-28'
+                    }
+                ]
+            });
 
-    <div class="events-content">
-        <ol>
-            <li class="selected" data-date="16/01/2014">
-                <div class="well" style="background-image: url(images/sports-hd-wallpapers-2_1.jpg);background-repeat: no-repeat;background-size: 80% auto; border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
-                        <h2 style="color: #c0c0c0"> {{  $str }}</h2>
-                        <em>January 16th, 2014</em>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                        </p>
-                    </div>
-                </div>
-            </li>
+        });
 
-            <li data-date="28/02/2014">
-                <div class="well" style="background-image: url(images/o_1a85kvgsv16el1ec1r1egmd1nuo19.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
-                        <h2 style="color: #c0c0c0">Horizontal Timeline</h2>
-                        <em>January 16th, 2014</em>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                        </p>
-                    </div>
-                </div>
-            </li>
+    </script>
 
-            <li data-date="20/04/2014">
-                <div class="well" style="background-image: url(images/sports-hd-wallpapers-5.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
-                        <h2 style="color: #c0c0c0">Horizontal Timeline</h2>
-                        <em>January 16th, 2014</em>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                        </p>
-                    </div>
-                </div>
-            </li>
+</head><!--/head-->
 
-            <li data-date="20/05/2014">
-                <div class="well" style="background-image: url(images/sports-hd-wallpapers-9.jpg);background-repeat: no-repeat;background-size: 100% auto;border-radius: 20px">
-                    <div class="well" style="background: rgba(122, 130, 136, 0.2)">
-                        <h2 style="color: #c0c0c0">Horizontal Timeline</h2>
-                        <em>January 16th, 2014</em>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                        </p>
-                    </div>
-                </div>
-            </li>
+<body data-spy="scroll"  data-offset="50" data-target=".navbar"  >
 
-            <li data-date="09/07/2014">
-                <h2>Event title here</h2>
-                <em>July 9th, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
+    <div class="container-fluid">
+        <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+            <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="navbar">
+            <div class="nav_btn"><a href="/"> Home </a></div>
+            <div class="nav_btn"><a href="/events"> Events </a></div>
+            <div class="nav_btn"><a href=""> Points </a></div>
+            <div class="nav_btn"><a href=""> Draw </a></div>
+            <div class="nav_btn"><a href=""> Live </a></div>
+            <br>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#calendar" >Calendar</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+</nav>
 
-            <li data-date="30/08/2014">
-                <h2>Event title here</h2>
-                <em>August 30th, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
+<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center" class="cd-horizontal-timeline">
 
-            <li data-date="15/09/2014">
-                <h2>Event title here</h2>
-                <em>September 15th, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="01/11/2014">
-                <h2>Event title here</h2>
-                <em>November 1st, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="10/12/2014">
-                <h2>Event title here</h2>
-                <em>December 10th, 2014</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="19/01/2015">
-                <h2>Event title here</h2>
-                <em>January 19th, 2015</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-
-            <li data-date="03/03/2015">
-                <h2>Event title here</h2>
-                <em>March 3rd, 2015</em>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-            </li>
-        </ol>
-    </div> <!-- .events-content -->
-</section>
+<div class="container-fluid">
+    <!-- JavaScript-->
+      <script type="text/javascript" src="{{ URL::asset('js/timeline.js')}}"></script>
+    <script>
+        var timeline = new TL.Timeline('timeline', 'examples/welcome.json', {
+            theme_color: "#990000",
+            ga_property_id: "UA-27829802-4"
+        });
+    </script>
 </div>
+</section>
+<section id="calculator" style="max-height: 50px">
+    <div id='calendar'></div>
+</section>
+
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.inview.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/wow.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/mousescroll.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/smoothscroll.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.countTo.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/lightbox.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+
+
 </body>
 </html>

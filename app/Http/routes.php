@@ -16,16 +16,18 @@ Route::get('/events', function(){
 });
 
 
-
-
 Route::get('/','HomePageController@index');
 
-Route::get('/test', function(){
-	return view('Test');
+
+Route::get('/events','HomePageController@viewEvents');
+
+
+Route::get('/calendar','HomePageController@viewCalendar');
+
+
+Route::get('/test',function(){
+	return view('test');
 });
-
-
-Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -19,8 +19,8 @@
             <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
                 </div>
                 <div class="navbar">
-                    <div class="nav_btn"><a href=""> Home </a></div>
-                    <div class="nav_btn"><a href="/"> Events </a></div>
+                    <div class="nav_btn"><a href="/"> Home </a></div>
+                    <div class="nav_btn"><a href="/events"> Events </a></div>
                     <div class="nav_btn"><a href=""> Points </a></div>
                     <div class="nav_btn"><a href=""> Draw </a></div>
                     <div class="nav_btn"><a href=""> Live </a></div>

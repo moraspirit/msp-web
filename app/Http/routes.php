@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function(){
+Route::get('/events', function(){
 	$str = 'here is changed text';
 	return view('events')->with('str',$str);
 });
@@ -18,7 +18,7 @@ Route::get('/', function(){
 
 
 
-Route::get('/homepage','HomePageController@index');
+Route::get('/','HomePageController@index');
 
 Route::get('/test', function(){
 	return view('Test');

@@ -10,13 +10,20 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/events', function(){
+	$str = 'here is changed text';
+	return view('events')->with('str',$str);
+});
+
 
 Route::get('/','HomePageController@index');
 
 
 Route::get('/events','HomePageController@viewEvents');
 
+
 Route::get('/calendar','HomePageController@viewCalendar');
+
 
 Route::get('/test',function(){
 	return view('test');

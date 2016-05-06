@@ -31,6 +31,21 @@ div.nav_btn{
     transition: all 0.5s;
     transform: skew(-10deg);
 }
+.nav_btn a{
+    color: inherit;
+    display: block;
+    transform: skew(10deg);
+}
+
+
+.nav_btn a:hover{
+    text-decoration: none;
+}
+
+.nav_btn:hover{
+    /*background-color: #333333;*/
+    background-color: darkslategray;
+}
 div.news {
     margin-top: 0px;
     margin-bottom: 0px;

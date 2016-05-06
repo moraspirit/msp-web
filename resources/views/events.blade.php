@@ -56,7 +56,12 @@
         .tl-timemarker-content{
         background-color: #0b4e00;
         }
+
         .tl-attribution{
+            display: none;
+        }
+
+        .fc-toolbar{
             display: none;
         }
 
@@ -68,11 +73,14 @@
             background-color: #002a80;
         }
 
+
         #calendar {
-            width: 1340px;
+            width:1330px;
             align-content: center;
-            max-height: 50%;
-            margin-left: 4px;
+            margin-left:10px;
+            background-color: #e3b03f;
+            margin-bottom: -50px;
+            border-radius: 10px ;
         }
 
 
@@ -84,17 +92,21 @@
 
             $('#calendar').fullCalendar({
                 defaultDate: '2016-01-12',
-                editable: true,
+                height: 500,
+                editable: false,
                 eventLimit: true, // allow "more" link when too many events
+
+
+
                 events: [
                     {
                         title: 'Volleyball',
                         start: '2016-01-01'
+
                     },
                     {
                         title: 'Long Event',
-                        start: '2016-01-07',
-                        end: '2016-01-10'
+                        start: '2016-01-07'
                     },
                     {
                         id: 999,
@@ -108,8 +120,7 @@
                     },
                     {
                         title: 'Conference',
-                        start: '2016-01-11',
-                        end: '2016-01-13'
+                        start: '2016-01-11'
                     },
                     {
                         title: 'Meeting',
@@ -138,9 +149,9 @@
                     },
                     {
                         title: 'Click for Google',
-                        url: 'http://google.com/',
                         start: '2016-01-28'
                     }
+
                 ]
             });
 
@@ -174,7 +185,7 @@
         </div>
 </nav>
 
-<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center" class="cd-horizontal-timeline">
+<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">
 
 <div class="container-fluid">
     <!-- JavaScript-->
@@ -185,9 +196,11 @@
             ga_property_id: "UA-27829802-4"
         });
     </script>
+    <h1>Calendar</h1>
 </div>
+
 </section>
-<section id="calculator" style="max-height: 50px">
+<section id="calculator" style="background-color: #e3dcd9">
     <div id='calendar'></div>
 </section>
 

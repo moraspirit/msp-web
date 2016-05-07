@@ -73,6 +73,9 @@
             background-color: #002a80;
         }
 
+        .table{
+            border-radius: 10px;
+        }
 
         #calendar {
             width:1330px;
@@ -81,8 +84,17 @@
             background-color: #e3b03f;
             margin-bottom: -50px;
             border-radius: 10px ;
+            background-image: url("{{ URL::asset('images/calendar')}}");
         }
 
+        .fc-event {
+            height: 1.9em;
+            background-color: #062a00;
+        }
+
+        .fc-more{
+            color: #000000;
+        }
 
     </style>
 
@@ -94,14 +106,14 @@
                 defaultDate: '2016-01-12',
                 height: 500,
                 editable: false,
-                eventLimit: true, // allow "more" link when too many events
-
-
+                eventLimit: true, // allow "more" link when too many event
 
                 events: [
                     {
                         title: 'Volleyball',
-                        start: '2016-01-01'
+                        start: '2016-01-01',
+                        imageurl:'icons/tennis.png',
+                        color: '#C2185B'
 
                     },
                     {
@@ -150,9 +162,26 @@
                     {
                         title: 'Click for Google',
                         start: '2016-01-28'
-                    }
+                    },
 
-                ]
+                ],
+                eventRender: function(event, eventElement) {
+                    if (event.imageurl) {
+                        eventElement.find("div.fc-content").prepend("<img src='" + event.imageurl +"' width='30' height='30'>");
+                    }
+                },
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+
+                // add event name to title attribute on mouseover
+                eventMouseover: function(event, jsEvent, view) {
+                    if (view.name !== 'agendaDay') {
+                        $(jsEvent.target).attr('title', event.title);
+                    }
+                }
             });
 
         });
@@ -200,7 +229,7 @@
 </div>
 
 </section>
-<section id="calculator" style="background-color: #e3dcd9">
+<section id="calculator" style="background-color: #e3dcd9; background-image: url('images/sport.jpg')">
     <div id='calendar'></div>
 </section>
 

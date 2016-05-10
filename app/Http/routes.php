@@ -1,5 +1,6 @@
 <?php
 
+use App\Sport;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -23,6 +24,13 @@ Route::get('/events','HomePageController@viewEvents');
 
 
 Route::get('/calendar','HomePageController@viewCalendar');
+
+Route::get('/getdata','HomePageController@getdata');
+
+Route::get('/db',function(){
+	$dbdata = Sport::all();
+	print_r($dbdata);
+});
 
 
 Route::get('/test',function(){

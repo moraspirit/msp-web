@@ -22,9 +22,18 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
-##configuration
+##Configuration
 
-Add the project to C:/xampp/htdocs
-I think you have to install the composer https://getcomposer.org/
+Add the project to C:/xampp/htdocs (or anywhere you like)
+Go to msp-web directory using cmd and do composer install and composer update (You might have to install the composer from https://getcomposer.org/).
+
+To configure database:-
+
+use the driver .dll file in  php_mongo-1.6.14-5.5-ts-vc11-x86 folder (according to the system this will be changed)
+copy php_mongo.dll file to php/ext directory
+edit php.ini file with extension=php_mongo.dll
+restart the apache server
+
+
 Then open cmd on Project directory
-type - php artisan serve  (to run the project)
+type - php artisan serve  (to run the project, it will be run on localhost:8000)

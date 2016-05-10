@@ -1,0 +1,4 @@
+use the driver .dll file in  php_mongo-1.6.14-5.5-ts-vc11-x86
+copy .dll file to php/ext
+edit php.ini file with extension=php_mongo.dll
+restart the apache server

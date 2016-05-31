@@ -90,7 +90,7 @@ return [
 			'port'     => 27017,
 			'username' => '',
 			'password' => '',
-			'database' => 'test'
+			'database' => 'slug2016'
 		],
 
 	],

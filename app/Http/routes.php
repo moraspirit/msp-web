@@ -32,6 +32,10 @@ Route::get('/db',function(){
 	print_r($dbdata);
 });
 
+Route::get('/addpoints','BackendController@addpoints');
+
+Route::post('/savepoints','BackendController@savepoints');
+
 
 Route::get('/test',function(){
 	return view('test');

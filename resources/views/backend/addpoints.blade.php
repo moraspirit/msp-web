@@ -10,8 +10,8 @@
         {!! Form::select('University',array('1' => 'UOM', '2'=> 'UOC', '3' => 'UOP' )) !!}
     </div>
     <div class="row" style="padding-bottom: 5px">
-        {!! Form::label('Sex','Sex') !!}
-        {!! Form::select('Sex',array('1' => 'Male', '2'=> 'Female')) !!}
+        {!! Form::label('Catagory','Catagory') !!}
+        {!! Form::select('Catagory',array('1' => 'Male', '2'=> 'Female')) !!}
     </div>
     <div class="row" style="padding-bottom: 5px">
         {!! Form::label('points','Points') !!}

@@ -2,19 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: Tharindu Diluksha
- * Date: 5/9/2016
- * Time: 9:55 AM
+ * Date: 6/21/2016
+ * Time: 12:00 PM
  */
 
-namespace app;
+namespace app\Entity;
 
 use Jenssegers\Mongodb\Model as Eloquent;
 use Illuminate\Database\Eloquent\Model;
 
+class Points extends Eloquent{
 
-class Sport extends Eloquent
-{
     protected  $connection ="mongodb";
     protected $collection = 'msp';
-
 }

@@ -37,7 +37,7 @@
             background-size: 100% auto;
             border-radius: 20px;
             text-align: center;
-            height: 300px;
+            height: 100%;
         }
         .popover {
             background: rgba(10,10,10,0.5);
@@ -78,13 +78,11 @@
         }
 
         #calendar {
-            width:1330px;
+            width:100%;
             align-content: center;
-            margin-left:10px;
             background-color: #e3b03f;
             margin-bottom: -50px;
             border-radius: 10px ;
-            background-image: url("{{ URL::asset('images/calendar')}}");
         }
 
         .fc-event {
@@ -104,7 +102,7 @@
 
             $('#calendar').fullCalendar({
                 defaultDate: '2016-01-12',
-                height: 500,
+                height: 550,
                 editable: false,
                 eventLimit: true, // allow "more" link when too many event
 
@@ -112,7 +110,7 @@
                     {
                         title: 'Volleyball',
                         start: '2016-01-01',
-                        imageurl:'icons/tennis.png',
+                        //imageurl:'icons/tennis.png',
                         color: '#C2185B'
 
                     },
@@ -204,12 +202,7 @@
             <div class="nav_btn"><a href=""> Draw </a></div>
             <div class="nav_btn"><a href=""> Live </a></div>
             <br>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#calendar" >Calendar</a></li>
-                </ul>
-            </div>
+
         </div>
         </div>
 </nav>

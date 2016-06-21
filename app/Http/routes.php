@@ -38,7 +38,7 @@ Route::post('/savepoints','BackendController@savepoints');
 
 
 Route::get('/test',function(){
-	return view('test');
+	return view('welcome');
 });
 
 Route::controllers([

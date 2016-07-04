@@ -3,15 +3,15 @@
 {!! Form::open(array('action' => 'BackendController@savepoints'))  !!}
     <div class="row" style="padding-bottom: 5px">
         {!! Form::label('Game','Game') !!}
-        {!! Form::select('Game',array('C' => 'Cricket', 'R'=> 'Rugby', 'F' => 'Football' ))  !!}
+        {!! Form::select('Game',array('Cricket' => 'Cricket', 'Rugby'=> 'Rugby', 'Football' => 'Football' ))  !!}
     </div>
     <div class="row" style="padding-bottom: 5px">
         {!! Form::label('University','University') !!}
-        {!! Form::select('University',array('1' => 'UOM', '2'=> 'UOC', '3' => 'UOP' )) !!}
+        {!! Form::select('University',array('UOM' => 'UOM', 'UOC'=> 'UOC', 'UOP' => 'UOP' )) !!}
     </div>
     <div class="row" style="padding-bottom: 5px">
         {!! Form::label('Catagory','Catagory') !!}
-        {!! Form::select('Catagory',array('1' => 'Male', '2'=> 'Female')) !!}
+        {!! Form::select('Catagory',array('Male' => 'Male', 'Female'=> 'Female')) !!}
     </div>
     <div class="row" style="padding-bottom: 5px">
         {!! Form::label('points','Points') !!}

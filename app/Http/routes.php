@@ -32,10 +32,19 @@ Route::get('/db',function(){
 	print_r($dbdata);
 });
 
+/* Add points page*/
 Route::get('/addpoints','BackendController@addpoints');
 
+/* Save points to DB*/
 Route::post('/savepoints','BackendController@savepoints');
 
+/* Add sports page */
+Route::get('/addsports','BackendController@addSports');
+
+/* Save sports to database */
+Route::post('/savesports','BackendController@saveSports');
+
+/* Load points table*/
 Route::get('/loadpointstable','PointstableController@showPoints');
 
 

@@ -16,33 +16,52 @@ use App\Sport;
 class BackendController extends Controller
 {
 
+    /* Load point adding page*/
     public function addpoints(){
         return view('backend.addpoints');
     }
 
     public function savepoints(Request $request){
-
+        /* Save points to mongodb*/
         $sport = $request->Game;
-        $uni = $request->University;
-        $sex = $request->Sex;
+        $university = $request->University;
+        $catagory = $request->Catagory;
         $points = $request->points;
         DB::connection('mongodb')->collection('msp')->insert(array(
             'sport' => $sport,
-            'university' => $uni,
-            'catagory' => $sex,
+            'university' => $university,
+            'catagory' => $catagory,
             'points' => $points
         ));
         return view('events');
-        /*return response()->json();*/
+
 
     }
 
     public function loadpoints(){
         /*$pointstable = DB::connection('mongodb')->collection('msp')->get();*/
-        $pointstable = Sport::all();
         /*return  view('backend.pointstabletest')->with($pointstable);*/
         /*return  view('backend.pointstabletest');*/
+        $pointstable = Sport::all();
         return $pointstable;
+
+        /*return response()->json();*/
+    }
+
+    public function addSports(){
+        return view('backend.addsports');
+    }
+
+    public function saveSports(Request $request){
+        $sportid = $request->id;
+        $sportcode = $request->code;
+        $sportname = $request->name;
+        DB::connection('mongodb')->collection('sports')->insert(array(
+            'id' => $sportid,
+            'sport_code' => $sportcode,
+            'Sport_name' => $sportname
+        ));
+        return view('events');
     }
 
 }

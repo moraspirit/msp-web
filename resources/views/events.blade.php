@@ -1,3 +1,7 @@
+@extends('frontend.layout')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +10,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>MoraSpirit</title>
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/animate.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/animate.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/lightbox.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/main.css')}}" rel="stylesheet">
-    <link id="css-preset" href="{{ URL::asset('css/presets/preset1.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/responsive.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/font.default.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="images/favicon.ico">
+
+
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
@@ -190,24 +179,8 @@
 
 <body data-spy="scroll"  data-offset="50" data-target=".navbar"  >
 
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
-    <div class="container-fluid">
-        <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-            <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
-        </div>
-        <div class="navbar">
-            <div class="nav_btn"><a href="/"> Home </a></div>
-            <div class="nav_btn"><a href="/events"> Events </a></div>
-            <div class="nav_btn"><a href=""> Points </a></div>
-            <div class="nav_btn"><a href=""> Draw </a></div>
-            <div class="nav_btn"><a href=""> Live </a></div>
-            <br>
 
-        </div>
-        </div>
-</nav>
-
-<section id="timeline" style="max-height: 55%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">
+<section id="timeline" style="max-height: 60%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">
 
 <div class="container-fluid">
     <!-- JavaScript-->
@@ -218,7 +191,6 @@
             ga_property_id: "UA-27829802-4"
         });
     </script>
-    <h1>Calendar</h1>
 </div>
 
 </section>
@@ -238,3 +210,4 @@
 
 </body>
 </html>
+@endsection

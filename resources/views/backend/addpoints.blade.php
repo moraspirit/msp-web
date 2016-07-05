@@ -1,4 +1,3 @@
-
 <div class="container" style="position: fixed; top: 30%; bottom: 70%; right: 60%; left: 40%; ">
 {!! Form::open(array('action' => 'BackendController@savepoints'))  !!}
     <div class="row" style="padding-bottom: 5px">

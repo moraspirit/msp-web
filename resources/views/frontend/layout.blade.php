@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,38 +28,29 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="images/favicon.ico">
 
+    <title>MoraSpirit</title>
 
 
-    <title>Msp web</title>
+
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
-    <div class="container-fluid">
-=======
-<html>
 
-<head>
 
-    <title>MoraSpirit</title>
-    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
-    <script type="text/javascript" src="{{ URL::asset('jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-</head>
 
 <body style="overflow-x: hidden;">
 
 @section('nav')
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
+
 <div class="container-fluid">
     <!--MoraSpirit Header-->
 
     <div class="col-sm-12 mspheader ">
->>>>>>> 957a9345a6b3666b9d963ac040040f6a62577a5a
+
         <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
             <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
         </div>
         <div class="navbar">
-<<<<<<< HEAD
             <div class="nav_btn"><a href="{{url('/')}}"> Home </a></div>
             <div class="nav_btn"><a href="{{url('/events')}}"> Events </a></div>
             <div class="nav_btn"><a href="#"> Points </a></div>
@@ -70,24 +60,18 @@
 
         </div>
     </div>
+</div>
+
+
 </nav>
 
 
 
 @yield('content')
 
-</body>
-</html>
-=======
-            <div class="nav_btn"><a href="/"> Home </a></div>
-            <div class="nav_btn"><a href="/events"> Events </a></div>
-            <div class="nav_btn"><a href=""> Points </a></div>
-            <div class="nav_btn"><a href=""> Draw </a></div>
-            <div class="nav_btn"><a href=""> Live </a></div>
-        </div>
-    </div>
-</div>
-@stop
+
+
+{{--@stop--}}
 
 @section('content')
     {{--custom content of the page--}}
@@ -96,8 +80,14 @@
 
 @section('script')
     {{--custom script goes here--}}
+
+    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
+    <script type="text/javascript" src="{{ URL::asset('jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+
     @stop
 
 
 
->>>>>>> 957a9345a6b3666b9d963ac040040f6a62577a5a
+

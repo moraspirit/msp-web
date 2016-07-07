@@ -12,7 +12,7 @@ class HomePageController extends Controller {
 
     public function viewEvents(){
 
-        return view('events');
+        return view('eventspage');
     }
 
     public function viewCalendar(){

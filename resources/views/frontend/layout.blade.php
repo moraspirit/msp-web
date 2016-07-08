@@ -22,7 +22,6 @@
     <link id="css-preset" href="{{ URL::asset('css/presets/preset1.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/responsive.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/font.default.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
     <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
@@ -33,11 +32,11 @@
 
 
 </head>
-<body>
 
 
 
-<body style="overflow-x: hidden;">
+
+{{--<body style="overflow-x: hidden;">--}}
 
 @section('nav')
     <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40); position: relative">

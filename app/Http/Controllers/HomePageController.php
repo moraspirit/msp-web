@@ -8,6 +8,12 @@ class HomePageController extends Controller {
     
     public function index(){
 
+        $ovwomen []= '';
+
+        $ovmen [] = '';
+
+        $ovtotal [] = '';
+
         $recent[] = ['men'=>'UOM won the men match','women'=>'UOM won the women match'];
 
         $messages [] = [ 'news1'=> 'Foodball match todday','news2'=>'cricket tomorrow',
@@ -15,6 +21,8 @@ class HomePageController extends Controller {
 
         return view('homepage',compact('messages','recent'));
     }
+
+
 
     public function viewEvents(){
 

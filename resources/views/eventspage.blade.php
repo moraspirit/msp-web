@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!DOCTYPE html>
+{{--<!DOCTYPE html>--}}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 
     <style>
 
@@ -66,22 +68,27 @@
         }
 
         #calendar {
-            width:100%;
+            width:98%;
             align-content: center;
             background-color: rgba(205, 168, 185, 0.83);
             margin-bottom: -50px;
+            margin-left: 1%;
             border-radius: 10px ;
         }
 
         .fc-event {
-            height: 1.9em;
+            height: 1.5em;
             background-color: #062a00;
+            font-size: 15px;
         }
 
         .fc-more{
             color: #000000;
         }
 
+        .fc-day{
+            height: 20px;
+        }
 
     </style>
 
@@ -109,7 +116,9 @@
                                $.map(eve,function(r) {
                                     events.push({
                                         title:r.title,
-                                        start:r.start
+                                        start:r.start,
+                                        color:r.color,
+                                        imageurl:r.imageurl
                                     });
 
                                 });
@@ -127,8 +136,8 @@
                 height: 550,
                 editable: false,
                 eventLimit: true, // allow "more" link when too many event
-
-
+                theme: true,
+                contentHeight: 700,
 
                 eventRender: function(event, eventElement) {
                     if (event.imageurl) {
@@ -155,12 +164,12 @@
 
 </head><!--/head-->
 
-<body data-spy="scroll"  data-offset="50" data-target=".navbar"  >
+<body>
 
 
-<section id="timeline" style="max-height: 60%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">
+{{--<section id="timeline" style="max-height: 60%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">--}}
 
-<div class="container-fluid">
+<div class="container-fluid" id="timeline" style="max-height: 80%; max-width: 100%; align-content: center;background-color: #e3dcd9" class="cd-horizontal-timeline">
     <!-- JavaScript-->
       <script type="text/javascript" src="{{ URL::asset('js/timeline.js')}}"></script>
 
@@ -174,8 +183,10 @@
 
 </div>
 
-</section>
-<section id="calculator" style="background-color: #e3dcd9; background-image: url('images/sport.jpg')">
+{{--</section>--}}
+<section id="calculator" style="background-color: #e3dcd9; height: 100%; background-image: url('images/sport.jpg')">
+    <h1 style="color: #2ca02c"><center>SLUG Calendar</center></h1>
+    <br><br>
     <div id='calendar'></div>
 </section>
 
@@ -192,5 +203,5 @@
 
 
 </body>
-</html>
+{{--</html>--}}
 @endsection

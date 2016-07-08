@@ -74,6 +74,7 @@
             margin-bottom: -50px;
             margin-left: 1%;
             border-radius: 10px ;
+            overflow: auto;
         }
 
         .fc-event {
@@ -184,20 +185,26 @@
 </div>
 
 {{--</section>--}}
-<section id="calculator" style="background-color: #e3dcd9; height: 100%; background-image: url('images/sport.jpg')">
+<div id="calculator" style="background-color: #e3dcd9; height: 115%; background-image: url('images/sport.jpg')">
+    <br>
     <h1 style="color: #2ca02c"><center>SLUG Calendar</center></h1>
-    <br><br>
+    <br>
     <div id='calendar'></div>
-</section>
+</div>
 
-
+<div class="row">
+    <div class="col-sm-12 text-center mspfooter" style="background-color: #00b3ee">
+        <div class="container-fluid"></div>
+       <h2 style="color: #2ac6f7">Footer</h2>
+    </div>
+</div>
 
 
 <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery.inview.min.js')}}"></script>
 {{--<script type="text/javascript" src="{{ URL::asset('js/wow.min.js')}}"></script>--}}
 <script type="text/javascript" src="{{ URL::asset('js/mousescroll.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/smoothscroll.js')}}"></script>
+{{--<script type="text/javascript" src="{{ URL::asset('js/smoothscroll.js')}}"></script>--}}
 <script type="text/javascript" src="{{ URL::asset('js/jquery.countTo.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/lightbox.min.js')}}"></script>
 

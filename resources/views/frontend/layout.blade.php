@@ -40,7 +40,7 @@
 <body style="overflow-x: hidden;">
 
 @section('nav')
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40)">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(240,40,40); position: relative">
 
 <div class="container-fluid">
     <!--MoraSpirit Header-->

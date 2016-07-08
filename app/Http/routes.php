@@ -24,7 +24,7 @@ Route::get('/','HomePageController@index');
 
 Route::get('/events','HomePageController@viewEvents');
 Route::post('ajaxevents','EventController@show');
-
+Route::post('timeline','EventController@timeline');
 
 
 Route::get('/calendar','HomePageController@viewCalendar');

@@ -163,12 +163,15 @@
 <div class="container-fluid">
     <!-- JavaScript-->
       <script type="text/javascript" src="{{ URL::asset('js/timeline.js')}}"></script>
+
     <script>
-        var timeline = new TL.Timeline('timeline', 'examples/welcome.json', {
+
+        var timeline = new TL.Timeline('timeline','examples/welcome.json', {
             theme_color: "#990000",
             ga_property_id: "UA-27829802-4"
         });
     </script>
+
 </div>
 
 </section>

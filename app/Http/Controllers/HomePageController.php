@@ -7,7 +7,13 @@ use App\Sport;
 class HomePageController extends Controller {
     
     public function index(){
-        return view('homepage');
+
+        $recent[] = ['men'=>'UOM won the men match','women'=>'UOM won the women match'];
+
+        $messages [] = [ 'news1'=> 'Foodball match todday','news2'=>'cricket tomorrow',
+            'news3'=>'news 3','news4'=>'news 4','news5'=>'news5 test for long text awefa awefaewf awefaewf ehe sdfbs e5eh'];
+
+        return view('homepage',compact('messages','recent'));
     }
 
     public function viewEvents(){

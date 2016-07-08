@@ -1,0 +1,7 @@
+.marquee span {
+	margin-right: 50%;
+}
+.marquee p {
+	white-space:nowrap;
+	margin-right: 10px;
+}

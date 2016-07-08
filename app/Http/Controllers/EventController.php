@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Psy\Util\String;
 
 class EventController extends Controller {
 
@@ -143,6 +144,11 @@ class EventController extends Controller {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function timeline(){
+
+		return response()->json(['scale'=>'human', 'title',array('media'=>['url'=>'http://i.telegraph.co.uk/multimedia/archive/01498/tennis_1498874c.jpg'])]);
 	}
 
 }

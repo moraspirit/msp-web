@@ -1,4 +1,6 @@
-<html>
+@extends('frontend.layout')
+
+@section('content')
 
 <head>
 
@@ -7,30 +9,31 @@
     <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
     <script type="text/javascript" src="{{ URL::asset('jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+    <link href="{{ URL::asset('css/marquee.css')}}" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
 </head>
 
-<body style="overflow-x: hidden;">
+<body>
+
+<div class="marquee">
+                @foreach($messages as $message)
+ <marquee scrollamount="10"><b>{{$message["news1"]}}<span> </span> {{$message["news2"]}}
+         <span> </span> {{$message["news3"]}}<span> </span> {{$message["news4"]}}
+         <span> </span> {{$message["news5"]}}</b></marquee>
+
+                @endforeach
+</div>
+
     <div class="container-fluid">
-        <!--MoraSpirit Header-->
 
-            <div class="col-sm-12 mspheader ">
-                <div id="logo" class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-            <img class="img-responsive" src="{{ URL::asset('images/logo.png')}}" style="margin-left: auto; margin-right: auto;">
-                </div>
-                <div class="navbar">
-                    <div class="nav_btn"><a href="{{url('/')}}"> Home </a></div>
-                    <div class="nav_btn"><a href="{{url('/events')}}"> Events </a></div>
-                    <div class="nav_btn"><a href=""> Points </a></div>
-                    <div class="nav_btn"><a href=""> Draw </a></div>
-                    <div class="nav_btn"><a href=""> Live </a></div>
-                </div>
-            </div>
-
-        <!--MoraSpirit Header-->
-        <div class="row news">
-            <div class="col-sm-12 text-center"><Strong>This is news area</div>
-        </div>
         <!--Recently finished matches, score area-->
+       @foreach($recent as $item)
         <div class="row recent_match">
             <div class="col-sm-2"></div>
             <div class="col-sm-3">
@@ -38,7 +41,7 @@
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">Men</div>
                     <div class="panel-body text-center">
-                        Recently played match
+                       {{$item["men"]}}
                     </div>
 
                 </div>
@@ -50,13 +53,15 @@
                 <div class="panel panel-default panel-primary pnl">
                     <div class="panel-heading text-center">Women</div>
                     <div class="panel-body text-center">
-                        Recently played match
+                        {{$item["women"]}}
                     </div>
 
                 </div>
             </div>
             <div class="col-sm-2"></div>
         </div>
+         @endforeach
+
         <!--End of recently finished matches, score area-->
         <div class="row">
             <div class="container-fluid under_recent_match"></div></div>
@@ -270,4 +275,4 @@
 
 </body>
 
-</html>
+@endsection

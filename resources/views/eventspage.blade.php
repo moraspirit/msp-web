@@ -141,7 +141,7 @@
 
                 eventRender: function(event, eventElement) {
                     if (event.imageurl) {
-                        eventElement.find("div.fc-content").prepend("<img src='" + event.imageurl +"' width='30' height='30'>");
+                        eventElement.find("div.fc-content").prepend("<img src='" + event.imageurl +"' width='20' height='20'>");
                     }
                 },
                 header: {

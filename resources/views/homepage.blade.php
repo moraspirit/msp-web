@@ -19,12 +19,16 @@
 <body>
 
 <div class="marquee">
-                @foreach($messages as $message)
- <marquee scrollamount="10"><b>{{$message["news1"]}}<span> </span> {{$message["news2"]}}
-         <span> </span> {{$message["news3"]}}<span> </span> {{$message["news4"]}}
-         <span> </span> {{$message["news5"]}}</b></marquee>
+    <div>
+        @foreach($messages as $message)
+        <span><i class="fa fa-truck"></i>{{$message["news1"]}}</span>
+        <span><i class="fa fa-cube"></i> {{$message["news2"]}}</span>
+        <span><i class="fa fa-shield"></i> {{$message["news3"]}}</span>
+        <span><i class="fa fa-leaf"></i> {{$message["news4"]}}</span>
+        <span><i class="fa fa-star"></i>{{$message["news5"]}}</span>
 
-                @endforeach
+            @endforeach
+    </div>
 </div>
 
     <div class="container-fluid">
@@ -70,44 +74,36 @@
             <div class="container-fluid row overall_points_pnltop"></div>-->
             
             <div class="col-sm-1"></div>
-            
+
             <div class="col-sm-2">
                 <!--Men points table-->
                 <div class="container-fluid menwomen_points-pnltop">
+
                 <div class="panel panel-default panel-danger pnl">
-                    <div class="panel-heading text-center"><span class="pre"> <span class="badge"> 1</span>&nbsp; UOM&nbsp; 
-                        <span class="badge">500</span> </span></div>
+
+
+
+
+                    <div class="panel-heading text-center"><span class="pre"> <span class="badge"> 1</span>&nbsp; UOM&nbsp;
+                        <span class="badge">1000</span> </span></div>
+
+
                     <table class="table table-striped mytable-hover">
                         <tbody>
+                        <?php $a=2; ?>
+                        @foreach($ovmen as $k => $v)
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">2</span></td>
-                                <td>UOP</td>
-                                <td><span class="badge">400</span></td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge">3</span></td>
-                                <td>UOC</td>
-                                <td><span class="badge">300</span></td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 4</span></td>
-                                <td>UOR</td>
-                                <td><span class="badge">200</span></td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 5</span></td>
-                                <td>Test</td>
-                                <td><span class="badge">100</span></td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"> 6</span></td>
-                                <td>Test</td>
-                                <td><span class="badge">50</span></td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge"><?php echo $a ?>  </span></td>
+                                <td>{{$v["uni"]}}</td>
+                                <td><span class="badge">{{$v["marks"]}}</span></td>
                             </tr>
                         </tbody>
-
+                        <?php $a++; ?>
+                        @endforeach
                     </table>
+
                 </div>
+
                     </div>
             </div>
             <div class="col-sm-1"></div>

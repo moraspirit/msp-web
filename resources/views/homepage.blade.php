@@ -5,10 +5,7 @@
 <head>
 
     <title>MoraSpirit</title>
-    <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ URL::asset('css/editedStyles.min.css')}}" rel="stylesheet">
-    <script type="text/javascript" src="{{ URL::asset('jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+
     <link href="{{ URL::asset('css/marquee.css')}}" rel="stylesheet">
     <style>
         body {

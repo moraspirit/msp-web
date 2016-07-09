@@ -20,11 +20,12 @@ Route::get('/events', function(){
 Route::get('/','HomePageController@index');
 
 
-//events
+/*event page controlling routes*/
 
-Route::get('/events','HomePageController@viewEvents');
+Route::get('/events','EventController@viewEvents');
 Route::post('ajaxevents','EventController@show');
 Route::post('timeline','EventController@timeline');
+
 
 
 Route::get('/calendar','HomePageController@viewCalendar');

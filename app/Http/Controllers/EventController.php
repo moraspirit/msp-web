@@ -8,11 +8,13 @@ use Psy\Util\String;
 
 class EventController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+
+	public function viewEvents(){
+
+		return view('eventspage');
+	}
+
+
 	public function index()
 	{
 		//

@@ -12,7 +12,6 @@
     <title>MoraSpirit</title>
 
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
 
@@ -36,7 +35,7 @@
         .popover.bottom .arrow:after {
             border-bottom-color: rgba(10,10,10,0.5);
         }
-        html, body {
+        html, body,footer {
             height:100%;
             width:100%;
             padding: 0px;
@@ -185,28 +184,21 @@
 </div>
 
 {{--</section>--}}
-<div id="calculator" style="background-color: #e3dcd9; height: 115%; background-image: url('images/sport.jpg')">
+<div id="cal" style="background-color: #e3dcd9; height: 122%; background-image: url('images/sport.jpg')">
     <br>
     <h1 style="color: #2ca02c"><center>SLUG Calendar</center></h1>
     <br>
     <div id='calendar'></div>
 </div>
 
-<div class="row">
+<div class="row" id="footer">
     <div class="col-sm-12 text-center mspfooter" style="background-color: #00b3ee">
-        <div class="container-fluid"></div>
-       <h2 style="color: #2ac6f7">Footer</h2>
+        <div class="container-fluid">
+            <h2 style="color: #2ac6f7">Footer</h2>
+        </div>
+
     </div>
 </div>
-
-
-<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/jquery.inview.min.js')}}"></script>
-{{--<script type="text/javascript" src="{{ URL::asset('js/wow.min.js')}}"></script>--}}
-<script type="text/javascript" src="{{ URL::asset('js/mousescroll.js')}}"></script>
-{{--<script type="text/javascript" src="{{ URL::asset('js/smoothscroll.js')}}"></script>--}}
-<script type="text/javascript" src="{{ URL::asset('js/jquery.countTo.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/lightbox.min.js')}}"></script>
 
 
 </body>

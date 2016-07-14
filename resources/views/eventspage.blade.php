@@ -19,8 +19,9 @@
     <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 
-    <style>
 
+    <style>
+        .hover-end{padding:0;margin:0;font-size:75%;text-align:center;position:absolute;bottom:0;width:100%;opacity:.8}
         .event-div{
             background-repeat: no-repeat;
             background-size: 100% auto;
@@ -152,10 +153,9 @@
 
                 // add event name to title attribute on mouseover
                 eventMouseover: function(event, jsEvent, view) {
-                    if (view.name !== 'agendaDay') {
-                        $(jsEvent.target).attr('title', event.title);
-                    }
-                }
+                    $('.fc-event-inner', this).append('<div id=\"'+event.id+'\" class=\"hover-end\">'+$.fullCalendar.formatDate(event.end, 'h:mmt')+'</div>');
+                },
+
             });
 
         });
@@ -184,7 +184,7 @@
 </div>
 
 {{--</section>--}}
-<div id="cal" style="background-color: #e3dcd9; height: 122%; background-image: url('images/sport.jpg')">
+<div id="cal" style="background-color: #0b4e00; height: 122%">
     <br>
     <h1 style="color: #2ca02c"><center>SLUG Calendar</center></h1>
     <br>

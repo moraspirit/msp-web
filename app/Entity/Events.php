@@ -1,12 +1,7 @@
-<?php
+<?php namespace App\Entity;
 
-namespace app\Entity;
-
-use Jenssegers\Mongodb\Model as Eloquent;
 use Illuminate\Database\Eloquent\Model;
 
-class Points extends Eloquent{
+class Events extends Model {
 
-    protected  $connection ="mongodb";
-    protected $collection = 'events';
 }

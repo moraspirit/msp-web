@@ -49,7 +49,7 @@ class EventController extends Controller {
 	public function show()
 	{
 
-		return response()->json(array(['title'=>'Volleyball', 'start'=>'2016-01-01','color'=>'#FF00FF'],
+		return response()->json(array(['title'=>'Volleyball', 'start'=>'2016-01-01','color'=>'#FF00FF',''],
 				['title'=>'Same Day', 'start'=>'2016-01-01','color'=>'#FF00FF'],
 				['title'=>'Same Day 2', 'start'=>'2016-01-01','color'=>'#FF00FF'],
 				['title'=>'Netball', 'start'=>'2016-01-02','color'=>'#00FF00'],['title'=>'Basketball', 'start'=>'2016-01-03','color'=>'#800000'],

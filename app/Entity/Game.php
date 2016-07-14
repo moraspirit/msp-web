@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class University extends Model {
+class Game extends Model {
 
 	//
 

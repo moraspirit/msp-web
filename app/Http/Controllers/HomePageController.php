@@ -1,57 +1,44 @@
 <?php namespace App\Http\Controllers;
 
-use App\event;
 use DB;
-use App\Sport;
+use Illuminate\Support\Facades\App;
+use App\Entity\Score;
 
 class HomePageController extends Controller {
     
     public function index(){
 
-       $ovmen= array(['uni'=>'UOM','marks'=>'1000'],['uni'=>'UOP','marks'=>'950']);
+        $ovmenitms = DB::table('scores')
+            ->select('u_code',DB::raw('sum(score) as score'))
+            ->groupBy('u_code')
+            ->where('category','M')
+            ->orderBy('score','desc')
+            ->get();
 
-        $ovwomen [] = '';
+        foreach($ovmenitms as $ovitem){
+            $ovmen[] = ['u_code'=> $ovitem->u_code,'score'=> $ovitem->score];
+        }
 
-        $ovtotal [] = '';
+        $ovwomenitms = DB::table('scores')
+            ->select('u_code',DB::raw('sum(score) as score'))
+            ->groupBy('u_code')
+            ->where('category','F')
+            ->orderBy('score','desc')
+            ->get();
 
-        $recent[] = ['men'=>'UOM won the men match','women'=>'UOM won the women match'];
+        foreach($ovwomenitms as $ovwoitem){
+            $ovwomen[] = ['u_code'=> $ovwoitem->u_code,'score'=> $ovwoitem->score];
+        }
 
-//       $messages = array([ 'news1'=> 'Foodball match todday'],
-//        ['news2'=>'cricket tomorrow'],
-//            ['news3'=>'news 3'],['news4'=>'news 4'],['news5'=>'news5 test for long text awefa awefaewf awefaewf ehe sdfbs e5eh']);
 
-        $messages [] = ['news1'=> 'Foodball match todday',
-        'news2'=>'cricket tomorrow',
-            'news3'=>'news 3','news4'=>'news 4','news5'=>'news5 test for long text awefa awefaewf awefaewf ehe sdfbs e5eh'];
+        $marquee = array(['title'=>'Cricket','vs'=>'UOM vs UOC','won'=>'UOM'],
+            ['title'=>'Volleyball','vs'=>'UOM vs UOC','won'=>'UOM']
+            );
 
-        return view('homepage',compact('messages','recent','ovmen'));
+        return view('home',compact('marquee','ovwomen','ovmen'));
     }
 
 
-
-
-
-    public function viewCalendar(){
-
-       return view('calendar');
-    }
-
-    public function getdata(){
-
-        //$user = DB::connection('mongodb')->collection('test')->get();
-
-        DB::connection('mongodb')->collection('test')->insert(array(
-            'item' => "ABCD2",
-            'details' => array('model' => "2016", 'manufacturer' => "dilu"),
-            'stock' => array('size' => "M", 'qty' => "100"),
-            'catagory' => "testdb"
-        ));
-
-        /*return view('homepage');*/
-
-        $dbdata = Sport::all();
-        return $dbdata;
-    }
 
 
 

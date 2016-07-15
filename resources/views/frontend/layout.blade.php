@@ -23,7 +23,7 @@
 
     <link rel="shortcut icon" sizes="57x57" href="{{URL::asset('images/img.png')}}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ URL::asset('jquery.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
     <link rel="shortcut icon" href="images/favicon.ico">
 
 
@@ -67,7 +67,7 @@
                     <a href="{{url('/events')}}">Events</a>
                 </li>
                 <li>
-                    <a href="{{url('loadpointstable')}}">Points Table</a>
+                    <a href="{{url('/loadpointstable')}}">Points Table</a>
                 </li>
                 <li>
                     <a href="#Matches">Upcomming Matches</a>
@@ -102,7 +102,7 @@
 @section('script')
     {{--custom script goes here--}}
 
-    <script type="text/javascript" src="{{ URL::asset('jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     @stop
 

@@ -30,12 +30,32 @@ class HomePageController extends Controller {
             $ovwomen[] = ['u_code'=> $ovwoitem->u_code,'score'=> $ovwoitem->score];
         }
 
+        $ovallitms = DB::table('scores')
+            ->select('u_code',DB::raw('sum(score) as score'))
+            ->groupBy('u_code')
+            ->orderBy('score','desc')
+            ->get();
 
-        $marquee = array(['title'=>'Cricket','vs'=>'UOM vs UOC','won'=>'UOM'],
-            ['title'=>'Volleyball','vs'=>'UOM vs UOC','won'=>'UOM']
+
+        foreach($ovallitms as $ovitem){
+            $unis = DB::table('universities')->where('uni_code',$ovitem->u_code)->get();
+
+            foreach($unis as $uni){
+                $logo = $uni->logo;
+                $name = $uni->uni_name;
+            }
+
+            $ovall[] = ['score'=> $ovitem->score,'logo'=>$logo,'name'=>$name];
+        }
+
+        $marquee = array(['title'=>'Cricket','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
+            ['title'=>'Volleyball','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
+            ['title'=>'Track and field','vs'=>'UOJ vs UOK','won'=>'UOJ','logo1'=>'UOJ.png','logo2'=>'UOK.png']
             );
 
-        return view('home',compact('marquee','ovwomen','ovmen'));
+
+
+        return view('home',compact('marquee','ovwomen','ovmen','ovall'));
     }
 
 

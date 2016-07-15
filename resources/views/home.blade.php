@@ -2,11 +2,18 @@
 
 @section('content')
 
-<div style="height: 80px; background-color:#e6e6e6" >
-	<marquee behavior="" direction="">
+<div style="height: 9 0px; background-color:#e6e6e6" >
+	<marquee behavior="" direction="" >
 		@foreach($marquee as $mkey => $mvalue)
-		<div  class="mblock">
-			<center><h5 style=" font-size: 12px"> <b>{{$mvalue['title']}}</b> </h5></center>
+		<div  class="mblock" style="height: 100%">
+			<center><h5 style=" font-size: 12px">
+
+					<img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" >
+					<b style="margin-left: 10px; margin-right: 10px">{{$mvalue['title']}}</b>
+					<img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" >
+
+					</h5>
+			</center>
 			<hr style="margin-top: 0;margin-bottom: 0; width: 80%   ">
 			<center><h5 style=" font-size: 12px"> {{$mvalue['vs']}}|
 					{{$mvalue['won']}} WON</h5></center>
@@ -38,7 +45,7 @@
 
 					<div class="panel-body text-center">
 						@foreach($ovmen as $kmen => $vmen)
-							@if(!($kmen==0))
+							@if(!($kmen==0) && $kmen<7)
 						<h4>{{($kmen+1)}}.{{' '.$vmen['u_code'].' '.'|'}}{{' '.$vmen['score']}} </h4>
 						<hr>
 							@endif
@@ -51,29 +58,30 @@
 			</div>
 			<div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
 				<center><h3> Top Ranking </h3></center>
-				<div class="panel">
+				@foreach($ovall as $kall => $vall)
+					@if($kall==0)
+					<div class="panel">
 					<div class="panel-heading text-center" style="background-image: linear-gradient(180deg,#f2f2f2, whitesmoke); width: 100%;">
 
-						<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 250px ;">
-						<h2  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;"> University of Moratuwa</h2>
+						<img src="{{URL::asset('logos/'.$vall['logo'])}}" alt="" style="width: 250px ;">
+						<h3  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;">{{$vall['name'].' '.'|'}}{{' '.$vall['score']}}</h3>
 					</div></div>
+					@endif
+				@endforeach
 
+				@foreach($ovall as $kall => $vall)
+					@if(!($kall==0) && $kall<3)
 				<div style="background-image: linear-gradient(180deg,whitesmoke, whitesmoke); width: 100%;">
 					<div class="row"> <div class="col-lg-3">
-							<img src="{{URL::asset('logos/col.png')}}" alt="" style="width: 90px ; padding: 3px" class="pull-right">
+							<img src="{{URL::asset('logos/'.$vall['logo'])}}" alt="" style="width: 90px ; padding: 3px" class="pull-right">
 						</div>
 						<div class="col-lg-9">
-							<br><span  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;"> University of Colombo  </span>
+							<br><span  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;">{{$vall['name'].' '.'|'}}{{' '.$vall['score']}}</span>
 						</div></div>
 				</div>
-				<br><div style="background-image: linear-gradient(180deg,whitesmoke, whitesmoke); width: 100%;">
-					<div class="row"> <div class="col-lg-3">
-							<img src="{{URL::asset('logos/col.png')}}" alt="" style="width: 90px ; padding: 3px" class="pull-right">
-						</div>
-						<div class="col-lg-9">
-							<br><span  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;"> University of Colombo  </span>
-						</div></div>
-				</div>
+				<br>
+					@endif
+				@endforeach
 			</div>
 
 
@@ -94,7 +102,7 @@
 
 					<div class="panel-body text-center">
 						@foreach($ovwomen as $kwomen => $vwomen)
-							@if(!($kwomen==0))
+							@if(!($kwomen==0) && $kwomen<7)
 								<h4>{{($kwomen+1)}}.{{' '.$vwomen['u_code'].' '.'|'}}{{' '.$vwomen['score']}} </h4>
 								<hr>
 							@endif

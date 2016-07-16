@@ -25,10 +25,13 @@
 }
 .mblock{
     margin-top: 5px;
-    width: 200px;height: 70px;
+    height: 70px;
     background-color: white;
     display: inline-block;
     opacity: 0.9;
+    padding-left: 25px;
+    padding-right: 25px;
+
 }
 
 

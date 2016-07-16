@@ -237,25 +237,7 @@
                 <td>13</td>
                 <td>14</td>
             </tr>
-            <!--<tr bgcolor="black" class="disable">-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--</tr>-->
+
             <tr style="border-top: 3px solid #ea2e2b;">
                 <td></td>
                 <td>Men</td>

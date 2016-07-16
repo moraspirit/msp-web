@@ -2,9 +2,11 @@
 
 @section('content')
 
-<div style="height: 9 0px; background-color:#e6e6e6" >
+	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
+
+<div style="height: 90px; background-color:#e6e6e6" >
 	<marquee behavior="" direction="" >
-		@foreach($marquee as $mkey => $mvalue)
+		@foreach($summery as $mkey => $mvalue)
 		<div  class="mblock" style="height: 100%">
 			<center><h5 style=" font-size: 12px">
 
@@ -15,8 +17,8 @@
 					</h5>
 			</center>
 			<hr style="margin-top: 0;margin-bottom: 0; width: 80%   ">
-			<center><h5 style=" font-size: 12px"> {{$mvalue['vs']}}|
-					{{$mvalue['won']}} WON</h5></center>
+			<center><h5 style=" font-size: 12px"> {{$mvalue['vs1'].' '}}<span class="label label-pill label-info">{{$mvalue['t_a_score']}}</span> {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info">{{$mvalue['t_b_score'].' '}}</span>|
+					{{' '.$mvalue['won']}} WON</h5></center>
 		</div>
 		@endforeach
 	</marquee>
@@ -70,7 +72,7 @@
 				@endforeach
 
 				@foreach($ovall as $kall => $vall)
-					@if(!($kall==0) && $kall<3)
+					@if(!($kall==0) && $kall<4)
 				<div style="background-image: linear-gradient(180deg,whitesmoke, whitesmoke); width: 100%;">
 					<div class="row"> <div class="col-lg-3">
 							<img src="{{URL::asset('logos/'.$vall['logo'])}}" alt="" style="width: 90px ; padding: 3px" class="pull-right">
@@ -133,117 +135,47 @@
 					<div class="carousel slide media-carousel" id="media">
 						<center>
 							<div class="carousel-inner" style="width: 90%">
+
+								@foreach($summery as $mkey => $mvalue)
+									@if($mkey==0)
 								<div class="item  active">
-									<h4> Sunday July 21rd 2016 </h4>
 									<br>
 									<center>
-										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> Cricket Semi Finals, University of Moratuwa vs University of Colombo</h5>
+										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> {{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
 										<div class="row">
 											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="pull-left">
+												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
 											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px"> 180/5 Vs 250/6</h3>
-												<h5> University of Moratuwa won the match</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="center-block">
-											</div>
-										</div>
-
-									</center>
-									<hr style="height: 0.5px;background-color:#ea2e2b; width: 80%">
-
-									<br>
-									<h4> Sunday July 21rd 2016 </h4>
-									<br>
-									<center>
-										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> Cricket Semi Finals, University of Moratuwa vs University of Colombo</h5>
-										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="pull-left">
-											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px"> 180/5 Vs 250/6</h3>
-												<h5> University of Moratuwa won the match</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="center-block">
+											<div class="col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+												<h5>{{$mvalue['summery']}}</h5></div>
+											<div class="col-lg-3"> <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
 										</div>
-										<hr style="height: 0.5px;background-color:#ea2e2b; width: 80%">
 									</center>
-
-
 								</div>
+									@endif
+								@endforeach
+
+									@foreach($summery as $mkey => $mvalue)
+										@if(!($mkey==0))
 								<div class="item">
-									<h4> Sunday July 21rd 2016 </h4>
 									<br>
 									<center>
-										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> Cricket Semi Finals, University of Moratuwa vs University of Colombo</h5>
+										<h5 style="background-color:#ea2e2b; color: white; padding: 5px ">{{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
 										<div class="row">
 											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="pull-left">
+												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
 											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px"> 180/5 Vs 250/6</h3>
-												<h5> University of Moratuwa won the match</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="center-block">
+											<div class="col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+												<h5>{{$mvalue['summery']}}</h5></div>
+											<div class="col-lg-3">  <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
 										</div>
 
 									</center>
-									<hr style="height: 0.5px;background-color:#ea2e2b; width: 80%">
-
-									<br>
-									<h4> Sunday July 21rd 2016 </h4>
-									<br>
-									<center>
-										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> Cricket Semi Finals, University of Moratuwa vs University of Colombo</h5>
-										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="pull-left">
-											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px"> 180/5 Vs 250/6</h3>
-												<h5> University of Moratuwa won the match</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="center-block">
-											</div>
-										</div>
-										<hr style="height: 0.5px;background-color:#ea2e2b; width: 80%">
-									</center>
-
-
 								</div>
-								<div class="item">
-									<h4> Sunday July 21rd 2016 </h4>
-									<br>
-									<center>
-										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> Cricket Semi Finals, University of Moratuwa vs University of Colombo</h5>
-										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="pull-left">
-											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px"> 180/5 Vs 250/6</h3>
-												<h5> University of Moratuwa won the match</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="center-block">
-											</div>
-										</div>
-
-									</center>
-									<hr style="height: 0.5px;background-color:#ea2e2b; width: 80%">
-
-									<br>
-									<h4> Sunday July 22rd 2016 </h4>
-									<br>
-									<center>
-										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> Cricket Semi Finals, University of Moratuwa vs University of Colombo</h5>
-										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="pull-left">
-											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px"> 180/5 Vs 250/6</h3>
-												<h5> University of Moratuwa won the match</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 100px;" class="center-block">
-											</div>
-										</div>
-										<hr style="height: 0.5px;background-color:#ea2e2b; width: 80%">
-									</center>
-
-
-								</div>
+										@endif
+									@endforeach
 
 							</div></center>
 						<a data-slide="prev" href="#media" class="left carousel-control">‹</a>
@@ -352,7 +284,7 @@
 					</li>
 					<li class="footer-menu-divider">&sdot;</li>
 					<li>
-						<a href="#Moraspirit">Moraspirit</a>
+						<a href="www.moraspirit.com">Moraspirit</a>
 					</li>
 				</ul>
 				<p class="copyright text-muted small">&copy; 2016 All Rights Reserved | <a href="http://moraspirit.com" style="color: red"> www.moraspirit.com</a></p>
@@ -360,5 +292,7 @@
 		</div>
 	</div>
 </footer>
+
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 
 @endsection

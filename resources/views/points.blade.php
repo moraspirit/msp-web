@@ -24,7 +24,7 @@
 
     <div class="container">
 
-        <table   class="table table-hover" align="middle">
+        <table   class="table table-hover" align="middle" style="text-transform: uppercase;">
             <thead class="thead-inverse">
             <tr>
                 <th>#</th>
@@ -49,7 +49,7 @@
             <tbody>
             <tr>
                 <td>1</td>
-                <td>Cricket(Men)</td>
+                <td>Cricket <span class="pull-right label label-default " style="margin-right:10px"> M</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -68,7 +68,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>Cricket(Women)</td>
+                <td>Cricket <span class="pull-right label label-default " style="margin-right:10px"> W</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -87,7 +87,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>VolleyBall(Men)</td>
+                <td>VolleyBall <span class="pull-right label label-default " style="margin-right:10px"> M</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -106,7 +106,7 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td>VolleyBall(Women)</td>
+                <td>VolleyBall <span class="pull-right label label-default " style="margin-right:10px"> W</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -125,7 +125,7 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>Cricket</td>
+                <td>Cricket  <span class="pull-right label label-default " style="margin-right:10px"> M</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -144,7 +144,7 @@
             </tr>
             <tr>
                 <td>6</td>
-                <td>Cricket</td>
+                <td>Cricket <span class="pull-right label label-default " style="margin-right:10px"> W</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -163,7 +163,7 @@
             </tr>
             <tr>
                 <td>7</td>
-                <td>Cricket(Men)</td>
+                <td>Cricket <span class="pull-right label label-default " style="margin-right:10px"> M</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -182,7 +182,7 @@
             </tr>
             <tr>
                 <td>8</td>
-                <td>Cricket(Men)</td>
+                <td>Cricket <span class="pull-right label label-default " style="margin-right:10px"> M</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>
@@ -201,7 +201,7 @@
             </tr>
             <tr>
                 <td>9</td>
-                <td>Cricket(Men)</td>
+                <td>Cricket <span class="pull-right label label-default " style="margin-right:10px"> M</span></td>
                 <td>10</td>
                 <td>7</td>
                 <td>12</td>

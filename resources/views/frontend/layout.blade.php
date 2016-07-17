@@ -23,6 +23,13 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
+
+    <link rel="shortcut icon" sizes="57x57" href="{{URL::asset('images/img.png')}}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
     {{--Favicon--}}
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon//apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
@@ -31,28 +38,25 @@
     <link rel="mask-icon" href="/favicon//safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
+
 </head>
-
-{{--<body style="overflow-x: hidden;">--}}
-
-{{--@section('nav')--}}
 
 <div class="container-fluid" id="banner" >
     <div class="row" style="background-color: firebrick;">
         <div class="container" style="color: white">
             <h5 class="pull-left" style="font-family: 'Coda', cursive;">www.sport.moraspirit.com</h5>
-            <h5 class="pull-right text-uppercase" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
+            <h5 class="pull-right" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
         </div>
     </div>
-    <div style="background-color: #fe0405; margin-left: -15px;margin-right: -15px;">
-        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="100%">
+    <div style="background-color: #fe0405;margin-right: -15px">
+        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="110%">
     </div>
 </div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
 
-    <div class="container text-uppercase">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -102,7 +106,7 @@
 
 @section('script')
     {{--custom script goes here--}}
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('js/main.js')}}"></script>

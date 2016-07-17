@@ -2,7 +2,10 @@
 
 @section('content')
 
-<div style="height: 90px; background-color:#e6e6e6" >
+	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
+
+<div style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive;"  >
+
 	<marquee behavior="" direction="" >
 		@foreach($summery as $mkey => $mvalue)
 		<div  class="mblock" style="height: 100%">
@@ -14,20 +17,17 @@
 
 					</h5>
 			</center>
-			<hr style="margin-top: 0;margin-bottom: 0; width: 80%   ">
-			<center><h5 style=" font-size: 12px"> {{$mvalue['vs1'].' '}}<span class="label label-pill label-info">{{$mvalue['t_a_score']}}</span> {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info">{{$mvalue['t_b_score'].' '}}</span></h5></center>
+			<hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
+			<center><h5 style=" font-size: 12px;margin-top: 5px"><span class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span>  {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
+					</h5><h5 style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{' '.$mvalue['won']}} WON</h5></center>
+
 		</div>
 		@endforeach
 	</marquee>
 </div>
 
-<div class="container-fluid font-oswald text-center">
-	<div style="font-size: 40pt;">WE ARE READY!</div>
-	<div style="font-size: 20pt">SEE YOU SOON WITH EXCITING UPDATES AND SCORES.</div>
-</div>
-
 <!-- Top List -->
-{{--<div class="content-section-a">
+<div class="content-section-a">
 
 	<div class="container">
 
@@ -38,23 +38,49 @@
 				<hr>
 				<div class="panel panel-primary">
 
+
 					@foreach($ovmen as $kmen => $vmen)
 						@if($kmen==0)
-							<div class="panel-heading text-center" style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Points <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
-								<center><h2  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em">1<br>{{$vmen['u_code'].' '.'|'}}{{' '.$vmen['score']}}</h2></center>
+							<div class="panel-heading text-center " style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Ranking <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
+								<center><h2  style="font-size: 2em;font-family: 'Coda', cursive;"> {{$vmen['u_code'].' '}} <span class="label label-pill label-info pull-right">{{' '.$vmen['score']}}</span></h2></center>
 							</div>
 						@endif
 					@endforeach
 
+						<div class="panel-body text-center" style="margin-bottom: -15px">
+							<div class="row">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="background-color:#f2f2f2; margin-top: -15px">
+									<br>
+									@foreach($ovmen as $kmen => $vmen)
+										@if(!($kmen==0) && $kmen<7)
 
-					<div class="panel-body text-center">
-						@foreach($ovmen as $kmen => $vmen)
-							@if(!($kmen==0) && $kmen<7)
-						<h4>{{($kmen+1)}}.{{' '.$vmen['u_code'].' '.'|'}}{{' '.$vmen['score']}} </h4>
-						<hr>
-							@endif
-						@endforeach
-					</div>
+											<h4 class="damith"> {{($kmen+1)}}</h4>
+											<hr>
+										@endif
+									@endforeach
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									@foreach($ovmen as $kmen => $vmen)
+										@if(!($kmen==0) && $kmen<7)
+
+											<h4 class="damith"> {{' '.$vmen['u_code'].' '}}</h4>
+											<hr>
+										@endif
+									@endforeach
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" background-color: #e6e6e6; margin-top: -15px">
+									<br>
+									@foreach($ovmen as $kmen => $vmen)
+										@if(!($kmen==0) && $kmen<7)
+
+											<h4 class="damith" style="text-align: right; margin-right: 10px"> {{' '.$vmen['score']}}</h4>
+											<hr>
+										@endif
+									@endforeach
+								</div>
+
+							</div>
+						</div>
 
 
 				</div>
@@ -68,7 +94,8 @@
 					<div class="panel-heading text-center" style="background-image: linear-gradient(180deg,#f2f2f2, whitesmoke); width: 100%;">
 
 						<img src="{{URL::asset('logos/'.$vall['logo'])}}" alt="" style="width: 250px ;">
-						<h3  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;">{{$vall['name'].' '.'|'}}{{' '.$vall['score']}}</h3>
+						<h4  style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
+							<span class="pull-right" style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>
 					</div></div>
 					@endif
 				@endforeach
@@ -79,8 +106,8 @@
 					<div class="row"> <div class="col-lg-3">
 							<img src="{{URL::asset('logos/'.$vall['logo'])}}" alt="" style="width: 90px ; padding: 3px" class="pull-right">
 						</div>
-						<div class="col-lg-9">
-							<br><span  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em;">{{$vall['name'].' '.'|'}}{{' '.$vall['score']}}</span>
+						<div class="col-lg-9" style="margin-top: 8px">
+							<br><span  style="font-family: 'Coda', cursive;font-size: 1.5em;">{{$vall['name'].' '}} <span class="pull-right" style="margin-right: 40px">{{' '.$vall['score']}}</span></span>
 						</div></div>
 				</div>
 				<br>
@@ -97,20 +124,46 @@
 
 					@foreach($ovwomen as $kwomen => $vwomen)
 						@if($kwomen==0)
-							<div class="panel-heading text-center" style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Points <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
-								<center><h2  style="font-family: 'Josefin Sans', sans-serif;font-size: 2em">1<br>{{$vwomen['u_code'].' '.'|'}}{{' '.$vwomen['score']}}</h2></center>
+							<div class="panel-heading text-center " style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Ranking <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
+								<center><h2  style="font-size: 2em;font-family: 'Coda', cursive;"> {{$vwomen['u_code'].' '}} <span class="label label-pill label-info pull-right">{{' '.$vwomen['score']}}</span></h2></center>
 							</div>
 						@endif
 					@endforeach
 
 
-					<div class="panel-body text-center">
-						@foreach($ovwomen as $kwomen => $vwomen)
-							@if(!($kwomen==0) && $kwomen<7)
-								<h4>{{($kwomen+1)}}.{{' '.$vwomen['u_code'].' '.'|'}}{{' '.$vwomen['score']}} </h4>
-								<hr>
-							@endif
-						@endforeach
+					<div class="panel-body text-center" style="margin-bottom: -15px">
+						<div class="row">
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="background-color:#f2f2f2; margin-top: -15px">
+								<br>
+								@foreach($ovwomen as $kwomen => $vwomen)
+									@if(!($kwomen==0) && $kwomen<7)
+
+										<h4 class="damith"> {{($kwomen+1)}}</h4>
+										<hr>
+									@endif
+								@endforeach
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								@foreach($ovwomen as $kwomen => $vwomen)
+									@if(!($kwomen==0) && $kwomen<7)
+
+										<h4 class="damith"> {{' '.$vwomen['u_code'].' '}}</h4>
+										<hr>
+									@endif
+								@endforeach
+							</div>
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" background-color: #e6e6e6; margin-top: -15px">
+								<br>
+								@foreach($ovwomen as $kwomen => $vwomen)
+									@if(!($kwomen==0) && $kwomen<7)
+
+										<h4 class="damith" style="text-align: right; margin-right: 10px"> {{' '.$vwomen['score']}}</h4>
+										<hr>
+									@endif
+								@endforeach
+							</div>
+
+						</div>
 					</div>
 
 
@@ -121,22 +174,25 @@
 	<!-- /.container -->
 
 </div>
-</div>--}}
+</div>
 <!-- /.Top list -->
 
 
 
 <!-- slider-->
-{{--<div class="web_disigner">
+<div class="web_disigner">
 	<div class="web_disigner_contain">
 		<div class="container">
-			<h3 class="text-uppercase font-oswald">Recent Matches</h3></div>
-		<div class="container">
+			<h3 >Recent Matches</h3></div>
+		<div class="container well well-lg"  >
+
 			<div class='row'>
 				<div class='col-md-8 col-md-offset-2'>
 					<div class="carousel slide media-carousel" id="media">
 						<center>
-							<div class="carousel-inner" style="width: 90%">
+
+							<div class="carousel-inner " style="width: 70%">
+
 
 								@foreach($summery as $mkey => $mvalue)
 									@if($mkey==0)
@@ -145,12 +201,13 @@
 									<center>
 										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> {{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
 										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <h3 style="padding: 5px;font-family: 'Arial'">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+
 												<h5>{{$mvalue['summery']}}</h5></div>
-											<div class="col-lg-3"> <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"> <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
 										</div>
 									</center>
@@ -165,12 +222,12 @@
 									<center>
 										<h5 style="background-color:#ea2e2b; color: white; padding: 5px ">{{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
 										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
 												<h5>{{$mvalue['summery']}}</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">  <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
 										</div>
 
@@ -187,7 +244,7 @@
 			</div>
 		</div>
 	</div>
-</div>--}}
+</div>
 <!-- // slider-->
 
 <!--past-->

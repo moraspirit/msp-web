@@ -18,16 +18,8 @@
 
 
 
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-
-
-    <link rel="shortcut icon" sizes="57x57" href="{{URL::asset('images/img.png')}}" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
     {{--Favicon--}}
@@ -45,7 +37,7 @@
     <div class="row" style="background-color: firebrick;">
         <div class="container" style="color: white">
             <h5 class="pull-left" style="font-family: 'Coda', cursive;">www.sport.moraspirit.com</h5>
-            <h5 class="pull-right" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
+            <h5 class="pull-right text-uppercase" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
         </div>
     </div>
     <div style="background-color: #fe0405;margin-right: -15px">
@@ -56,7 +48,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
 
-    <div class="container">
+    <div class="container text-uppercase">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -106,7 +98,6 @@
 
 @section('script')
     {{--custom script goes here--}}
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('js/main.js')}}"></script>

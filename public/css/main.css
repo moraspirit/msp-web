@@ -41,7 +41,7 @@ body{
     opacity: 0.9;
     padding-left: 25px;
     padding-right: 25px;
-
+    max-width: 250px;
 }
 
 

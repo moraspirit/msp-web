@@ -37,6 +37,7 @@
 
 {{--@section('nav')--}}
 <body>
+<div id="wrapper">
 <div class="container-fluid" id="banner" >
     <div class="row" style="background-color: firebrick;">
         <div class="container" style="color: white">
@@ -92,6 +93,9 @@
 @yield('content')
 
 
+    <div class="push"></div>
+
+</div>
 {{--custom script goes here--}}
 <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
@@ -139,6 +143,23 @@
 
 @section('footer')
     @stop
+{{--Footer--}}
+<footer class="site-footer">
+    <div class="msp-love">
+<img src="/images/love_msp.png" alt="moraspirit" class="img-responsive">
+</div>
+<p class="year">2016</p>
+<div class="social">
+<a href="https://www.facebook.com/moraspirit.fanpage"><i id="facebook" class="icon-facebook fa fa-facebook-square"></i></a>
+
+<a href="https://twitter.com/moraspiritNews"><i id="twitter" class="icon-twitter fa fa-twitter-square"></i></a>
+<a href="http://www.youtube.com/user/moraspiritNews?feature=watch"><i id="youtube" class="icon-youtube fa fa-youtube-square"></i></a>
+<a href="https://plus.google.com/108795907592684921602/posts"><i id="plus" class="icon-google-plus-sign fa fa-google-plus-square"></i></a>
+<a href="http://www.linkedin.com/company/moraspirit-initiative"><i id="linkedin" class="icon-linkedin-sign fa fa-linkedin-square"></i></a>
+<a href="mailto:admin@moraspirit.com"><i id="mail" class="icon-envelope fa fa-envelope-square"></i></a>
+
+</div>
+</footer>
 
 </body>
 </html>

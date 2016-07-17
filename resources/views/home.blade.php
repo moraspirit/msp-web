@@ -28,6 +28,10 @@
 	</div>
 	
 
+	<div class="container text-center font-oswald" style="padding-top: 35px;">
+		<div style="font-size: 40px">WE ARE READY!</div>
+		<div style="font-size: 25px">STAY WITH US FOR EXCITING STUFFS AND SCORES.</div>
+	</div>
 <!--past-->
 {{--Previous Winnners section--}}
 <div class="content-section-a">

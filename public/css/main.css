@@ -35,6 +35,7 @@ body{
 .mblock{
     margin-top: 5px;
     height: 80px;
+
     background-color: white;
     display: inline-block;
     opacity: 0.9;
@@ -179,3 +180,55 @@ body{
 
 
 /* End carousel */
+
+.font-oswald{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.font-oswald--bold {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.font-coda{
+    font-family: 'Coda', cursive;
+    font-weight: 400;
+}
+
+.font-coda--bold{
+    font-family: 'Coda', cursive;
+    font-weight: 700;
+}
+
+.prev-winners-card{
+    background-color:#e6e6e6;
+    height: 330px;
+    max-width: 330px;
+    padding: 8px;
+    text-transform: uppercase!important;
+}
+
+.prev-winners-card__year{
+    background-color:#ea2e2b;
+    color: white;
+    padding: 2px;
+}
+
+.prev-winners-card__logo{
+    width: 120px;
+}
+
+.prev-winners-card__winneruni{
+    font-size: 1em;
+}
+
+.prev-winners-card__hr{
+    background-color:#ea2e2b;
+    height: 1px;
+    margin-bottom: 4px;
+}
+
+.prev-winners-card__runnersup{
+
+}

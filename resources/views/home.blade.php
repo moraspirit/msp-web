@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
 
 <div style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive;"  >
+
 	<marquee behavior="" direction="" >
 		@foreach($summery as $mkey => $mvalue)
 		<div  class="mblock" style="height: 100%">
@@ -19,6 +20,7 @@
 			<hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
 			<center><h5 style=" font-size: 12px;margin-top: 5px"><span class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span>  {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
 					</h5><h5 style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{' '.$mvalue['won']}} WON</h5></center>
+
 		</div>
 		@endforeach
 	</marquee>
@@ -174,7 +176,7 @@
 </div>
 </div>
 <!-- /.Top list -->
-<hr>
+
 
 
 <!-- slider-->
@@ -183,11 +185,14 @@
 		<div class="container">
 			<h3 >Recent Matches</h3></div>
 		<div class="container"  >
+
 			<div class='row'>
-				<div class='col-md-12'>
+				<div class='col-md-8 col-md-offset-2'>
 					<div class="carousel slide media-carousel" id="media">
 						<center>
+
 							<div class="carousel-inner" style="width: 70%">
+
 
 								@foreach($summery as $mkey => $mvalue)
 									@if($mkey==0)
@@ -200,6 +205,7 @@
 												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
 											</div>
 											<div class="col-lg-6"> <h3 style="padding: 5px;font-family: 'Arial'">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+
 												<h5>{{$mvalue['summery']}}</h5></div>
 											<div class="col-lg-3"> <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
@@ -243,73 +249,84 @@
 <!-- // slider-->
 
 <!--past-->
+{{--Previous Winnners section--}}
 <div class="content-section-a">
 
 	<div class="container">
-		<h3> Previous SLUG Winners</h3>
+		<h3 class="text-uppercase font-oswald">Previous SLUG Winners</h3>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
 
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p></center>
+
+			<div class="row text-uppercase">
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2004</h4>
+								<img src="{{URL::asset('logos/UOP.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">University of Peradeniya</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">University of Colombo</p>
+							</center>
+						</div>
+
 					</div>
-
 				</div>
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2007</h4>
+								<img src="{{URL::asset('logos/UOC.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">-</p>
+							</center>
+						</div>
 
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
-
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p>
-						</center>
-					</div>
-
-				</div>
-
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
-
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p>
-						</center>
 					</div>
 				</div>
 
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2010</h4>
+								<img src="{{URL::asset('logos/UOC.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">University of Moratuwa</p>
+							</center>
+						</div>
 
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p>
-						</center>
 					</div>
 				</div>
+
+
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2013</h4>
+								<img src="{{URL::asset('logos/uom.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">University of Moratuwa</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">University of Colombo</p>
+							</center>
+						</div>
+
+					</div>
+				</div>
+
+
 
 
 			</div>
-		</div>
+
 
 
 	</div>
@@ -317,7 +334,6 @@
 </div>
 
 <!--//past-->
-
 
 <!-- Footer -->
 <footer>

@@ -36,7 +36,7 @@
 {{--<body style="overflow-x: hidden;">--}}
 
 {{--@section('nav')--}}
-
+<body>
 <div class="container-fluid" id="banner" >
     <div class="row" style="background-color: firebrick;">
         <div class="container" style="color: white">
@@ -92,8 +92,24 @@
 @yield('content')
 
 
+{{--custom script goes here--}}
+<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+<script src="{{URL::asset('js/main.js')}}"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37983557-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
 
 {{--@stop--}}
+
 
 @section('con')
     {{--custom content of the page--}}
@@ -102,7 +118,6 @@
 
 @section('script')
     {{--custom script goes here--}}
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('js/main.js')}}"></script>
@@ -123,4 +138,7 @@
 
 
 @section('footer')
-    
+    @stop
+
+</body>
+</html>

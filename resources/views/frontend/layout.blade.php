@@ -23,9 +23,9 @@
 
     <link rel="shortcut icon" sizes="57x57" href="{{URL::asset('images/img.png')}}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
     <link rel="shortcut icon" href="images/favicon.ico">
-
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -40,8 +40,8 @@
             <h5 class="pull-right" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
         </div>
     </div>
-    <div style="background-color: #fe0405; margin-right: -20px">
-        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" >
+    <div style="background-color: #fe0405;margin-right: -20px">
+        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="110%">
     </div>
 </div>
 
@@ -70,16 +70,13 @@
                     <a href="{{url('/loadpointstable')}}">Points Table</a>
                 </li>
                 <li>
-                    <a href="#Matches">Upcomming Matches</a>
-                </li>
-                <li>
                     <a href="#Draw">Draw</a>
                 </li>
                 <li>
                     <a href="#Live">Live</a>
                 </li>
                 <li>
-                    <a href="#Moraspirit">Moraspirit</a>
+                    <a href="http://moraspirit.com/">Moraspirit</a>
                 </li>
             </ul>
         </div>
@@ -101,7 +98,7 @@
 
 @section('script')
     {{--custom script goes here--}}
-
+    <script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     @stop

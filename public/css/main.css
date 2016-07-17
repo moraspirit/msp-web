@@ -1,3 +1,12 @@
+body{
+    font-family: 'Coda', cursive;
+
+
+
+}
+.damith{
+    font-family: 'Coda', cursive;
+}
 #topnavbar {
     margin: 0;
 }
@@ -25,10 +34,13 @@
 }
 .mblock{
     margin-top: 5px;
-    width: 200px;height: 70px;
+    height: 80px;
     background-color: white;
     display: inline-block;
     opacity: 0.9;
+    padding-left: 25px;
+    padding-right: 25px;
+
 }
 
 
@@ -49,6 +61,7 @@
     height: 40px;
     width : 40px;
     margin: auto;
+
 }
 /* Next button  */
 .media-carousel .carousel-control.right
@@ -60,6 +73,7 @@
     height: 40px;
     width : 40px;
     margin: auto;
+
 }
 /* Changes the position of the indicators */
 .media-carousel .carousel-indicators

@@ -48,14 +48,37 @@ class HomePageController extends Controller {
             $ovall[] = ['score'=> $ovitem->score,'logo'=>$logo,'name'=>$name];
         }
 
-        $marquee = array(['title'=>'Cricket','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
-            ['title'=>'Volleyball','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
-            ['title'=>'Track and field','vs'=>'UOJ vs UOK','won'=>'UOJ','logo1'=>'UOJ.png','logo2'=>'UOK.png']
-            );
+//        $summery = array(['title'=>'CRICKET-MEN-QUARTERFINALS','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
+//            ['title'=>'Volleyball','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
+//            ['title'=>'Track and field','vs'=>'UOJ vs UOK','won'=>'UOJ','logo1'=>'UOJ.png','logo2'=>'UOK.png']
+//            );
+
+             $summeryitems = \App\Entity\Summary::all();
+
+        foreach($summeryitems as $summeryitem){
+
+            $sums1 = DB::table('universities')->where('uni_code',$summeryitem->t_a_code)->get();
+
+            foreach($sums1 as $sum1){
+                $logo1 = $sum1->logo;
+                $name1 = $sum1->uni_name;
+            }
+
+            $sums2 = DB::table('universities')->where('uni_code',$summeryitem->t_b_code)->get();
+
+            foreach($sums2 as $sum2){
+                $logo2 = $sum2->logo;
+                $name2 = $sum2->uni_name;
+            }
+            $summery [] = ['title'=>$summeryitem->heading, 'vs1'=> $summeryitem->t_a_code, 'vs2'=> $summeryitem->t_b_code,
+                            'logo1'=>$logo1, 'logo2'=> $logo2 , 'dvs' => $name1.' '.'vs'.' '.$name2, 'won'=> $summeryitem->t_won,
+                            'summery'=> $summeryitem->summery, 't_a_score'=> $summeryitem->t_a_score,'t_b_score'=> $summeryitem->t_b_score
+
+            ];
+        }
 
 
-
-        return view('home',compact('marquee','ovwomen','ovmen','ovall'));
+        return view('home',compact('summery','ovwomen','ovmen','ovall'));
     }
 
 

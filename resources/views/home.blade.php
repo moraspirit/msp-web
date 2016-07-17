@@ -34,20 +34,20 @@
 	</div>
 <!--past-->
 {{--Previous Winnners section--}}
-<div class="content-section-a">
+	<div class="content-section-a">
 
-	<div class="container">
-		<h3 class="text-uppercase font-oswald">Previous SLUG Winners</h3>
+		<div class="container">
+			<h3 class="text-uppercase font-oswald">Previous SLUG Winners</h3>
 
 
 
 			<div class="row text-uppercase">
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
 								<h4 class="prev-winners-card__year">2004</h4>
-								<img src="{{URL::asset('logos/UOP.png')}}" alt="" class="prev-winners-card__logo">
+								<img src="{{URL::asset('logos/PER.png')}}" alt="" class="prev-winners-card__logo">
 								<h5 class="prev-winners-card__winneruni">University of Peradeniya</h5>
 								<hr class="prev-winners-card__hr">
 								<p>Runners up</p>
@@ -57,12 +57,12 @@
 
 					</div>
 				</div>
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
 								<h4 class="prev-winners-card__year">2007</h4>
-								<img src="{{URL::asset('logos/UOC.png')}}" alt="" class="prev-winners-card__logo">
+								<img src="{{URL::asset('logos/COL.png')}}" alt="" class="prev-winners-card__logo">
 								<h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
 								<hr class="prev-winners-card__hr">
 								<p>Runners up</p>
@@ -73,12 +73,12 @@
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
 								<h4 class="prev-winners-card__year">2010</h4>
-								<img src="{{URL::asset('logos/UOC.png')}}" alt="" class="prev-winners-card__logo">
+								<img src="{{URL::asset('logos/COL.png')}}" alt="" class="prev-winners-card__logo">
 								<h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
 								<hr class="prev-winners-card__hr">
 								<p>Runners up</p>
@@ -90,12 +90,12 @@
 				</div>
 
 
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
 								<h4 class="prev-winners-card__year">2013</h4>
-								<img src="{{URL::asset('logos/uom.png')}}" alt="" class="prev-winners-card__logo">
+								<img src="{{URL::asset('logos/MOR.png')}}" alt="" class="prev-winners-card__logo">
 								<h5 class="prev-winners-card__winneruni">University of Moratuwa</h5>
 								<hr class="prev-winners-card__hr">
 								<p>Runners up</p>
@@ -113,12 +113,10 @@
 
 
 
+		</div>
+
 	</div>
 
-</div>
-
 <!--//past-->
-
-<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 
 @endsection

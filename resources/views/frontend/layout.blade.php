@@ -18,10 +18,8 @@
 
 
 
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
     {{--Favicon--}}
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon//apple-touch-icon.png">
@@ -70,7 +68,7 @@
                 <li>
                     <a href="{{url('/events')}}">Events</a>
                 </li>
-                <li>
+                {{--<li>
                     <a href="{{url('/loadpointstable')}}">Points Table</a>
                 </li>
                 <li>
@@ -78,7 +76,7 @@
                 </li>
                 <li>
                     <a href="#Live">Live</a>
-                </li>
+                </li>--}}
                 <li>
                     <a href="http://moraspirit.com/">Moraspirit</a>
                 </li>
@@ -111,3 +109,5 @@
 
 
 
+@section('footer')
+    

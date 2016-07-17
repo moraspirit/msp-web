@@ -20,6 +20,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
 
     {{--Favicon--}}
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon//apple-touch-icon.png">

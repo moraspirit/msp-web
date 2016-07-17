@@ -44,7 +44,7 @@
             <h5 class="pull-right text-uppercase" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
         </div>
     </div>
-    <div style="background-color: #fe0405; margin-left: -15px;margin-right: -15px;">
+    <div style="background-color: #fe0405; margin-left: -105px;margin-right: -15px;">
         <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="100%">
     </div>
 </div>

@@ -120,17 +120,17 @@
 </div>
 </div>
 <!-- /.Top list -->
-<hr>
+
 
 
 <!-- slider-->
 <div class="web_disigner">
 	<div class="web_disigner_contain">
 		<div class="container">
-			<h3 >Recent Matches</h3></div>
+			<h3 class="text-uppercase">Recent Matches</h3></div>
 		<div class="container">
 			<div class='row'>
-				<div class='col-md-12'>
+				<div class='col-md-8 col-md-offset-2'>
 					<div class="carousel slide media-carousel" id="media">
 						<center>
 							<div class="carousel-inner" style="width: 90%">
@@ -188,73 +188,84 @@
 <!-- // slider-->
 
 <!--past-->
+{{--Previous Winnners section--}}
 <div class="content-section-a">
 
 	<div class="container">
-		<h3> Previous SLUG Winners</h3>
+		<h3 class="text-uppercase font-oswald">Previous SLUG Winners</h3>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
 
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p></center>
+
+			<div class="row text-uppercase">
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2004</h4>
+								<img src="{{URL::asset('logos/UOP.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">University of Peradeniya</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">University of Colombo</p>
+							</center>
+						</div>
+
 					</div>
-
 				</div>
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2007</h4>
+								<img src="{{URL::asset('logos/UOC.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">-</p>
+							</center>
+						</div>
 
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
-
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p>
-						</center>
-					</div>
-
-				</div>
-
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
-
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p>
-						</center>
 					</div>
 				</div>
 
-				<div class="col-lg-2 col-xs-5" style="background-color:#e6e6e6;margin: 8px">
-					<div style="font-family: 'Coda', cursive;">
-						<center><h4 style="background-color:#ea2e2b; color: white; padding: 2px "> 2013</h4>
-							<img src="{{URL::asset('logos/uom.png')}}" alt="" style="width: 120px;">
-							<h3 style="margin-top: 0; font-size: 2em"> UOM </h3>
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2010</h4>
+								<img src="{{URL::asset('logos/UOC.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">University of Moratuwa</p>
+							</center>
+						</div>
 
-							<h5 style="font-size: 1em"> Unversity of Moratuwa</h5>
-							<hr style="background-color:#ea2e2b; height: 1px; margin-bottom: 4px">
-							<p> Runners up</p>
-							<p> University of Colombo</p>
-						</center>
 					</div>
 				</div>
+
+
+				<div class="col-lg-2">
+					<div class="font-coda--bold prev-winners-card">
+						<div>
+							<center>
+								<h4 class="prev-winners-card__year">2013</h4>
+								<img src="{{URL::asset('logos/uom.png')}}" alt="" class="prev-winners-card__logo">
+								<h5 class="prev-winners-card__winneruni">University of Moratuwa</h5>
+								<hr class="prev-winners-card__hr">
+								<p>Runners up</p>
+								<p class="font-coda">University of Colombo</p>
+							</center>
+						</div>
+
+					</div>
+				</div>
+
+
 
 
 			</div>
-		</div>
+
 
 
 	</div>
@@ -262,35 +273,6 @@
 </div>
 
 <!--//past-->
-
-
-<!-- Footer -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="list-inline">
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#Points"> Points Table</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#Time">Time Table</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="www.moraspirit.com">Moraspirit</a>
-					</li>
-				</ul>
-				<p class="copyright text-muted small">&copy; 2016 All Rights Reserved | <a href="http://moraspirit.com" style="color: red"> www.moraspirit.com</a></p>
-			</div>
-		</div>
-	</div>
-</footer>
 
 <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 

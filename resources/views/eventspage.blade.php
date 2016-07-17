@@ -3,24 +3,21 @@
 @section('content')
 
 {{--<!DOCTYPE html>--}}
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>MoraSpirit</title>
+
 
 
     {{--<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
---}}    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
+--}}
+{{--
+    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
+--}}
 {{--
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 --}}
-
+{{--
 
     <style>
         .hover-end{padding:0;margin:0;font-size:75%;text-align:center;position:absolute;bottom:0;width:100%;opacity:.8}
@@ -93,7 +90,7 @@
             height: 20px;
         }
 
-    </style>
+    </style>--}}
 
 {{--    <script>
 
@@ -164,9 +161,6 @@
 
     </script>--}}
 
-</head><!--/head-->
-
-<body>
 
 
 {{--<section id="timeline" style="max-height: 60%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">--}}

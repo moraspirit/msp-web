@@ -36,11 +36,11 @@
     <div class="row" style="background-color: firebrick;">
         <div class="container" style="color: white">
             <h5 class="pull-left" style="font-family: 'Coda', cursive;">www.sport.moraspirit.com</h5>
-            <h5 class="pull-right" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
+            <h5 class="pull-right" style="font-family: 'Coda', cursive; text-transform: uppercase;">Sri Lanka University Games - 2016</h5>
         </div>
     </div>
-    <div style="background-color: #fe0405;margin-right: -20px">
-        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="110%">
+    <div style="background-color: #fe0405; margin-left: -15px;margin-right: -15px;">
+        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="100%">
     </div>
 </div>
 

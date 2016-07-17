@@ -12,12 +12,14 @@
     <title>MoraSpirit</title>
 
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    {{--<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
-    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
+--}}    <link href="{{ URL::asset('css/timeline.css')}}" rel="stylesheet">
+{{--
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+--}}
 
 
     <style>
@@ -93,7 +95,7 @@
 
     </style>
 
-    <script>
+{{--    <script>
 
         $(document).ready(function() {
 
@@ -160,7 +162,7 @@
 
         });
 
-    </script>
+    </script>--}}
 
 </head><!--/head-->
 
@@ -168,6 +170,7 @@
 
 
 {{--<section id="timeline" style="max-height: 60%; max-width: 100%; align-content: center" class="cd-horizontal-timeline; background-color: #e3dcd9">--}}
+{{--
 
 <div class="container-fluid" id="timeline" style="max-height: 80%; max-width: 100%; align-content: center;background-color: #e3dcd9" class="cd-horizontal-timeline">
     <!-- JavaScript-->
@@ -182,8 +185,10 @@
     </script>
 
 </div>
+--}}
 
 {{--</section>--}}
+{{--
 <div id="cal" style="background-color: #0b4e00; height: 122%">
     <br>
     <h1 style="color: #2ca02c"><center>SLUG Calendar</center></h1>
@@ -199,6 +204,13 @@
 
     </div>
 </div>
+--}}
+<br />
+<div class="container">
+    <div data-tockify-component="calendar" data-tockify-calendar="slug.2016"></div>
+
+</div>
+<script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
 
 
 </body>

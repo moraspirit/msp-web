@@ -17,8 +17,7 @@
 					</h5>
 			</center>
 			<hr style="margin-top: 0;margin-bottom: 0; width: 80%   ">
-			<center><h5 style=" font-size: 12px"> {{$mvalue['vs1'].' '}}<span class="label label-pill label-info">{{$mvalue['t_a_score']}}</span> {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info">{{$mvalue['t_b_score'].' '}}</span>|
-					{{' '.$mvalue['won']}} WON</h5></center>
+			<center><h5 style=" font-size: 12px"> {{$mvalue['vs1'].' '}}<span class="label label-pill label-info">{{$mvalue['t_a_score']}}</span> {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info">{{$mvalue['t_b_score'].' '}}</span></h5></center>
 		</div>
 		@endforeach
 	</marquee>

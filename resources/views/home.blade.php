@@ -49,7 +49,7 @@
 
 						<div class="panel-body text-center" style="margin-bottom: -15px">
 							<div class="row">
-								<div class="col-lg-3" style="background-color:#f2f2f2; margin-top: -15px">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="background-color:#f2f2f2; margin-top: -15px">
 									<br>
 									@foreach($ovmen as $kmen => $vmen)
 										@if(!($kmen==0) && $kmen<7)
@@ -59,7 +59,7 @@
 										@endif
 									@endforeach
 								</div>
-								<div class="col-lg-6">
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 									@foreach($ovmen as $kmen => $vmen)
 										@if(!($kmen==0) && $kmen<7)
 
@@ -68,7 +68,7 @@
 										@endif
 									@endforeach
 								</div>
-								<div class="col-lg-3" style=" background-color: #e6e6e6; margin-top: -15px">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" background-color: #e6e6e6; margin-top: -15px">
 									<br>
 									@foreach($ovmen as $kmen => $vmen)
 										@if(!($kmen==0) && $kmen<7)
@@ -133,7 +133,7 @@
 
 					<div class="panel-body text-center" style="margin-bottom: -15px">
 						<div class="row">
-							<div class="col-lg-3" style="background-color:#f2f2f2; margin-top: -15px">
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="background-color:#f2f2f2; margin-top: -15px">
 								<br>
 								@foreach($ovwomen as $kwomen => $vwomen)
 									@if(!($kwomen==0) && $kwomen<7)
@@ -143,7 +143,7 @@
 									@endif
 								@endforeach
 							</div>
-							<div class="col-lg-6">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								@foreach($ovwomen as $kwomen => $vwomen)
 									@if(!($kwomen==0) && $kwomen<7)
 
@@ -152,7 +152,7 @@
 									@endif
 								@endforeach
 							</div>
-							<div class="col-lg-3" style=" background-color: #e6e6e6; margin-top: -15px">
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" background-color: #e6e6e6; margin-top: -15px">
 								<br>
 								@foreach($ovwomen as $kwomen => $vwomen)
 									@if(!($kwomen==0) && $kwomen<7)
@@ -184,14 +184,14 @@
 	<div class="web_disigner_contain">
 		<div class="container">
 			<h3 >Recent Matches</h3></div>
-		<div class="container"  >
+		<div class="container well well-lg"  >
 
 			<div class='row'>
 				<div class='col-md-8 col-md-offset-2'>
 					<div class="carousel slide media-carousel" id="media">
 						<center>
 
-							<div class="carousel-inner" style="width: 70%">
+							<div class="carousel-inner " style="width: 70%">
 
 
 								@foreach($summery as $mkey => $mvalue)
@@ -201,13 +201,13 @@
 									<center>
 										<h5 style="background-color:#ea2e2b; color: white; padding: 5px "> {{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
 										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px;font-family: 'Arial'">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <h3 style="padding: 5px;font-family: 'Arial'">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
 
 												<h5>{{$mvalue['summery']}}</h5></div>
-											<div class="col-lg-3"> <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"> <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
 										</div>
 									</center>
@@ -222,12 +222,12 @@
 									<center>
 										<h5 style="background-color:#ea2e2b; color: white; padding: 5px ">{{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
 										<div class="row">
-											<div class="col-lg-3">
-												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="pull-left">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+												<img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
-											<div class="col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> <h3 style="padding: 5px">{{$mvalue['t_a_score']}} Vs {{$mvalue['t_b_score']}}</h3>
 												<h5>{{$mvalue['summery']}}</h5></div>
-											<div class="col-lg-3">  <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
+											<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">  <img src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" style="width: 100px;" class="center-block">
 											</div>
 										</div>
 
@@ -258,7 +258,7 @@
 
 
 			<div class="row text-uppercase">
-				<div class="col-lg-2">
+				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-2" style="margin-top: 10px">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
@@ -273,7 +273,7 @@
 
 					</div>
 				</div>
-				<div class="col-lg-2">
+				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-2" style="margin-top: 10px">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
@@ -289,7 +289,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-2" style="margin-top: 10px">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
@@ -306,7 +306,7 @@
 				</div>
 
 
-				<div class="col-lg-2">
+				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-2" style="margin-top: 10px">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>

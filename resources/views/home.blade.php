@@ -333,36 +333,4 @@
 
 </div>
 
-<!--//past-->
-
-<!-- Footer -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="list-inline">
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#Points"> Points Table</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="#Time">Time Table</a>
-					</li>
-					<li class="footer-menu-divider">&sdot;</li>
-					<li>
-						<a href="www.moraspirit.com">Moraspirit</a>
-					</li>
-				</ul>
-				<p class="copyright text-muted small">&copy; 2016 All Rights Reserved | <a href="http://moraspirit.com" style="color: red"> www.moraspirit.com</a></p>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-
 @endsection

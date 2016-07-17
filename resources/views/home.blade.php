@@ -2,8 +2,6 @@
 
 @section('content')
 
-	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
-
 <div style="height: 90px; background-color:#e6e6e6" >
 	<marquee behavior="" direction="" >
 		@foreach($summery as $mkey => $mvalue)
@@ -23,8 +21,13 @@
 	</marquee>
 </div>
 
+<div class="container-fluid font-oswald text-center">
+	<div style="font-size: 40pt;">WE ARE READY!</div>
+	<div style="font-size: 20pt">SEE YOU SOON WITH EXCITING UPDATES AND SCORES.</div>
+</div>
+
 <!-- Top List -->
-<div class="content-section-a">
+{{--<div class="content-section-a">
 
 	<div class="container">
 
@@ -118,16 +121,16 @@
 	<!-- /.container -->
 
 </div>
-</div>
+</div>--}}
 <!-- /.Top list -->
 
 
 
 <!-- slider-->
-<div class="web_disigner">
+{{--<div class="web_disigner">
 	<div class="web_disigner_contain">
 		<div class="container">
-			<h3 class="text-uppercase">Recent Matches</h3></div>
+			<h3 class="text-uppercase font-oswald">Recent Matches</h3></div>
 		<div class="container">
 			<div class='row'>
 				<div class='col-md-8 col-md-offset-2'>
@@ -184,7 +187,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>--}}
 <!-- // slider-->
 
 <!--past-->
@@ -197,7 +200,7 @@
 
 
 			<div class="row text-uppercase">
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
@@ -212,7 +215,7 @@
 
 					</div>
 				</div>
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
@@ -228,7 +231,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>
@@ -245,7 +248,7 @@
 				</div>
 
 
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-xs-6">
 					<div class="font-coda--bold prev-winners-card">
 						<div>
 							<center>

@@ -2,9 +2,6 @@
 
 @section('content')
 
-	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
-	<script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>
-
 	<div style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive;">
 	<div id="marquee1" class="container-marquee" onmouseover="zxcMarquee.scroll('marquee1',0);" onmouseout="zxcMarquee.scroll('marquee1',-1);">
 		<div style="position: absolute; width: 98%;">
@@ -339,4 +336,10 @@
 </div>
 
 <!--//past-->
+@endsection
+
+
+@section('script')
+	@parent
+	<script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>
 @endsection

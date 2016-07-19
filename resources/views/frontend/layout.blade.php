@@ -81,6 +81,9 @@
                         <a href="#Draw">Draw</a>
                     </li>
                     <li>
+                        <a href="{{url('/gallery')}}">Gallery</a>
+                    </li>
+                    <li>
                         <a href="#Live">Live</a>
                     </li>
                     <li>

@@ -19,7 +19,9 @@ Route::get('/events', function(){
 
 Route::get('/','HomePageController@index');
 
-
+Route::get('/gallery', function (){
+	return view('gallery');
+});
 /*event page controlling routes*/
 
 Route::get('/events','EventController@viewEvents');

@@ -204,6 +204,10 @@ html, body {
     font-weight: 700;
 }
 
+.font-opensans{
+    font-family: 'Open Sans', sans-serif;;
+}
+
 .prev-winners-card{
     background-color:#e6e6e6;
     height: 330px;

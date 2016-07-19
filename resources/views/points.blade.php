@@ -19,10 +19,11 @@
     </style>
 
 <div class="container">
-    <h3  style="font-family: 'Coda', cursive;"> Points Table</h3>
+    <h1 class="font-oswald text-uppercase">Points Table</h1>
     <br>
 
-    <div class="container">
+    {{--why adding container inside a container ??--}}
+    <div class="">
 
         <table   class="table table-hover" align="middle" style="text-transform: uppercase;">
             <thead class="thead-inverse">

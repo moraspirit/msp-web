@@ -201,6 +201,7 @@
 --}}
 <br />
 <div class="container">
+    <h1 class="font-oswald">EVENT SCHEDULE</h1>
     <div data-tockify-component="calendar" data-tockify-calendar="slug.2016"></div>
 
 </div>

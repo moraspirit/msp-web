@@ -48,12 +48,8 @@ class HomePageController extends Controller {
             $ovall[] = ['score'=> $ovitem->score,'logo'=>$logo,'name'=>$name];
         }
 
-//        $summery = array(['title'=>'CRICKET-MEN-QUARTERFINALS','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
-//            ['title'=>'Volleyball','vs'=>'UOM vs UOC','won'=>'UOM','logo1'=>'UOM.png','logo2'=>'UOC.png'],
-//            ['title'=>'Track and field','vs'=>'UOJ vs UOK','won'=>'UOJ','logo1'=>'UOJ.png','logo2'=>'UOK.png']
-//            );
 
-             $summeryitems = \App\Entity\Summary::all();
+        $summeryitems = DB::table('summaries')->orderBy('id', 'desc')->take(5)->get();
 
         foreach($summeryitems as $summeryitem){
 
@@ -77,6 +73,7 @@ class HomePageController extends Controller {
             ];
         }
 
+        $summery = []; $ovall=[]; $ovmen=[]; $ovwomen=[];
 
         return view('home',compact('summery','ovwomen','ovmen','ovall'));
     }

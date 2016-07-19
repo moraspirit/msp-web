@@ -43,7 +43,7 @@ function init(){
     zxcMarquee.init({
         ID:'marquee1',     // the unique ID name of the parent DIV.                        (string)
         Mode:'Horizontal',   //(optional) the mode of execution, 'Vertical' or 'Horizontal'. (string, default = 'Vertical')
-        StartDelay:500,   //(optional) the auto start delay in milli seconds'.            (number, default = no auto start)
+        StartDelay:2000,   //(optional) the auto start delay in milli seconds'.            (number, default = no auto start)
         StartDirection:-1  //(optional) the auto start scroll direction'.                  (number, default = -1)
     });
 

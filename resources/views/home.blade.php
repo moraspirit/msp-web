@@ -5,9 +5,23 @@
 	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>
 
-	<div style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive;">
+	<link rel="stylesheet" href="{{ URL::asset('css/marquee.css')}}">
+	@if(empty($summery))
+		<style> #marqueehead{ display: none}	#detailedsummery{display: none }</style>
+	@endif
+	@if(empty($ovmen))
+		<style> #ovmen{ display: none}</style>
+	@endif
+	@if(empty($ovwomen))
+		<style> #ovwomen{ display: none}</style>
+	@endif
+	@if(empty($ovall))
+		<style> #ovall{ display: none}</style>
+	@endif
+	<div id="marqueehead" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
 	<div id="marquee1" class="container-marquee" onmouseover="zxcMarquee.scroll('marquee1',0);" onmouseout="zxcMarquee.scroll('marquee1',-1);">
 		<div style="position: absolute; width: 98%;">
+
 
 			@foreach($summery as $mkey => $mvalue)
 				<div  class="mblock" style="height: 100%">
@@ -37,7 +51,7 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
+			<div id="ovmen" class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
 
 				<center><h4 class="section-heading">Men</h4></center>
 				<hr>
@@ -91,7 +105,7 @@
 				</div>
 
 			</div>
-			<div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+			<div id="ovall" class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
 				<center><h3> Top Ranking </h3></center>
 				@foreach($ovall as $kall => $vall)
 					@if($kall==0)
@@ -122,7 +136,7 @@
 
 
 
-			<div class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
+			<div id="ovwomen" class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
 				<center><h4 class="section-heading">Women</h4></center>
 				<hr>
 				<div class="panel panel-primary">
@@ -185,7 +199,7 @@
 
 
 <!-- slider-->
-<div class="web_disigner">
+<div id="detailedsummery" class="web_disigner">
 	<div class="web_disigner_contain">
 		<div class="container">
 			<h3 >Recent Matches</h3></div>
@@ -326,16 +340,8 @@
 
 					</div>
 				</div>
-
-
-
-
 			</div>
-
-
-
 	</div>
-
 </div>
 
 @endsection

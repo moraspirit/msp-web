@@ -176,6 +176,8 @@
 
 </div>
 </div>
+
+
 <!-- /.Top list -->
 
 
@@ -184,7 +186,7 @@
 <div class="web_disigner">
 	<div class="web_disigner_contain">
 		<div class="container">
-			<h3 >Recent Matches</h3></div>
+				<h3 >Recent Matches</h3></div>
 		<div class="container well well-lg"  >
 
 			<div class='row'>
@@ -246,6 +248,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- // slider-->
 
 <!--past-->

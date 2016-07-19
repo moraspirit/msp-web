@@ -17,92 +17,142 @@
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
 
 
-
     <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
-    {{--Favicon--}}
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon//apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon//favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/favicon//manifest.json">
-    <link rel="mask-icon" href="/favicon//safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
 
+    {{--Favicon--}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
-<div class="container-fluid" id="banner" >
-    <div class="row" style="background-color: firebrick;">
-        <div class="container" style="color: white">
-            <h5 class="pull-left" style="font-family: 'Coda', cursive;">www.sport.moraspirit.com</h5>
-            <h5 class="pull-right text-uppercase" style="font-family: 'Coda', cursive;">Sri Lanka University Games - 2016</h5>
+{{--<body style="overflow-x: hidden;">--}}
+
+{{--@section('nav')--}}
+<body>
+<div id="wrapper">
+    <div class="container-fluid" id="banner">
+        <div class="row" style="background-color: firebrick;">
+            <div class="container" style="color: white">
+                <h5 class="pull-left" style="font-family: 'Coda', cursive;">www.sport.moraspirit.com</h5>
+                <h5 class="pull-right text-uppercase" style="font-family: 'Coda', cursive;">Sri Lanka University Games -
+                    2016</h5>
+            </div>
+        </div>
+        <div style="background-color: #fe0405; margin-left: -105px;margin-right: -15px;">
+            <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="100%">
         </div>
     </div>
-    <div style="background-color: #fe0405;margin-right: -15px">
-        <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="110%">
-    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
+
+        <div class="container text-uppercase">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="{{url('/')}}"><h4 class="pull-left"
+                                                                style="font-family: 'Coda', cursive;margin-top: 0px">
+                        SLUG 2016</h4></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{url('/events')}}">Events</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/loadpointstable')}}">Points Table</a>
+                    </li>
+                    <li>
+                        <a href="#Draw">Draw</a>
+                    </li>
+                    <li>
+                        <a href="#Live">Live</a>
+                    </li>
+                    <li>
+                        <a href="http://moraspirit.com/">Moraspirit</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    @yield('content')
+
+
+    <div class="push"></div>
+
 </div>
-
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
-
-    <div class="container text-uppercase">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class = "navbar-brand" href = "{{url('/')}}"> <h4 class="pull-left" style="font-family: 'Coda', cursive;margin-top: 0px">SLUG 2016</h4></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="{{url('/events')}}">Events</a>
-                </li>
-                <li>
-                    <a href="{{url('/loadpointstable')}}">Points Table</a>
-                </li>
-                <li>
-                    <a href="#Draw">Draw</a>
-                </li>
-                <li>
-                    <a href="#Live">Live</a>
-                </li>
-                <li>
-                    <a href="http://moraspirit.com/">Moraspirit</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-@yield('content')
-
-
-
 {{--@stop--}}
 
 @section('con')
     {{--custom content of the page--}}
-    @stop
+@stop
 
+@section('footer')
+{{--Footer--}}
+<footer class="site-footer">
+    <div class="msp-love">
+        <img src="/images/love_msp.png" alt="moraspirit" class="img-responsive">
+    </div>
+    <p class="year">2016</p>
+    <div class="social">
+        <a href="https://www.facebook.com/moraspirit.fanpage"><i id="facebook"
+                                                                 class="icon-facebook fa fa-facebook-square"></i></a>
+
+        <a href="https://twitter.com/moraspiritNews"><i id="twitter" class="icon-twitter fa fa-twitter-square"></i></a>
+        <a href="http://www.youtube.com/user/moraspiritNews?feature=watch"><i id="youtube"
+                                                                              class="icon-youtube fa fa-youtube-square"></i></a>
+        <a href="https://plus.google.com/108795907592684921602/posts"><i id="plus"
+                                                                         class="icon-google-plus-sign fa fa-google-plus-square"></i></a>
+        <a href="http://www.linkedin.com/company/moraspirit-initiative"><i id="linkedin"
+                                                                           class="icon-linkedin-sign fa fa-linkedin-square"></i></a>
+        <a href="mailto:admin@moraspirit.com"><i id="mail" class="icon-envelope fa fa-envelope-square"></i></a>
+
+    </div>
+</footer>
+@show
 
 @section('script')
     {{--custom script goes here--}}
     <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('js/main.js')}}"></script>
-    @stop
 
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
+        ga('create', 'UA-37983557-2', 'auto');
+        ga('send', 'pageview');
 
+    </script>
+@show
 
+</body>
+</html>

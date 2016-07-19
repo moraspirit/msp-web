@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+body{
+    font-family: 'Coda', cursive;
+    max-width: 100%;
+=======
 html, body {
     height: 100%;
     margin: 0;
@@ -7,6 +12,7 @@ html, body {
     min-height: 100%;
     margin-bottom: -120px;
     position: relative;
+>>>>>>> 561837910fe2233f72a9a9e649a78b113670c063
 }
 
 .damith{

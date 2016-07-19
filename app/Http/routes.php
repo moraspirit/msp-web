@@ -11,11 +11,6 @@ use App\Sport;
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/events', function(){
-	$str = 'here is changed text';
-	return view('events')->with('str',$str);
-});
-
 
 Route::get('/','HomePageController@index');
 
@@ -54,6 +49,8 @@ Route::post('/savesports','BackendController@saveSports');
 /* Load points table*/
 Route::get('/loadpointstable','PointstableController@showPoints');
 
+
+Route::get('/draws','DrawsController@index');
 
 Route::get('/test',function(){
 	return view('welcome');

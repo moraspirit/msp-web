@@ -1,59 +1,69 @@
+/*!*.marquee span {*!*/
+	/*!*margin-right: 50%;*!*/
+/*!*}*!*/
+/*!*.marquee p {*!*/
+	/*!*white-space:nowrap;*!*/
+	/*!*margin-right: 10px;*!*/
+/*!*}*!*/
+
+
+/*.marquee {*/
+	/*background: slategray;*/
+	/*padding: 1.5rem 1.5rem;*/
+	/*width: 100vw;*/
+	/*overflow: hidden;*/
+	/*white-space: nowrap;*/
+	/*box-sizing: border-box;*/
+	/*position: absolute;*/
+	/*margin-top: -1.9rem;*/
+	/*margin-bottom: 0.5rem;*/
+/*}*/
+/*.marquee div {*/
+	/*!*-webkit-transform: translateX(0vw);*!*/
+	/*transform: translateX(0vw);*/
+	/*!*-webkit-animation: marquee 80s linear infinite alternate;*!*/
+	/*animation: marquee 20s linear infinite alternate;*/
+/*}*/
+/*.marquee div:hover {*/
+	/*-webkit-animation-play-state: paused;*/
+	/*animation-play-state: paused;*/
+/*}*/
 /*.marquee span {*/
-	/*margin-right: 50%;*/
+	/*display: inline-block;*/
+	/*margin: 0 8rem;*/
 /*}*/
-/*.marquee p {*/
-	/*white-space:nowrap;*/
-	/*margin-right: 10px;*/
+/*.marquee i {*/
+	/*margin-right: 5rem;*/
 /*}*/
 
+/*@-webkit-keyframes marquee {*/
+	/*0% {*/
+		/*-webkit-transform: translateX(0vw);*/
+		/*transform: translateX(0vw);*/
+	/*}*/
+	/*100% {*/
+		/*-webkit-transform: translateX(-100vw);*/
+		/*transform: translateX(-100vw);*/
+	/*}*/
+/*}*/
 
-.marquee {
-	background: slategray;
-	padding: 1.5rem 1.5rem;
-	width: 100vw;
+/*@keyframes marquee {*/
+	/*0% {*/
+		/*-webkit-transform: translateX(0vw);*/
+		/*transform: translateX(0vw);*/
+	/*}*/
+	/*100% {*/
+		/*-webkit-transform: translateX(-100vw);*/
+		/*transform: translateX(-100vw);*/
+	/*}*/
+/*}*/
+
+.container-marquee{
+	position: relative;
+	width:100%; /*marquee width */
+	height: 200px; /*marquee height */
 	overflow: hidden;
-	white-space: nowrap;
-	box-sizing: border-box;
-	position: absolute;
-	margin-top: -1.9rem;
-	margin-bottom: 0.5rem;
-}
-.marquee div {
-	/*-webkit-transform: translateX(0vw);*/
-	transform: translateX(0vw);
-	/*-webkit-animation: marquee 80s linear infinite alternate;*/
-	animation: marquee 20s linear infinite alternate;
-}
-.marquee div:hover {
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-}
-.marquee span {
-	display: inline-block;
-	margin: 0 8rem;
-}
-.marquee i {
-	margin-right: 5rem;
-}
-
-@-webkit-keyframes marquee {
-	0% {
-		-webkit-transform: translateX(0vw);
-		transform: translateX(0vw);
-	}
-	100% {
-		-webkit-transform: translateX(-100vw);
-		transform: translateX(-100vw);
-	}
-}
-
-@keyframes marquee {
-	0% {
-		-webkit-transform: translateX(0vw);
-		transform: translateX(0vw);
-	}
-	100% {
-		-webkit-transform: translateX(-100vw);
-		transform: translateX(-100vw);
-	}
+	background-color: white;
+	padding: 2px;
+	padding-left: 4px;
 }

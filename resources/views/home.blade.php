@@ -2,29 +2,33 @@
 
 @section('content')
 
-<div style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive;"  >
+	<script type="text/javascript" src="{{ URL::asset('js/jquery.js')}}"></script>
+	<script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>
 
-	<marquee behavior="" direction="" >
-		@foreach($summery as $mkey => $mvalue)
-		<div  class="mblock" style="height: 100%">
-			<center><h5 style=" font-size: 12px">
+	<div style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive;">
+	<div id="marquee1" class="container-marquee" onmouseover="zxcMarquee.scroll('marquee1',0);" onmouseout="zxcMarquee.scroll('marquee1',-1);">
+		<div style="position: absolute; width: 98%;">
+
+			@foreach($summery as $mkey => $mvalue)
+				<div  class="mblock" style="height: 100%">
+					<center><h5 style=" font-size: 12px">
 
 					<img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="" >
-					<b class="text-uppercase" style="margin-left: 10px; margin-right: 10px">{{$mvalue['title']}}</b>
+					<b style="margin-left: 10px; margin-right: 10px">{{$mvalue['title']}}</b>
 					<img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="" >
 
 					</h5>
 			</center>
 			<hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
-			<center>
-				<h5 style=" font-size: 12px;margin-top: 5px"><span class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span>  {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
-					</h5>
-				<h5 class="text-uppercase" style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}</h5>
-			</center>
+			<center><h5 style=" font-size: 12px;margin-top: 5px"><span class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span>  {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}<span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
+					</h5><h5 style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{' '.$mvalue['won']}} WON</h5></center>
 
+				</div>
+			@endforeach
 		</div>
-		@endforeach
-	</marquee>
+	</div>
+
+
 </div>
 
 <!-- Top List -->
@@ -176,8 +180,6 @@
 
 </div>
 </div>
-
-
 <!-- /.Top list -->
 
 
@@ -186,7 +188,7 @@
 <div class="web_disigner">
 	<div class="web_disigner_contain">
 		<div class="container">
-				<h3 >Recent Matches</h3></div>
+			<h3 >Recent Matches</h3></div>
 		<div class="container well well-lg"  >
 
 			<div class='row'>
@@ -240,6 +242,7 @@
 									@endforeach
 
 							</div></center>
+
 						<a data-slide="prev" href="#media" class="left carousel-control">‹</a>
 						<a data-slide="next" href="#media" class="right carousel-control">›</a>
 					</div>
@@ -248,7 +251,6 @@
 		</div>
 	</div>
 </div>
-
 <!-- // slider-->
 
 <!--past-->

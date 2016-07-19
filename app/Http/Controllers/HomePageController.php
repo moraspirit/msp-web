@@ -73,7 +73,6 @@ class HomePageController extends Controller {
             ];
         }
 
-        $summery = []; $ovall=[]; $ovmen=[]; $ovwomen=[];
 
         return view('home',compact('summery','ovwomen','ovmen','ovall'));
     }

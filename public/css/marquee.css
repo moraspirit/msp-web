@@ -63,7 +63,7 @@
 	width:100%; /*marquee width */
 	height: 200px; /*marquee height */
 	overflow: hidden;
-	background-color: white;
+	background-color: rgba(0,0,0,0);
 	padding: 2px;
 	padding-left: 4px;
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-body{
-    font-family: 'Coda', cursive;
-    max-width: 100%;
-=======
+
 html, body {
     height: 100%;
     margin: 0;
@@ -12,7 +8,6 @@ html, body {
     min-height: 100%;
     margin-bottom: -120px;
     position: relative;
->>>>>>> 561837910fe2233f72a9a9e649a78b113670c063
 }
 
 .damith{
@@ -44,14 +39,14 @@ html, body {
     color: red;
 }
 .mblock{
-    margin-top: 5px;
+    margin-top: 2px;
     height: 70px;
     background-color: white;
     display: inline-block;
     opacity: 0.9;
     padding-left: 25px;
     padding-right: 25px;
-    max-width: 270px;
+    max-width: 350px;
 
 }
 

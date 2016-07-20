@@ -379,5 +379,31 @@
 
 @section('script')
     @parent
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var totalMarqueWidth = 0;
+            $(".mblock").each(function () {
+                //console.log($(this).width());
+                totalMarqueWidth += $(this).width();
+            });
+            console.log(totalMarqueWidth);
+
+            if($(window).width() <= totalMarqueWidth) {
+                $(".container-marquee").css("width", totalMarqueWidth);
+            }
+
+            /*
+            // on resize reset width of container-marquee
+            $( window ).resize(function() {
+                console.log('resized');
+                if($(window).width() <= totalMarqueWidth) {
+                    $(".container-marquee").css("width", totalMarqueWidth);
+                }
+            });*/
+        })
+
+    </script>
+
     <script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>
 @endsection

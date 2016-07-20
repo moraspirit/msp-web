@@ -78,7 +78,7 @@
                         <a href="{{url('/loadpointstable')}}">Points Table</a>
                     </li>
                     <li>
-                        <a href="#Draw">Draw</a>
+                        <a href="{{url('/draws')}}">Draws</a>
                     </li>
                     <li>
                         <a href="{{url('/gallery')}}">Gallery</a>
@@ -87,7 +87,12 @@
                         <a href="#Live">Live</a>
                     </li>
                     <li>
-                        <a href="http://moraspirit.com/">Moraspirit</a>
+                        <a target="_blank" href="http://moraspirit.com/">Moraspirit</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://app.moraspirit.com" title="change your profile pictures supporting your university">
+                            change ur profiles
+                        </a>
                     </li>
                 </ul>
             </div>

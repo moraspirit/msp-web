@@ -39,7 +39,7 @@ html, body {
     color: red;
 }
 .mblock{
-    margin-top: 2px;
+    margin-top: 4px;
     height: 70px;
     background-color: white;
     display: inline-block;
@@ -325,3 +325,53 @@ footer {
         margin: 0;
     }
 }
+
+/*End Footer*/
+
+/*Draws Page*/
+.mw{
+    font-size: inherit;
+}
+
+.draws-pg .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #ffffff;
+    background-color: #ea2e2b;
+}
+.draws-pg .nav-pills > li > a {
+    border-radius: 0;
+}
+.draws-pg .nav > li > a {
+/*    position: relative;
+    display: block;
+    padding: 10px 15px;*/
+    background-color: #e3e3e3;
+}
+
+.draws-pg .nav > li.active > a:hover {
+    color: #e3e3e3;
+}
+
+.draws-pg .nav > li > a:hover {
+    color: #ea2e2b;
+}
+.draws-pg a {
+    color: #ea2e2b;
+    text-decoration: none;
+}
+.draws-pg a {
+    background-color: transparent;
+}
+/*.draws-pg * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.draws-pg user agent stylesheeta:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}*/
+.draws-pg .tab-pane.active {
+    border: 1px solid #EBEBEB;
+}
+/*End Draws Page*/

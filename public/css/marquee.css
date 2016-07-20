@@ -61,9 +61,9 @@
 .container-marquee{
 	position: relative;
 	width:100%; /*marquee width */
-	height: 200px; /*marquee height */
+	height: 79px; /*marquee height */
 	overflow: hidden;
 	background-color: rgba(0,0,0,0);
-	padding: 2px;
+	/*padding: 2px;*/
 	padding-left: 4px;
 }

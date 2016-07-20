@@ -19,13 +19,15 @@ Route::get('/gallery', function (){
 });
 /*event page controlling routes*/
 
-Route::get('/events','EventController@viewEvents');
+/*Route::get('/events','EventController@viewEvents');
 Route::post('ajaxevents','EventController@show');
-Route::post('timeline','EventController@timeline');
+Route::post('timeline','EventController@timeline');*/
 
 
 
-Route::get('/calendar','HomePageController@viewCalendar');
+Route::get('/events',function (){
+	return view('eventspage');
+});
 
 Route::get('/getdata','HomePageController@getdata');
 

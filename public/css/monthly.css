@@ -19,7 +19,7 @@
 	box-sizing: border-box;
 }
 .monthly-header-title {
-	font-size:.8em;
+	font-size:1em;
 	text-transform: uppercase;
 }
 /* wrapper for left button to make the clickable area bigger */

@@ -1,10 +1,11 @@
 @extends('frontend.layout')
 
 <link rel="stylesheet" type="text/css" href="{{URL::asset('fbalbum/jquery.fb.albumbrowser.css')}}" />
+<title>SLUG 2016 - GALLERY</title>
 
 @section('content')
     <div class="container">
-        <h1 class="font-oswald">SLUG GALLERY</h1>
+        <h1 class="font-oswald side-lines text-center">SLUG GALLERY</h1>
 
         <div class="font-coda text-uppercase" style="padding: 20px 0;">
             <div class="fb-album-container"></div>

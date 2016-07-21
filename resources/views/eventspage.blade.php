@@ -1,10 +1,12 @@
 @extends('frontend.layout')
 
 <link rel="stylesheet" type="text/css" href="{{URL::asset('css/monthly.css')}}" />
+<title>SLUG 2016 - EVENTS</title>
+
 @section('content')
 
 <div class="container" style="padding-bottom: 20px;">
-    <h1 class="font-oswald">EVENT SCHEDULE</h1>
+    <h1 class="font-oswald side-lines text-center">EVENT SCHEDULE</h1>
     <div class="monthly" id="mycalendar"></div>
 
     {{--<div data-tockify-component="calendar" data-tockify-calendar="slug.2016"></div>--}}

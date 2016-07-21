@@ -375,3 +375,97 @@ footer {
     border: 1px solid #EBEBEB;
 }
 /*End Draws Page*/
+
+
+/*Header side line styles*/
+.side-lines:before, .side-lines:after {
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    content: '';
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: .50em;
+}
+.side-lines:before {
+    margin-left: -21%;
+}
+.side-lines:after {
+    margin-left: 1%;
+}
+
+@media only screen and (max-width : 480px) {
+    .side-lines:before, .side-lines:after {
+        width: 10%;
+    }
+
+    .side-lines:before {
+        margin-left: -11%;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    .side-lines:before, .side-lines:after {
+        content: none;
+
+    }
+
+}
+/*End Header side line styles*/
+
+/*Overall points table styles*/
+
+.overall-mwtbl{
+    font-family: 'Coda', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.points-wrapper, .rank-wrapper, .uni-wrapper{
+    margin-top: -15px;
+}
+
+.overall-mwtbl .rank{
+    text-align: right;
+}
+.overall-mwtbl .uni{
+    text-align: center;
+}
+
+.overall-mwtbl .points{
+    text-align: right;
+}
+
+.overall-tbl-row{
+    height: 90px;
+    font-family: 'Coda', cursive;
+    text-transform: uppercase!important;
+}
+.overall-tbl-row .unilogo{
+    width: 90px;
+}
+.overall-tbl-row .points{
+    text-align: right;
+}
+
+.overall-tbl-row .uni, .overall-tbl-row .points{
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 33px;
+}
+
+@media only screen and (max-width : 480px) {
+    .overall-tbl-row{
+        height: auto;
+    }
+    .overall-tbl-row .unilogo{
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    .overall-tbl-row .uni{
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+}

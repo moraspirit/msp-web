@@ -1,5 +1,6 @@
 @extends('frontend.layout')
 
+<title>SLUG 2016 - POINTS TABLE</title>
 @section('content')
     <style>
         .table-hover tbody tr:hover td {
@@ -19,7 +20,7 @@
     </style>
 
 <div class="container">
-    <h1 class="font-oswald text-uppercase">Points Table</h1>
+    <h1 class="font-oswald side-lines text-center text-uppercase">Points Table</h1>
     <br>
 
     {{--why adding container inside a container ??--}}

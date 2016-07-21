@@ -1,13 +1,16 @@
 @extends('frontend.layout')
 <link rel="stylesheet" href="{{ URL::asset('css/marquee.css')}}">
+<title>SLUG 2016 - HOME</title>
 
 @section('content')
 
-    <div id="marqueehead" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
-        <div id="marquee1" class="container-marquee" onmouseover="zxcMarquee.scroll('marquee1',0);"
-             onmouseout="zxcMarquee.scroll('marquee1',-1);">
-            <div style="position: absolute; width: 98%;">
-
+    {{--Marquee to be load in Desktop--}}
+    <div id="marqueehead" class="hidden-xs hidden-sm" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
+        <div id="marquee1" class="container-marquee"
+             onmouseover="zxcMarquee.scroll('marquee1',0);"
+             onmouseout="zxcMarquee.scroll('marquee1',-1);"
+        >
+            <div style="position: relative; width: 100%;">
                 @foreach($summery as $mkey => $mvalue)
                     <div class="mblock" style="height: 100%;">
                         <center><h5 style=" font-size: 12px">
@@ -36,6 +39,32 @@
 
     </div>
 
+    {{--Marquee to be load in Mobile /Tab--}}
+    <marquee id="marquee-mobile" class="hidden-lg hidden-md" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
+        @foreach($summery as $mkey => $mvalue)
+            <div class="mblock" style="height: 76px;">
+                <center><h5 style=" font-size: 12px">
+
+                        <img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="">
+                        <b class="text-uppercase"
+                           style="margin-left: 10px; margin-right: 10px">{{$mvalue['title']}}</b>
+                        <img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="">
+
+                    </h5>
+                </center>
+                <hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
+                <center><h5 style=" font-size: 12px;margin-top: 5px"><span
+                                class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span> {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}
+                        <span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
+                    </h5>
+                    <h5 class="text-uppercase"
+                        style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}
+                        WON</h5></center>
+
+            </div>
+        @endforeach
+    </marquee>
+
     <!-- Top List -->
     <div class="content-section-a">
 
@@ -44,15 +73,17 @@
             <div class="row">
                 <div class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
 
-                    <center><h4 class="section-heading">Men</h4></center>
+                    <center><h4 class="section-heading text-uppercase font-oswald">Men</h4></center>
                     <hr>
+                    @if(isset($ovmen))
                     <div class="panel panel-primary">
+
 
 
                         @foreach($ovmen as $kmen => $vmen)
                             @if($kmen==0)
-                                <div class="panel-heading text-center "
-                                     style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Ranking
+                                <div class="panel-heading text-center font-coda text-uppercase"
+                                     style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)">Top Rankings
                                     <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
                                     <center>
                                         <h2 style="font-size: 2em;font-family: 'Coda', cursive;"> {{$vmen['u_code'].' '}}
@@ -62,36 +93,36 @@
                             @endif
                         @endforeach
 
-                        <div class="panel-body text-center" style="margin-bottom: -15px">
+                        <div class="panel-body overall-mwtbl" style="margin-bottom: -15px">
                             <div class="row">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"
-                                     style="background-color:#f2f2f2; margin-top: -15px">
+                                <div class="col-xs-3 rank-wrapper"
+                                     style="background-color:#f2f2f2;">
                                     <br>
                                     @foreach($ovmen as $kmen => $vmen)
                                         @if(!($kmen==0) && $kmen<7)
 
-                                            <h4 class="damith"> {{($kmen+1)}}</h4>
+                                            <h4 class="rank"> {{($kmen+1)}}</h4>
                                             <hr>
                                         @endif
                                     @endforeach
                                 </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    @foreach($ovmen as $kmen => $vmen)
-                                        @if(!($kmen==0) && $kmen<7)
-
-                                            <h4 class="damith"> {{' '.$vmen['u_code'].' '}}</h4>
-                                            <hr>
-                                        @endif
-                                    @endforeach
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"
-                                     style=" background-color: #e6e6e6; margin-top: -15px">
+                                <div class="col-xs-5 uni-wrapper">
                                     <br>
                                     @foreach($ovmen as $kmen => $vmen)
                                         @if(!($kmen==0) && $kmen<7)
 
-                                            <h4 class="damith"
-                                                style="text-align: right; margin-right: 10px"> {{' '.$vmen['score']}}</h4>
+                                            <h4 class="uni"> {{' '.$vmen['u_code'].' '}}</h4>
+                                            <hr>
+                                        @endif
+                                    @endforeach
+                                </div>
+                                <div class="col-xs-4 points-wrapper"
+                                     style=" background-color: #e6e6e6;">
+                                    <br>
+                                    @foreach($ovmen as $kmen => $vmen)
+                                        @if(!($kmen==0) && $kmen<7)
+
+                                            <h4 class="points"> {{' '.$vmen['score']}}</h4>
                                             <hr>
                                         @endif
                                     @endforeach
@@ -102,10 +133,15 @@
 
 
                     </div>
+                    @else
+
+                    @endif
 
                 </div>
                 <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
-                    <center><h3> Top Ranking </h3></center>
+                    <center><h3 class="side-lines text-uppercase font-oswald">&nbsp;Top Rankings&nbsp;</h3></center>
+
+                    @if(isset($ovall))
                     @foreach($ovall as $kall => $vall)
                         @if($kall==0)
                             <div class="panel">
@@ -113,9 +149,21 @@
                                      style="background-image: linear-gradient(180deg,#f2f2f2, whitesmoke); width: 100%;">
 
                                     <img src="{{URL::asset('logos/'.$vall['logo'])}}" alt="" style="width: 250px ;">
-                                    <h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
-                                        <span class="pull-right"
-                                              style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>
+                                    <div class="row overall-tbl-row">
+
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-md-6 col-xs-5 uni text-left">
+                                            <span>{{$vall['name'].' '}}</span>
+                                        </div>
+                                        <div class="col-md-3 col-xs-4 points">
+                                            <span>{{' '.$vall['score']}}</span>
+                                        </div>
+
+                                        {{--<h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
+                                            <span class="pull-right"
+                                                  style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>--}}
+                                    </div>
+
                                 </div>
                             </div>
                         @endif
@@ -123,84 +171,94 @@
 
                     @foreach($ovall as $kall => $vall)
                         @if(!($kall==0) && $kall<4)
-                            <div style="background-image: linear-gradient(180deg,whitesmoke, whitesmoke); width: 100%;">
-                                <div class="row">
-                                    <div class="col-lg-3">
+                            <div class="overall-tbl-row" style="background-image: linear-gradient(180deg,whitesmoke, whitesmoke); width: 100%;">
+                                <div class="row" style="padding-left: 15px; padding-right: 15px;">
+                                    <div class="col-xs-3">
                                         <img src="{{URL::asset('logos/'.$vall['logo'])}}" alt=""
-                                             style="width: 90px ; padding: 3px" class="pull-right">
+                                             class="unilogo">
                                     </div>
-                                    <div class="col-lg-9" style="margin-top: 8px">
-                                        <br><span style="font-family: 'Coda', cursive;font-size: 1.5em;">{{$vall['name'].' '}}
-                                            <span class="pull-right"
-                                                  style="margin-right: 40px">{{' '.$vall['score']}}</span></span>
+                                    <div class="col-md-6 col-xs-5 uni">
+                                        <span>{{$vall['name'].' '}}</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-4 points">
+                                        <span>{{' '.$vall['score']}}</span>
                                     </div>
                                 </div>
                             </div>
                             <br>
                         @endif
                     @endforeach
+
+                    @else
+
+                    @endif
                 </div>
 
 
                 <div class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
-                    <center><h4 class="section-heading">Women</h4></center>
+                    <center><h4 class="section-heading text-uppercase font-oswald">Women</h4></center>
                     <hr>
-                    <div class="panel panel-primary">
+                    @if(isset($ovwomen))
+                        <div class="panel panel-primary">
 
-                        @foreach($ovwomen as $kwomen => $vwomen)
-                            @if($kwomen==0)
-                                <div class="panel-heading text-center "
-                                     style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Ranking
-                                    <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
-                                    <center>
-                                        <h2 style="font-size: 2em;font-family: 'Coda', cursive;"> {{$vwomen['u_code'].' '}}
-                                            <span class="label label-pill label-info pull-right">{{' '.$vwomen['score']}}</span>
-                                        </h2></center>
+                                @foreach($ovwomen as $kwomen => $vwomen)
+                                    @if($kwomen==0)
+                                        <div class="panel-heading text-center font-coda text-uppercase"
+                                             style="background-image: linear-gradient(300deg,#ea2e2b, firebrick)"> Top Ranking
+                                            <hr style="margin-bottom: 5px;margin-top: 5px;width: 70%">
+                                            <center>
+                                                <h2 style="font-size: 2em;font-family: 'Coda', cursive;"> {{$vwomen['u_code'].' '}}
+                                                    <span class="label label-pill label-info pull-right">{{' '.$vwomen['score']}}</span>
+                                                </h2></center>
+                                        </div>
+                                    @endif
+                                @endforeach
+
+
+
+                            <div class="panel-body overall-mwtbl" style="margin-bottom: -15px">
+                                <div class="row">
+                                    <div class="col-xs-3 rank-wrapper"
+                                         style="background-color:#f2f2f2;">
+                                        <br>
+                                        @foreach($ovwomen as $kwomen => $vwomen)
+                                            @if(!($kwomen==0) && $kwomen<7)
+
+                                                <h4 class="rank"> {{($kwomen+1)}}</h4>
+                                                <hr>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                    <div class="col-xs-5 uni-wrapper">
+                                        <br>
+                                        @foreach($ovwomen as $kwomen => $vwomen)
+                                            @if(!($kwomen==0) && $kwomen<7)
+
+                                                <h4 class="uni"> {{' '.$vwomen['u_code'].' '}}</h4>
+                                                <hr>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                    <div class="col-xs-4 points-wrapper"
+                                         style=" background-color: #e6e6e6;">
+                                        <br>
+                                        @foreach($ovwomen as $kwomen => $vwomen)
+                                            @if(!($kwomen==0) && $kwomen<7)
+
+                                                <h4 class="points"> {{' '.$vwomen['score']}}</h4>
+                                                <hr>
+                                            @endif
+                                        @endforeach
+                                    </div>
+
                                 </div>
-                            @endif
-                        @endforeach
-
-
-                        <div class="panel-body text-center" style="margin-bottom: -15px">
-                            <div class="row">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"
-                                     style="background-color:#f2f2f2; margin-top: -15px">
-                                    <br>
-                                    @foreach($ovwomen as $kwomen => $vwomen)
-                                        @if(!($kwomen==0) && $kwomen<7)
-
-                                            <h4 class="damith"> {{($kwomen+1)}}</h4>
-                                            <hr>
-                                        @endif
-                                    @endforeach
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    @foreach($ovwomen as $kwomen => $vwomen)
-                                        @if(!($kwomen==0) && $kwomen<7)
-
-                                            <h4 class="damith"> {{' '.$vwomen['u_code'].' '}}</h4>
-                                            <hr>
-                                        @endif
-                                    @endforeach
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"
-                                     style=" background-color: #e6e6e6; margin-top: -15px">
-                                    <br>
-                                    @foreach($ovwomen as $kwomen => $vwomen)
-                                        @if(!($kwomen==0) && $kwomen<7)
-
-                                            <h4 class="damith"
-                                                style="text-align: right; margin-right: 10px"> {{' '.$vwomen['score']}}</h4>
-                                            <hr>
-                                        @endif
-                                    @endforeach
-                                </div>
-
                             </div>
+
+
                         </div>
+                    @else
 
-
-                    </div>
+                    @endif
                 </div>
 
             </div>
@@ -210,87 +268,9 @@
     </div>
     <!-- /.Top list -->
 
-
-
-    <!-- slider-->
-    <div class="web_disigner">
-        <div class="web_disigner_contain">
-            <div class="container">
-                <h3>Recent Matches</h3></div>
-            <div class="container well well-lg">
-
-                <div class='row'>
-                    <div class='col-md-8 col-md-offset-2'>
-                        <div class="carousel slide media-carousel" id="media">
-                            <center>
-
-                                <div class="carousel-inner " style="width: 70%">
-
-
-                                    @foreach($summery as $mkey => $mvalue)
-                                        @if($mkey==0)
-                                            <div class="item  active">
-                                                <br>
-                                                <center>
-                                                    <h5 style="background-color:#ea2e2b; color: white; padding: 5px "> {{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
-                                                    <div class="row">
-                                                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                                            <img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt=""
-                                                                 style="width: 100px;" class="center-block">
-                                                        </div>
-                                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"><h3
-                                                                    style="padding: 5px;font-family: 'Arial'">{{$mvalue['t_a_score']}}
-                                                                Vs {{$mvalue['t_b_score']}}</h3>
-
-                                                            <h5>{{$mvalue['summery']}}</h5></div>
-                                                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><img
-                                                                    src="{{URL::asset('logos/'.$mvalue['logo2'])}}"
-                                                                    alt="" style="width: 100px;" class="center-block">
-                                                        </div>
-                                                    </div>
-                                                </center>
-                                            </div>
-                                        @endif
-                                    @endforeach
-
-                                    @foreach($summery as $mkey => $mvalue)
-                                        @if(!($mkey==0))
-                                            <div class="item">
-                                                <br>
-                                                <center>
-                                                    <h5 style="background-color:#ea2e2b; color: white; padding: 5px ">{{$mvalue['title'].','.' '.$mvalue['dvs']}}</h5>
-                                                    <div class="row">
-                                                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                                            <img src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt=""
-                                                                 style="width: 100px;" class="center-block">
-                                                        </div>
-                                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"><h3
-                                                                    style="padding: 5px">{{$mvalue['t_a_score']}}
-                                                                Vs {{$mvalue['t_b_score']}}</h3>
-                                                            <h5>{{$mvalue['summery']}}</h5></div>
-                                                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><img
-                                                                    src="{{URL::asset('logos/'.$mvalue['logo2'])}}"
-                                                                    alt="" style="width: 100px;" class="center-block">
-                                                        </div>
-                                                    </div>
-
-                                                </center>
-                                            </div>
-                                        @endif
-                                    @endforeach
-
-                                </div>
-                            </center>
-
-                            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-                            <a data-slide="next" href="#media" class="right carousel-control">›</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <hr />
     </div>
-    <!-- // slider-->
 
     <!--past-->
     {{--Previous Winnners section--}}
@@ -385,12 +365,12 @@
             var totalMarqueWidth = 0;
             $(".mblock").each(function () {
                 //console.log($(this).width());
-                totalMarqueWidth += $(this).width();
+                totalMarqueWidth += $(this).outerWidth();
             });
             console.log(totalMarqueWidth);
 
             if($(window).width() <= totalMarqueWidth) {
-                $(".container-marquee").css("width", totalMarqueWidth);
+//                $(".container-marquee").css("width", totalMarqueWidth);
             }
 
             /*

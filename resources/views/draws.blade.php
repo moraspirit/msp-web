@@ -1,5 +1,6 @@
 @extends('frontend.layout')
 
+<title>SLUG 2016 - DRAWS</title>
 @section('content')
 
     <div class="container draws-pg font-coda--bold text-uppercase" style="padding-top: 20px; padding-bottom: 20px;">
@@ -38,8 +39,7 @@
             <!-- Tab panes -->
             <div class="tab-content">
                 <div class="tab-pane active" id="crk_m">
-                    {{--this is an incorrect diagram--}}
-                    <img data-original="http://www.gliffy.com/go/publish/image/8247875/L.png" alt="" class="lazy img-responsive">
+                    <img data-original="http://www.gliffy.com/go/publish/image/10917521/L.png" alt="" class="lazy img-responsive">
                 </div>
                 <div class="tab-pane" id="rug_m">
                     <img data-original="http://www.gliffy.com/go/publish/image/10901481/L.png" alt="" class="lazy img-responsive">

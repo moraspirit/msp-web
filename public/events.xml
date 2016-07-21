@@ -4,58 +4,787 @@
 
 	<event>
 		<id>1</id>
-		<name>Here's an Event</name>
-		<startdate>2016-3-15</startdate>
-		<enddate>2016-3-17</enddate>
-		<starttime>12:00</starttime>
-		<endtime>2:00</endtime>
-		<color>#ffb128</color>
+		<name>Rugger Preliminary</name>
+		<startdate>2016-07-16</startdate>
+		<enddate></enddate>
+		<starttime>15:00</starttime>
+		<endtime>15:35</endtime>
+		<color>#f44336</color>
 		<url></url>
 	</event>
 
-	<event>
-		<id>2</id>
-		<name>Another Event</name>
-		<startdate>2016-3-15</startdate>
-		<enddate></enddate>
-		<starttime></starttime>
-		<endtime></endtime>
-		<color>#28cbff</color>
-		<url></url>
-	</event>
 
 	<event>
 		<id>3</id>
-		<name>Another Event</name>
-		<startdate>2016-3-29</startdate>
-		<enddate></enddate>
-		<starttime>9:00</starttime>
-		<endtime>10:00</endtime>
-		<color>#9cc370</color>
-		<url></url>
-	</event>
-
-	<event>
-		<id>4</id>
-		<name>Another Event</name>
-		<startdate>2016-3-2</startdate>
+		<name>Rugger Preliminary</name>
+		<startdate>2016-07-17</startdate>
 		<enddate></enddate>
 		<starttime></starttime>
 		<endtime></endtime>
-		<color>#9f4b99</color>
+		<color>#f44336</color>
 		<url></url>
 	</event>
 
 	<event>
 		<id>5</id>
-		<name>Rugby Group Matches</name>
-		<startdate>2016-7-18</startdate>
+		<name>Rugger Preliminary</name>
+		<startdate>2016-07-23</startdate>
 		<enddate></enddate>
 		<starttime></starttime>
 		<endtime></endtime>
-		<color>#9f4b99</color>
+		<color>#f44336</color>
 		<url></url>
 	</event>
+
+
+	<event>
+		<id>7</id>
+		<name>Rugger Preliminary</name>
+		<startdate>2016-07-30</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>9</id>
+		<name>Rugger Preliminary</name>
+		<startdate>2016-07-31</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>11</id>
+		<name>Rugger Quarter Finals</name>
+		<startdate>2016-08-06</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>13</id>
+		<name>Rugger Quarter Finals</name>
+		<startdate>2016-08-07</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
+
+	<event>
+		<id>15</id>
+		<name>Rugger Semi Finals</name>
+		<startdate>2016-08-13</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
+
+<!--
+	<event>
+		<id>17</id>
+		<name>Rugger Consolation Finals</name>
+		<startdate>2016-08-20</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>-->
+
+	<event>
+		<id>18</id>
+		<name>Rugger Finals</name>
+		<startdate>2016-08-20</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
+	<!--End of Rugger-->
+
+	<!--Start of Cricket-->
+	<event>
+		<id>19</id>
+		<name>Cricket Preliminary</name>
+		<startdate>2016-07-23</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>20</id>
+		<name>Cricket Preliminary</name>
+		<startdate>2016-07-30</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>21</id>
+		<name>Cricket Preliminary</name>
+		<startdate>2016-08-06</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>22</id>
+		<name>Cricket Quarter Finals</name>
+		<startdate>2016-08-13</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>23</id>
+		<name>Cricket Semi Finals</name>
+		<startdate>2016-08-20</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>24</id>
+		<name>Cricket Consolation Final</name>
+		<startdate>2016-08-27</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>25</id>
+		<name>Cricket Finals</name>
+		<startdate>2016-09-06</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<!--End of cricket -->
+
+	<!--Tennis-->
+	<event>
+		<id>26</id>
+		<name>Tennis (M/W)</name>
+		<startdate>2016-07-26</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#9C27B0</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>27</id>
+		<name>Tennis (M/W)</name>
+		<startdate>2016-07-27</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#9C27B0</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>28</id>
+		<name>Tennis (M/W)</name>
+		<startdate>2016-07-28</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#9C27B0</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>29</id>
+		<name>Tennis (M/W)</name>
+		<startdate>2016-07-29</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#9C27B0</color>
+		<url></url>
+	</event>
+
+	<!--End of Tennis-->
+
+	<!--Start of Hockey-->
+	<event>
+		<id>30</id>
+		<name>Hockey (M/W) Preliminary</name>
+		<startdate>2016-08-12</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#673AB7</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>31</id>
+		<name>Hockey (M/W) Quarter Finals</name>
+		<startdate>2016-08-13</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#673AB7</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>32</id>
+		<name>Hockey (M/W) Finals</name>
+		<startdate>2016-08-14</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#673AB7</color>
+		<url></url>
+	</event>
+	<!--End of Hockey-->
+
+	<!--Start of Rowing-->
+	<event>
+		<id>36</id>
+		<name>Rowing (M/W)</name>
+		<startdate>2016-08-13</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#3F51B5</color>
+		<url></url>
+	</event>
+	<!--End of Rowing-->
+
+	<!--Start of Baseball-->
+	<event>
+		<id>37</id>
+		<name>Baseball Preliminary</name>
+		<startdate>2016-08-19</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>38</id>
+		<name>Baseball Preliminary</name>
+		<startdate>2016-08-20</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>39</id>
+		<name>Baseball Preliminary</name>
+		<startdate>2016-08-21</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>40</id>
+		<name>Baseball Finals</name>
+		<startdate>2016-08-22</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+	<!--End of baseball-->
+
+	<!--Start of track n Field-->
+	<event>
+		<id>41</id>
+		<name>Track and Field</name>
+		<startdate>2016-08-27</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#03A9F4</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>42</id>
+		<name>Track and Field</name>
+		<startdate>2016-08-28</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#03A9F4</color>
+		<url></url>
+	</event>
+	<!--End of track n Field-->
+
+
+	<event>
+		<id>43</id>
+		<name>Opening Ceremony</name>
+		<startdate>2016-09-01</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#00BCD4</color>
+		<url></url>
+	</event>
+
+	<!--Start of Badminton-->
+	<event>
+		<id>44</id>
+		<name>Badminton (M/W)</name>
+		<startdate>2016-09-02</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#009688</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>45</id>
+		<name>Badminton (M/W)</name>
+		<startdate>2016-09-03</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#009688</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>46</id>
+		<name>Badminton (M/W)</name>
+		<startdate>2016-09-04</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#009688</color>
+		<url></url>
+	</event>
+	<!--End of badminton-->
+
+	<!--Weightlifting-->
+	<event>
+		<id>47</id>
+		<name>Weightlifting (M)</name>
+		<startdate>2016-09-02</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#4CAF50</color>
+		<url></url>
+	</event>
+	<!--End of Weightlifting-->
+
+
+	<!--Netball-->
+	<event>
+		<id>48</id>
+		<name>Netball Preliminary</name>
+		<startdate>2016-09-02</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#8BC34A</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>51</id>
+		<name>Netball Finals</name>
+		<startdate>2016-09-03</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#8BC34A</color>
+		<url></url>
+	</event>
+
+	<!--End of Netball-->
+
+	<!--Basketball-->
+	<event>
+		<id>52</id>
+		<name>Basketball (M/W) Preliminary</name>
+		<startdate>2016-09-04</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#CDDC39</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>53</id>
+		<name>Basketball (M/W) Preliminary</name>
+		<startdate>2016-09-05</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#CDDC39</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>54</id>
+		<name>Basketball (M/W) Quarter Finals</name>
+		<startdate>2016-09-06</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#CDDC39</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>55</id>
+		<name>Basketball (M/W) Finals</name>
+		<startdate>2016-09-07</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#CDDC39</color>
+		<url></url>
+	</event>
+	<!--End of Basketball-->
+
+	<!--Taekwondo-->
+<!--	<event>
+		<id>56</id>
+		<name>Taekwondo (M/W)</name>
+		<startdate>2016-09-05</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#FFEB3B</color>
+		<url></url>
+	</event>-->
+
+	<event>
+		<id>57</id>
+		<name>Taekwondo (M/W)</name>
+		<startdate>2016-09-06</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#FFEB3B</color>
+		<url></url>
+	</event>
+	<!--End of Taekwndoo-->
+
+	<!--Elle-->
+	<event>
+		<id>58</id>
+		<name>Elle (M/W)</name>
+		<startdate>2016-09-07</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#FFC107</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>59</id>
+		<name>Elle (M/W)</name>
+		<startdate>2016-09-08</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#FFC107</color>
+		<url></url>
+	</event>
+	<!--End of Elle-->
+
+	<!--Swimming-->
+	<event>
+		<id>61</id>
+		<name>Swimming (M/W)</name>
+		<startdate>2016-09-07</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#FF9800</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>62</id>
+		<name>Swimming (M/W)</name>
+		<startdate>2016-09-08</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#FF9800</color>
+		<url></url>
+	</event>
+	<!--End of swimming-->
+
+	<!--Wrestling-->
+	<event>
+		<id>64</id>
+		<name>Wrestling (M/W)</name>
+		<startdate>2016-09-08</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#FF5722</color>
+		<url></url>
+	</event>
+
+	<!--End of wrestling-->
+
+	<!--Volleyball-->
+	<event>
+		<id>65</id>
+		<name>Volleyball (M/W)</name>
+		<startdate>2016-09-09</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#795548</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>66</id>
+		<name>Volleyball (M/W)</name>
+		<startdate>2016-09-10</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#795548</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>67</id>
+		<name>Volleyball (M/W)</name>
+		<startdate>2016-09-11</startdate>
+		<enddate></enddate>
+		<starttime>08:00</starttime>
+		<endtime></endtime>
+		<color>#795548</color>
+		<url></url>
+	</event>
+	<!--End of volleyball-->
+
+	<!--RoadRace-->
+	<event>
+		<id>68</id>
+		<name>Road Race (M)</name>
+		<startdate>2016-09-09</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#9E9E9E</color>
+		<url></url>
+	</event>
+	<!--End of RR-->
+
+	<!--Carrom-->
+	<event>
+		<id>69</id>
+		<name>Carrom (M/W) Preliminary</name>
+		<startdate>2016-09-09</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#607D8B</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>70</id>
+		<name>Carrom (M/W) Finals</name>
+		<startdate>2016-09-10</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#607D8B</color>
+		<url></url>
+	</event>
+	<!--End of carrom-->
+
+	<!--Football-->
+	<event>
+		<id>71</id>
+		<name>Football Preliminary</name>
+		<startdate>2016-09-10</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>72</id>
+		<name>Football Quarter Finals</name>
+		<startdate>2016-09-11</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>73</id>
+		<name>Football Finals</name>
+		<startdate>2016-09-12</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#E91E63</color>
+		<url></url>
+	</event>
+	<!--End of football-->
+
+	<!--Karate-->
+	<event>
+		<id>74</id>
+		<name>Karate (M/W)</name>
+		<startdate>2016-09-09</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#673AB7</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>75</id>
+		<name>Karate (M/W)</name>
+		<startdate>2016-09-10</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#673AB7</color>
+		<url></url>
+	</event>
+	<!--End of Karate-->
+
+	<event>
+		<id>76</id>
+		<name>Chess Round 1/2 (M/W)</name>
+		<startdate>2016-09-11</startdate>
+		<enddate></enddate>
+		<starttime>08:30</starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+
+
+	<event>
+		<id>78</id>
+		<name>Chess Round 3/4 (M/W)</name>
+		<startdate>2016-09-12</startdate>
+		<enddate></enddate>
+		<starttime>08:30</starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>80</id>
+		<name>Chess Round 5 (M/W)</name>
+		<startdate>2016-09-13</startdate>
+		<enddate></enddate>
+		<starttime>08:30</starttime>
+		<endtime></endtime>
+		<color>#2196F3</color>
+		<url></url>
+	</event>
+	<!--End of chess-->
+
+	<!--TT-->
+	<event>
+		<id>81</id>
+		<name>Table Tennis (M/W)</name>
+		<startdate>2016-09-12</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#009688</color>
+		<url></url>
+	</event>
+
+	<event>
+		<id>82</id>
+		<name>Table Tennis (M/W)</name>
+		<startdate>2016-09-13</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#009688</color>
+		<url></url>
+	</event>
+	<!--End of TT-->
+
+	<event>
+		<id>83</id>
+		<name>Closing Ceremony</name>
+		<startdate>2016-09-13</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#FFC107</color>
+		<url></url>
+	</event>
+
+
+
 
 
 

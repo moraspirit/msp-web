@@ -25,28 +25,16 @@ var zxcMarquee={
 
     scroll:function(id,ud){
         var oop=this,o=this['zxc'+id],p;
-        /*if (o){
-         ud=typeof(ud)=='number'?ud:0;
-         clearTimeout(o.dly);
-         p=parseInt(o.obj.style[o.mde])+ud;
-         if ((ud>0&&p>0)||(ud<0&&p<-o.sz)){
-         p+=o.sz*(ud>0?-1:1);
-         }
-         o.obj.style[o.mde]=(p-2)+'px';
-         console.log('if inside scroll');
-         o.dly=setTimeout(function(){ oop.scroll(id,ud); },50);
-         }*/
-
-        var interval = setInterval(function () {
-            // ud=typeof(ud)=='number'?ud:0;
-            // clearTimeout(o.dly);
+        if (o){
+            ud=typeof(ud)=='number'?ud:0;
+            clearTimeout(o.dly);
             p=parseInt(o.obj.style[o.mde])+ud;
-
             if ((ud>0&&p>0)||(ud<0&&p<-o.sz)){
                 p+=o.sz*(ud>0?-1:1);
             }
-            o.obj.style[o.mde]=(p-3)+'px';
-        }, 65);
+            o.obj.style[o.mde]=(p-2)+'px';
+            o.dly=setTimeout(function(){ oop.scroll(id,ud); },65);
+        }
     }
 }
 

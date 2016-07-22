@@ -469,3 +469,35 @@ footer {
         padding-bottom: 21px;
     }
 }
+.header-image--wrapper{
+
+/*
+    background: #D31027; !* fallback for old browsers *!
+    background: -webkit-linear-gradient(to left, #D31027 , #EA384D); !* Chrome 10-25, Safari 5.1-6 *!
+    background: linear-gradient(to left, #D31027 , #EA384D); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!
+   */
+    background-image: linear-gradient(300deg,#ea2e2b, firebrick)
+}
+
+.header-unis{
+    height: 60px;
+    margin-right: -7px;
+}
+
+.header-unis img{
+    height: 44px;
+    background-color: #FFFFFF;
+    margin: 8px 2px;
+}
+
+
+.no-link{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.no-link:hover{
+    text-decoration: none;
+    color: white;
+}

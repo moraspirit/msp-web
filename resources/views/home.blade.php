@@ -1,7 +1,14 @@
 @extends('frontend.layout')
-<link rel="stylesheet" href="{{ URL::asset('css/marquee.css')}}">
-<title>SLUG 2016 - HOME</title>
 
+@section('meta')
+    <meta property="og:title" content="SLUG 2016 - HOME" />
+    <meta property="og:description" content="slug 2016 overview at a glace." />
+    <meta property="og:image" content="" />
+@stop
+@section('title', 'SLUG 2016 - HOME')
+@section('css')
+    <link rel="stylesheet" href="{{ URL::asset('css/marquee.css')}}">
+@stop
 @section('content')
 
     {{--Marquee to be load in Desktop--}}
@@ -257,7 +264,9 @@
 
                         </div>
                     @else
-
+                        <div class="no-scores-text">
+                            let's wait till points available
+                        </div>
                     @endif
                 </div>
 
@@ -281,7 +290,7 @@
 
 
             <div class="row text-uppercase">
-                <div class="col-lg-2 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-xs-6">
                     <div class="font-coda--bold prev-winners-card">
                         <div>
                             <center>
@@ -296,7 +305,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-2 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-xs-6">
                     <div class="font-coda--bold prev-winners-card">
                         <div>
                             <center>
@@ -312,7 +321,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-xs-6">
                     <div class="font-coda--bold prev-winners-card">
                         <div>
                             <center>
@@ -329,7 +338,7 @@
                 </div>
 
 
-                <div class="col-lg-2 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-xs-6">
                     <div class="font-coda--bold prev-winners-card">
                         <div>
                             <center>

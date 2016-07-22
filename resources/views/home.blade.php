@@ -7,47 +7,47 @@
 @stop
 @section('title', 'SLUG 2016 - HOME')
 @section('css')
-    <link rel="stylesheet" href="{{ URL::asset('css/marquee.css')}}">
+    {{--<link rel="stylesheet" href="{{ URL::asset('css/marquee.css')}}">--}}
 @stop
 @section('content')
 
     {{--Marquee to be load in Desktop--}}
-    <div id="marqueehead" class="hidden-xs hidden-sm" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
-        <div id="marquee1" class="container-marquee"
+    {{--<div id="marqueehead" class="hidden-xs hidden-sm" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">--}}
+        {{--<div id="marquee1" class="container-marquee"--}}
              {{--onmouseover="zxcMarquee.scroll('marquee1',0);"--}}
              {{--onmouseout="zxcMarquee.scroll('marquee1',-1);"--}}
-        >
-            <div style="position: relative; width: 100%;">
-                @foreach($summery as $mkey => $mvalue)
-                    <div class="mblock" style="height: 100%;">
-                        <center><h5 style=" font-size: 12px">
+        {{-->--}}
+            {{--<div style="position: relative; width: 100%;">--}}
+                {{--@foreach($summery as $mkey => $mvalue)--}}
+                    {{--<div class="mblock" style="height: 100%;">--}}
+                        {{--<center><h5 style=" font-size: 12px">--}}
 
-                                <img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="">
-                                <b class="text-uppercase"
-                                   style="margin-left: 10px; margin-right: 10px">{{$mvalue['title']}}</b>
-                                <img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="">
+                                {{--<img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="">--}}
+                                {{--<b class="text-uppercase"--}}
+                                   {{--style="margin-left: 10px; margin-right: 10px">{{$mvalue['title']}}</b>--}}
+                                {{--<img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo2'])}}" alt="">--}}
 
-                            </h5>
-                        </center>
-                        <hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
-                        <center><h5 style=" font-size: 12px;margin-top: 5px"><span
-                                        class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span> {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}
-                                <span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
-                            </h5>
-                            <h5 class="text-uppercase"
-                                style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}
-                                WON</h5></center>
+                            {{--</h5>--}}
+                        {{--</center>--}}
+                        {{--<hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">--}}
+                        {{--<center><h5 style=" font-size: 12px;margin-top: 5px"><span--}}
+                                        {{--class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span> {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}--}}
+                                {{--<span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>--}}
+                            {{--</h5>--}}
+                            {{--<h5 class="text-uppercase"--}}
+                                {{--style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}--}}
+                                {{--WON</h5></center>--}}
 
-                    </div>
-                @endforeach
-            </div>
-        </div>
+                    {{--</div>--}}
+                {{--@endforeach--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
 
-    </div>
+    {{--</div>--}}
 
     {{--Marquee to be load in Mobile /Tab--}}
-    <marquee id="marquee-mobile" class="hidden-lg hidden-md" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
+    <marquee id="marquee-mobile" class="" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
         @foreach($summery as $mkey => $mvalue)
             <div class="mblock" style="height: 76px;">
                 <center><h5 style=" font-size: 12px">
@@ -404,5 +404,5 @@
 
     </script>
 
-    <script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>
+    {{--<script type="text/javascript" src="{{ URL::asset('js/marquee.js')}}"></script>--}}
 @endsection

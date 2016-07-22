@@ -49,7 +49,7 @@ class HomePageController extends Controller {
         }
 
 
-        $summeryitems = DB::table('summaries')->orderBy('id', 'desc')->take(5)->get();
+        $summeryitems = DB::table('summaries')->orderBy('id', 'desc')->take(10)->get();
 
         foreach($summeryitems as $summeryitem){
 

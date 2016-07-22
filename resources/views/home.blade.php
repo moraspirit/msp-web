@@ -73,6 +73,7 @@
     </marquee>
 
     <!-- Top List -->
+{{--
     <div class="content-section-a">
 
         <div class="container">
@@ -166,9 +167,11 @@
                                             <span>{{' '.$vall['score']}}</span>
                                         </div>
 
-                                        {{--<h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
+                                        --}}
+{{--<h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
                                             <span class="pull-right"
-                                                  style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>--}}
+                                                  style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>--}}{{--
+
                                     </div>
 
                                 </div>
@@ -275,6 +278,7 @@
 
         </div>
     </div>
+--}}
     <!-- /.Top list -->
 
     <div class="container">

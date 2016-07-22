@@ -25,7 +25,7 @@
                         <span class="label label-default pull-right mw">M</span>
                     </a>
                 </li>
-                <li><a href="#hoc_m" data-toggle="tab">Hockey
+                {{--<li><a href="#hoc_m" data-toggle="tab">Hockey
                         <span class="label label-default pull-right mw">M</span>
 
                     </a>
@@ -37,7 +37,7 @@
                 <li><a href="#ell_m" data-toggle="tab">Elle
                         <span class="label label-default pull-right mw">M</span>
                     </a>
-                </li>
+                </li>--}}
             </ul>
         </div>
 
@@ -50,10 +50,9 @@
                 <div class="tab-pane" id="rug_m">
                     <img data-original="http://www.gliffy.com/go/publish/image/10901481/L.png" alt="" class="lazy img-responsive">
                 </div>
-                <div class="tab-pane" id="hoc_m">
-                    {{--this is an incorrect diagram--}}
+                {{--<div class="tab-pane" id="hoc_m">
                     <img data-original="http://www.gliffy.com/go/publish/image/8270899/L.png" alt="" class="lazy img-responsive">
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>

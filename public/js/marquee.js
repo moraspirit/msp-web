@@ -5,7 +5,7 @@ var zxcMarquee={
             mde=typeof(mde)=='string'&&mde.charAt(0).toUpperCase()=='H'?['left','offsetWidth','top','width']:['top','offsetHeight','left','height'],id=o.ID,srt=o.StartDelay,ud=o.StartDirection,p=document.getElementById(id),obj=p.getElementsByTagName('DIV')[0],sz=obj[mde[1]],clone;
         p.style.overflow='hidden';
         obj.style.position='absolute';
-        obj.style[mde[0]]='20px';
+        obj.style[mde[0]]='0px';
         obj.style[mde[3]]=sz+'px';
         clone=obj.cloneNode(true);
         clone.style[mde[0]]=sz+'px';

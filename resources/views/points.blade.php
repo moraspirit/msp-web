@@ -3,7 +3,7 @@
 @section('meta')
     <meta property="og:title" content="SLUG 2016 - POINTS TABLE" />
     <meta property="og:description" content="slug 2016 points table." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="http://sports.moraspirit.com/images/social.png" />
 @stop
 @section('title', 'SLUG 2016 - POINTS TABLE')
 

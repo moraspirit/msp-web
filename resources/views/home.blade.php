@@ -10,7 +10,8 @@
              onmouseover="zxcMarquee.scroll('marquee1',0);"
              onmouseout="zxcMarquee.scroll('marquee1',-1);"
         >
-            <div style="position: relative; width: 100%;">
+
+            <div id="marqueebody" style="position: relative; min-width: {{count($summery)*300}}px">
                 @foreach($summery as $mkey => $mvalue)
                     <div class="mblock" style="height: 100%;">
                         <center><h5 style=" font-size: 12px">
@@ -22,7 +23,7 @@
 
                             </h5>
                         </center>
-                        <hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
+                        <hr style="margin-top: -5px;margin-bottom:0px ; width: 80%">
                         <center><h5 style=" font-size: 12px;margin-top: 5px"><span
                                         class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span> {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}
                                 <span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>

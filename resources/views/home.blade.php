@@ -3,7 +3,7 @@
 @section('meta')
     <meta property="og:title" content="SLUG 2016 - HOME" />
     <meta property="og:description" content="slug 2016 overview at a glace." />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="http://sports.moraspirit.com/images/social.png" />
 @stop
 @section('title', 'SLUG 2016 - HOME')
 @section('css')
@@ -65,8 +65,7 @@
                         <span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
                     </h5>
                     <h5 class="text-uppercase"
-                        style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}
-                        WON</h5></center>
+                        style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}</h5></center>
 
             </div>
         @endforeach

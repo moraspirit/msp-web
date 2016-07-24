@@ -36,6 +36,17 @@
 		<url></url>
 	</event>
 
+	<event>
+		<id>6</id>
+		<name>Rugger Preliminary</name>
+		<startdate>2016-07-24</startdate>
+		<enddate></enddate>
+		<starttime></starttime>
+		<endtime></endtime>
+		<color>#f44336</color>
+		<url></url>
+	</event>
+
 
 	<event>
 		<id>7</id>

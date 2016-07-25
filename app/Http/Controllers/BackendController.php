@@ -38,6 +38,10 @@ class BackendController extends Controller
 
     }
 
+    public function addsummary(){
+        return view('backend.addsummary');
+    }
+
     public function loadpoints(){
         /*$pointstable = DB::connection('mongodb')->collection('msp')->get();*/
         /*return  view('backend.pointstabletest')->with($pointstable);*/

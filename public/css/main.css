@@ -586,3 +586,7 @@ footer {
     width: 44px;
     height: 44px;
 }
+
+.marquee-points{
+    font-size: 1.2em;
+}

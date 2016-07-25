@@ -319,8 +319,8 @@
                         <div>
                             <center>
                                 <h4 class="prev-winners-card__year">2007</h4>
-                                <img src="{{URL::asset('logos/COL.png')}}" alt="" class="prev-winners-card__logo">
-                                <h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+                                <img src="{{URL::asset('logos/PER.png')}}" alt="" class="prev-winners-card__logo">
+                                <h5 class="prev-winners-card__winneruni">University of Peradeniya</h5>
                                 <hr class="prev-winners-card__hr">
                                 <p>Runners up</p>
                                 <p class="font-coda">-</p>
@@ -336,7 +336,7 @@
                             <center>
                                 <h4 class="prev-winners-card__year">2010</h4>
                                 <img src="{{URL::asset('logos/COL.png')}}" alt="" class="prev-winners-card__logo">
-                                <h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+                                <h5 class="prev-winners-card__winneruni">University of Colombo</h5>
                                 <hr class="prev-winners-card__hr">
                                 <p>Runners up</p>
                                 <p class="font-coda">University of Moratuwa</p>

@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Input;
 use App\Sport;
+use App\Entity\summaries;
 
 class BackendController extends Controller
 {
@@ -39,6 +40,20 @@ class BackendController extends Controller
     }
 
     public function addsummary(){
+        return view('backend.addsummary');
+    }
+
+    public function savesummary(Request $request){
+
+        DB::table('summaries')->insert(array(
+            'g_code' => $request->Game,
+            't_a_code' => $request->team_a,
+            't_b_code' => $request->team_b,
+            't_a_score' => $request->team_a_scr,
+            't_b_score' => $request->team_b_scr,
+            't_won' => $request->t_won,
+            'heading' => $request->heading,
+            'summery' => $request->summary ));
         return view('backend.addsummary');
     }
 

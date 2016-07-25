@@ -46,6 +46,10 @@ Route::post('/savepoints','BackendController@savepoints');
 /* Add summaries */
 Route::get('/addsummary','BackendController@addsummary');
 
+/* Save summaries to DB*/
+Route::post('/savepoints','BackendController@savesummary');
+
+
 
 
 /* Add sports page */

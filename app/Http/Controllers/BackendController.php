@@ -16,33 +16,40 @@ use App\Entity\summaries;
 
 class BackendController extends Controller
 {
+    /* load backend home */
+    public function bkhome(){
+        return view('backend.backendhome');
+    }
 
-    /* Load point adding page*/
+    /* Load points adding page*/
     public function addpoints(){
         return view('backend.addpoints');
     }
 
+    /* Save Points */
     public function savepoints(Request $request){
-        /* Save points to mongodb*/
         $sport = $request->Game;
-        $university = $request->University;
-        $catagory = $request->Catagory;
-        $points = $request->points;
-        DB::connection('mongodb')->collection('msp')->insert(array(
-            'sport' => $sport,
-            'university' => $university,
-            'catagory' => $catagory,
-            'points' => $points
-        ));
-        return view('events');
+        $category = $request->Category;
+        $uniscrarray = ['MOR_scr','PER_scr','COL_scr','SJP_scr','KEL_scr','JAF_scr','RHU_scr','RAJ_scr','UVA_scr',
+            'SAB_scr','WAY_scr','SEA_scr','EST_scr','VPA_scr'];
 
-
+        foreach ($uniscrarray as $uniscr){
+            DB::table('scores')->insert(array(
+                'g_code' => $sport,
+                'u_code' => explode('_',$uniscr)[0],
+                'score'=> $request->$uniscr,
+                'category' => $category
+            ));
+        }
+        return view('backend.layout.success');
     }
 
+    /* Render add summaries page*/
     public function addsummary(){
         return view('backend.addsummary');
     }
 
+    /* Save added summaries */
     public function savesummary(Request $request){
 
         DB::table('summaries')->insert(array(
@@ -54,7 +61,7 @@ class BackendController extends Controller
             't_won' => $request->t_won,
             'heading' => $request->heading,
             'summery' => $request->summary ));
-        return view('backend.addsummary');
+        return view('backend.layout.success');
     }
 
     public function loadpoints(){

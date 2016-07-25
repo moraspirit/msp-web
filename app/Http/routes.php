@@ -37,6 +37,10 @@ Route::get('/db',function(){
 });
 
 /* Backend routs */
+
+/* Backend home */
+Route::get('/bkhome','BackendController@bkhome');
+
 /* Add points page*/
 Route::get('/addpoints','BackendController@addpoints');
 
@@ -47,7 +51,7 @@ Route::post('/savepoints','BackendController@savepoints');
 Route::get('/addsummary','BackendController@addsummary');
 
 /* Save summaries to DB*/
-Route::post('/savepoints','BackendController@savesummary');
+Route::post('/savesummary','BackendController@savesummary');
 
 
 
@@ -58,7 +62,7 @@ Route::get('/addsports','BackendController@addSports');
 /* Save sports to database */
 Route::post('/savesports','BackendController@saveSports');
 
-/* end backend routs */
+/* /end backend routs */
 
 /* Load points table*/
 Route::get('/loadpointstable','PointstableController@showPoints');

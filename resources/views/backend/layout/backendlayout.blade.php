@@ -75,19 +75,23 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a ><i class="fa fa-home"></i> Add Points </a>
+                            <li><a href="/bkhome"><i class="fa fa-home"></i> Home </a>
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Edit Points </a>
+                            <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Add Points </a>
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Delete Points </a>
+                            <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Edit Points </a>
+                            </li>
+                            <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Delete Points </a>
                             </li>
                             <li><a href="/addsummary"><i class="fa fa-edit"></i> Add Summary </a>
                             </li>
-                            <li><a><i class="fa fa-desktop"></i> Edit Summary </a>
+                            <li><a href="/addsummary"><i class="fa fa-edit"></i> Edit Summary </a>
                             </li>
-                            <li><a><i class="fa fa-table"></i> Delete Summary </a>
+                            <li><a href="/addsummary"><i class="fa fa-edit"></i> Delete Summary </a>
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Draws </a>
+                            <li><a><i class="fa fa-desktop"></i> Draws </a>
+                            </li>
+                            <li><a><i class="fa fa-table"></i> Contact </a>
                             </li>
                         </ul>
                     </div>

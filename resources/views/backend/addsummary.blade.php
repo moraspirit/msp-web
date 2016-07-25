@@ -5,11 +5,11 @@
     @endsection
 
 @section('content2')
-    Add summaries of games
+    MORASPIRIT
     @endsection
 
 @section('content3')
-    Add new Summary
+    Add New Summary
     @endsection
 
 @section('formcontent')

@@ -57,22 +57,21 @@
 
                 {{--<img class="pull-right img-circle" src="{{URL::asset('images/MSP HiQuality LOGO (1).png')}}" height="60" style="margin-right: -7px; padding: 4px 0;">--}}
                 <div class="header-unis pull-right">
-                    {{--<img src="{{URL::asset('logos/COL.png')}}" alt="" class="img-circle">--}}
-                    <img class="uni-logo uni-logo-COL img-circle">
-                    <img class="uni-logo uni-logo-EST img-circle">
-                    <img class="uni-logo uni-logo-JAF img-circle">
-                    <img class="uni-logo uni-logo-KEL img-circle">
-                    <img class="uni-logo uni-logo-MOR img-circle">
-                    <img class="uni-logo uni-logo-PER img-circle">
-                    <img class="uni-logo uni-logo-RAJ img-circle">
-                    <img class="uni-logo uni-logo-RHU img-circle">
-                    <img class="uni-logo uni-logo-SAB img-circle">
-                    <img class="uni-logo uni-logo-SEA img-circle">
-                    <img class="uni-logo uni-logo-SJP img-circle">
-                    <img class="uni-logo uni-logo-UVA img-circle">
-                    <img class="uni-logo uni-logo-VPA img-circle">
-                    <img class="uni-logo uni-logo-WAY img-circle">
-                    <img class="uni-logo uni-logo-MSP img-circle">
+                    <div class="uni-logo uni-logo-COL img-circle"></div>
+                    <div class="uni-logo uni-logo-EST img-circle"></div>
+                    <div class="uni-logo uni-logo-JAF img-circle"></div>
+                    <div class="uni-logo uni-logo-KEL img-circle"></div>
+                    <div class="uni-logo uni-logo-MOR img-circle"></div>
+                    <div class="uni-logo uni-logo-PER img-circle"></div>
+                    <div class="uni-logo uni-logo-RAJ img-circle"></div>
+                    <div class="uni-logo uni-logo-RHU img-circle"></div>
+                    <div class="uni-logo uni-logo-SAB img-circle"></div>
+                    <div class="uni-logo uni-logo-SEA img-circle"></div>
+                    <div class="uni-logo uni-logo-SJP img-circle"></div>
+                    <div class="uni-logo uni-logo-UVA img-circle"></div>
+                    <div class="uni-logo uni-logo-VPA img-circle"></div>
+                    <div class="uni-logo uni-logo-WAY img-circle"></div>
+                    <div class="uni-logo uni-logo-MSP img-circle"></div>
 
                 </div>
 

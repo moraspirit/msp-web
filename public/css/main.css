@@ -507,7 +507,8 @@ footer {
 
 .uni-logo {
     background-image: url('../images/sprite.png');
-    margin: 8px 2px;
+    margin: 8px 3px;
+    float: left;
 }
 
 .uni-logo-RAJ {

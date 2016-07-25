@@ -1,4 +1,19 @@
-<div class="container" style="position: fixed; top: 30%; bottom: 70%; right: 60%; left: 40%; ">
+@extends('backend.layout.backendlayout')
+
+@section('content1')
+    Points
+@endsection
+
+@section('content2')
+    Add Points of a games
+@endsection
+
+@section('content3')
+    Add new Points of a game
+@endsection
+
+@section('formcontent')
+{{--<div class="container" style="position: fixed; top: 30%; bottom: 70%; right: 60%; left: 40%; ">--}}
 {!! Form::open(array('action' => 'BackendController@savepoints'))  !!}
     <div class="row" style="padding-bottom: 5px">
         {!! Form::label('Game','Game') !!}
@@ -20,5 +35,6 @@
         {!! Form::submit('Submit') !!}
     </div>
 {!!  Form::close() !!}
-</div>
+{{--</div>--}}
+@endsection
 

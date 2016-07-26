@@ -111,7 +111,7 @@ class BackendController extends Controller
         return view('backend.layout.success');
     }
 
-    /* /point adding*/
+    /* /point editing*/
 
     /* point deletion */
     public function showdeletpoints(){
@@ -188,16 +188,11 @@ class BackendController extends Controller
         return view('backend.layout.success');
     }
 
-    public function selectsummaryedit(){
-        return view('backend.selectsummaryedit');
-    }
+    public function showsummariesedit(){
 
-    public function showsummariesedit(Request $request){
-
-        $sport = $request->Game;
         $sum= DB::table('summaries')
-            ->select('id','t_a_code','t_b_code','t_won','t_a_score','t_b_score','heading','summery')
-            ->where('g_code', '=', $sport)
+            ->select('id','t_a_code','t_b_code','t_won','g_code','t_a_score','t_b_score','heading','summery')
+            ->orderBy('id','desc')
             ->get();
 
         $summaries = array();
@@ -208,12 +203,43 @@ class BackendController extends Controller
             }
             array_push($summaries,$tempsum);
         }
-        /*print_r($summaries);*/
-        return view('backend.showsummariesedit',array(
-            'game'=> $sport))->with('summaries', $summaries);;
+        return view('backend.showsummariesedit',['summaries' => $summaries]);
+
     }
     public function saveeditedsummary(Request $request){
+        $num = $request->num;
+        /*print_r($request->num);*/
+        /*$selctedn = "selected".$num;*/
+       /* echo "hello".$request->$selctedn;*/
 
+        for ($x=1;$x<=$num;$x++){
+            $selctedn = "selected".$x;
+            if ($request->$selctedn==1){
+
+                echo $selctedn;
+                $idn='id'.$x;
+                $an='team_a'.$x;
+                $bn='team_b'.$x;
+                $wn='t_won'.$x;
+                $gn='gamecode'.$x;
+                $ascrn='team_a_scr'.$x;
+                $bscrn='team_b_scr'.$x;
+                $headn='heading'.$x;
+                $summrn='summary'.$x;
+
+                DB::table('summaries')
+                    ->where('id', '=', $request->$idn)
+                    ->update(array('t_a_code' =>$request->$an,
+                        't_b_code'=>$request->$bn,
+                        't_won'=>$request->$wn,
+                        'g_code'=>$request->$gn,
+                        't_a_score'=>$request->$ascrn,
+                        't_b_score'=>$request->$bscrn,
+                        'heading'=>$request->$headn,
+                        'summery'=>$request->$summrn));
+            }
+
+        }
         return view('backend.layout.success');
     }
 

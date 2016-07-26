@@ -9,7 +9,7 @@
 @endsection
 
 @section('content3')
-    Edit summary for {{$game}}
+    Edit summaries
 @endsection
 
 
@@ -21,11 +21,13 @@
         <div style="max-width: 400px">
         <table class="table" style="max-width: 400px">
             <thead>
+            <td> Edit</td>
             <td> Heading</td>
+            <td> Game</td>
             <td> Team A</td>
             <td> Team B</td>
             <td> A Score</td>
-            <td> B SCore</td>
+            <td> B Score</td>
             <td> Team Won</td>
             <td> Summary</td>
             </thead>
@@ -38,7 +40,11 @@
 
                     {!! Form::hidden('id'.$num,$summary['id']) !!}
 
+                    <td> {!! Form::checkbox('selected'.$num) !!}</td>
+
                     <td> {!! Form::text('heading'.$num,$summary['heading']) !!}</td>
+
+                    <td> {!! Form::text('gamecode'.$num,$summary['g_code']) !!}</td>
 
                     <td>{!! Form::select('team_a'.$num,array(
                         'MOR' => 'University of Moratuwa',
@@ -101,7 +107,7 @@
         </table>
         </div>
     </div>
-
+    {!! Form::hidden('num',$num) !!}
     <div class="row" style="padding-bottom: 5px">
         {!! Form::submit('SAVE') !!}
     </div>

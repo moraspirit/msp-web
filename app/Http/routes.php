@@ -77,8 +77,7 @@ Route::get('/addsummary','BackendController@addsummary');
 Route::post('/savesummary','BackendController@savesummary');
 
 /* Summary editing */
-Route::get('/selectsummaryedit','BackendController@selectsummaryedit');
-Route::post('/showsummariesedit','BackendController@showsummariesedit');
+Route::get('/showsummariesedit','BackendController@showsummariesedit');
 Route::post('/saveeditedsummary','BackendController@saveeditedsummary');
 /* /points editing */
 

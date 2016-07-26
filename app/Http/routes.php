@@ -37,17 +37,35 @@ Route::get('/db',function(){
 });
 
 /* Backend routs */
+
+/* Backend home */
+Route::get('/bkhome','BackendController@bkhome');
+
 /* Add points page*/
 Route::get('/addpoints','BackendController@addpoints');
 
 /* Save points to DB*/
 Route::post('/savepoints','BackendController@savepoints');
 
+/* points editing */
+Route::get('/showselectpoints','BackendController@showselectpoints');
+Route::post('/editpoints','BackendController@editpoints');
+Route::post('/savepointsedited','BackendController@savepointsedited');
+/* /points editing */
+
+/* points deletion*/
+Route::get('/showdeletpoints','BackendController@showdeletpoints');
+Route::post('/dletepoints','BackendController@dletepoints');
+Route::post('/savepointsdeleted','BackendController@savepointsdeleted');
+/* /points deletion*/
+
+
+
 /* Add summaries */
 Route::get('/addsummary','BackendController@addsummary');
 
 /* Save summaries to DB*/
-Route::post('/savepoints','BackendController@savesummary');
+Route::post('/savesummary','BackendController@savesummary');
 
 
 
@@ -58,7 +76,7 @@ Route::get('/addsports','BackendController@addSports');
 /* Save sports to database */
 Route::post('/savesports','BackendController@saveSports');
 
-/* end backend routs */
+/* /end backend routs */
 
 /* Load points table*/
 Route::get('/loadpointstable','PointstableController@showPoints');

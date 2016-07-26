@@ -62,7 +62,7 @@
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>Anthony Fernando</h2>
+                        <h2>{{$user = Auth::user()->name}}</h2>
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -73,7 +73,7 @@
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
                     <div class="menu_section">
-                        <h3>General</h3>
+                        <h3><a href="/auth/logout"> <strong> Log out </strong></a></h3>
                         <ul class="nav side-menu">
                             <li><a href="/bkhome"><i class="fa fa-home"></i> Home </a>
                             </li>

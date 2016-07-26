@@ -37,5 +37,8 @@
 
 </head>
 <body>
-    @yield('content')
+    <div class="container" style="/*margin-top: 100px*/">
+        @yield('content')
+    </div>
+
 </body>

@@ -38,4 +38,14 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
+	public function showRegistrationForm()
+	{
+		return redirect('/bkhome');
+	}
+
+	public function register()
+	{
+
+	}
+
 }

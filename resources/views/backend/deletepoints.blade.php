@@ -14,7 +14,7 @@
 
 @section('formcontent')
     {{--<div class="container" style="position: fixed; top: 30%; bottom: 70%; right: 60%; left: 40%; ">--}}
-    {!! Form::open(array('action' => 'BackendController@savepointsedited'))  !!}
+    {!! Form::open(array('action' => 'BackendController@savepointsdeleted'))  !!}
     <div class="row">
         <div>
             <table class="table">
@@ -143,9 +143,24 @@
     </div>
 
     <div class="row" style="padding-bottom: 5px">
-        {!! Form::submit('SAVE') !!}
+        {!! Form::hidden('gamechoosed',$game) !!}
+        {!! Form::hidden('catchoosed',$category) !!}
+    </div>
+
+    <div class="row" style="padding-bottom: 5px">
+        {!! Form::submit('DELETE') !!}
     </div>
     {!!  Form::close() !!}
     {{--</div>--}}
 @endsection
 
+@section('script')
+    <script>
+        function myFunction() {
+            document.getElementById("Game").disabled = true;
+            document.getElementById("Category").disabled = true;
+        }
+
+        window.onload = myFunction();
+    </script>
+    @endsection

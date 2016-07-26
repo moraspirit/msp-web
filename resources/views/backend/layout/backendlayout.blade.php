@@ -81,7 +81,7 @@
                             </li>
                             <li><a href="/showselectpoints"><i class="fa fa-bar-chart-o"></i> Edit Points </a>
                             </li>
-                            <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Delete Points </a>
+                            <li><a href="/showdeletpoints"><i class="fa fa-bar-chart-o"></i> Delete Points </a>
                             </li>
                             <li><a href="/addsummary"><i class="fa fa-edit"></i> Add Summary </a>
                             </li>

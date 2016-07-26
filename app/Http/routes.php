@@ -53,6 +53,12 @@ Route::post('/editpoints','BackendController@editpoints');
 Route::post('/savepointsedited','BackendController@savepointsedited');
 /* /points editing */
 
+/* points deletion*/
+Route::get('/showdeletpoints','BackendController@showdeletpoints');
+Route::post('/dletepoints','BackendController@dletepoints');
+Route::post('/savepointsdeleted','BackendController@savepointsdeleted');
+/* /points deletion*/
+
 
 
 /* Add summaries */

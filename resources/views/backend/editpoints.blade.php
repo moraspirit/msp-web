@@ -118,7 +118,7 @@
 
             <tr class="success">
                 <td>{!! Form::label('WAY','Wayamba University') !!}</td>
-                <{{--td> {!! Form::number('WAY_scr') !!}</td>--}}
+                {{--td> {!! Form::number('WAY_scr') !!}</td>--}}
                 <td> {!! Form::input('number','WAY_scr',$scores10) !!}</td>
             </tr>
             <tr class="danger">

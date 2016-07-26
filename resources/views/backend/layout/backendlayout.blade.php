@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SLUG 2016 | </title>
+    <title>MSP SPORTS | ADMIN</title>
 
     {{--<!-- Bootstrap Core CSS -->--}}
     <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -49,23 +49,12 @@
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>SLUG
-                                    2016</span></a>
+                    <a href="index.html" class="site_title">
+                        <i class="fa fa-home"></i> <span>SLUG 2016</span></a>
                 </div>
                 <div class="clearfix"></div>
 
 
-                <!-- menu prile quick info -->
-                <div class="profile">
-                    <div class="profile_pic">
-                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                    </div>
-                    <div class="profile_info">
-                        <span>Welcome,</span>
-                        <h2>Anthony Fernando</h2>
-                    </div>
-                </div>
-                <!-- /menu prile quick info -->
 
                 <br />
 
@@ -170,7 +159,7 @@
             <footer>
                 <div class="">
                     <p class="pull-right">Sri Lankan University Games 2016 by <a>MoraSpirit</a>. |
-                        <span class="lead"> <i class="fa fa-paw"></i> SLUG 2016 </span>
+                        <span class="lead"> <i class="fa fa-home"></i> SLUG 2016 </span>
                     </p>
                 </div>
                 <div class="clearfix"></div>

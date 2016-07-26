@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Input;
 use App\Sport;
 use App\Entity\summaries;
 use app\Http\Middleware\Authenticate;
+use PhpSpec\Exception\Exception;
 
 class BackendController extends Controller
 {
@@ -30,11 +31,11 @@ class BackendController extends Controller
 
 
     /* POINTS */
+
     /* Load points adding page*/
     public function addpoints(){
         return view('backend.addpoints');
     }
-
     /* Save Points */
     public function savepoints(Request $request){
         $sport = $request->Game;
@@ -67,33 +68,46 @@ class BackendController extends Controller
 
         $savedscores=array();
 
-        foreach ($uniscrarray as $uniscr){
-            $scr= DB::table('scores')->select('score')
-                ->where('g_code', '=', $sport)
-                ->where('category', '=', $category)
-                ->where('u_code', '=', explode('_',$uniscr)[0])
-                ->get();
-            array_push($savedscores,$scr[0]->score);
+
+            foreach ($uniscrarray as $uniscr) {
+                $scr = DB::table('scores')->select('score')
+                    ->where('g_code', '=', $sport)
+                    ->where('category', '=', $category)
+                    ->where('u_code', '=', explode('_', $uniscr)[0])
+                    ->get();
+
+                if ($scr==null){
+                    break;
+                }
+                else{
+                    array_push($savedscores, $scr[0]->score);
+                }
+            }
+
+        if ($savedscores==null){
+            return view('backend.layout.norecord');
         }
 
-        return view('backend.editpoints',array(
-            'game'=> $sport,
-            'category'=>$category,
-            'scores0' => (string)$savedscores[0],
-            'scores1' => (string)$savedscores[1],
-            'scores2' => (string)$savedscores[2],
-            'scores3' => (string)$savedscores[3],
-            'scores4' => (string)$savedscores[4],
-            'scores5' => (string)$savedscores[5],
-            'scores6' => (string)$savedscores[6],
-            'scores7' => (string)$savedscores[7],
-            'scores8' => (string)$savedscores[8],
-            'scores9' => (string)$savedscores[9],
-            'scores10' => (string)$savedscores[10],
-            'scores11' => (string)$savedscores[11],
-            'scores12' => (string)$savedscores[12],
-            'scores13' => (string)$savedscores[13],
-        ));
+        else {
+            return view('backend.editpoints', array(
+                'game' => $sport,
+                'category' => $category,
+                'scores0' => (string)$savedscores[0],
+                'scores1' => (string)$savedscores[1],
+                'scores2' => (string)$savedscores[2],
+                'scores3' => (string)$savedscores[3],
+                'scores4' => (string)$savedscores[4],
+                'scores5' => (string)$savedscores[5],
+                'scores6' => (string)$savedscores[6],
+                'scores7' => (string)$savedscores[7],
+                'scores8' => (string)$savedscores[8],
+                'scores9' => (string)$savedscores[9],
+                'scores10' => (string)$savedscores[10],
+                'scores11' => (string)$savedscores[11],
+                'scores12' => (string)$savedscores[12],
+                'scores13' => (string)$savedscores[13],
+            ));
+        }
     }
 
     public function savepointsedited(Request $request){
@@ -133,27 +147,38 @@ class BackendController extends Controller
                 ->where('category', '=', $category)
                 ->where('u_code', '=', explode('_',$uniscr)[0])
                 ->get();
-            array_push($savedscores,$scr[0]->score);
+            if ($scr==null){
+                break;
+            }
+            else{
+                array_push($savedscores, $scr[0]->score);
+            }
         }
 
-        return view('backend.deletepoints',array(
-            'game'=> $sport,
-            'category'=>$category,
-            'scores0' => (string)$savedscores[0],
-            'scores1' => (string)$savedscores[1],
-            'scores2' => (string)$savedscores[2],
-            'scores3' => (string)$savedscores[3],
-            'scores4' => (string)$savedscores[4],
-            'scores5' => (string)$savedscores[5],
-            'scores6' => (string)$savedscores[6],
-            'scores7' => (string)$savedscores[7],
-            'scores8' => (string)$savedscores[8],
-            'scores9' => (string)$savedscores[9],
-            'scores10' => (string)$savedscores[10],
-            'scores11' => (string)$savedscores[11],
-            'scores12' => (string)$savedscores[12],
-            'scores13' => (string)$savedscores[13],
-        ));
+        if ($savedscores==null){
+            return view('backend.layout.norecord');
+        }
+
+        else {
+            return view('backend.editpoints', array(
+                'game' => $sport,
+                'category' => $category,
+                'scores0' => (string)$savedscores[0],
+                'scores1' => (string)$savedscores[1],
+                'scores2' => (string)$savedscores[2],
+                'scores3' => (string)$savedscores[3],
+                'scores4' => (string)$savedscores[4],
+                'scores5' => (string)$savedscores[5],
+                'scores6' => (string)$savedscores[6],
+                'scores7' => (string)$savedscores[7],
+                'scores8' => (string)$savedscores[8],
+                'scores9' => (string)$savedscores[9],
+                'scores10' => (string)$savedscores[10],
+                'scores11' => (string)$savedscores[11],
+                'scores12' => (string)$savedscores[12],
+                'scores13' => (string)$savedscores[13],
+            ));
+        }
     }
 
     public function savepointsdeleted(Request $request){
@@ -188,6 +213,7 @@ class BackendController extends Controller
         return view('backend.layout.success');
     }
 
+    /* Summary Edit */
     public function showsummariesedit(){
 
         $sum= DB::table('summaries')
@@ -213,10 +239,10 @@ class BackendController extends Controller
        /* echo "hello".$request->$selctedn;*/
 
         for ($x=1;$x<=$num;$x++){
-            $selctedn = "selected".$x;
-            if ($request->$selctedn==1){
 
-                echo $selctedn;
+            $selctedn = "selected".$x;
+
+            if ($request->$selctedn==1){
                 $idn='id'.$x;
                 $an='team_a'.$x;
                 $bn='team_b'.$x;
@@ -242,7 +268,47 @@ class BackendController extends Controller
         }
         return view('backend.layout.success');
     }
+    /* /Summary Edit */
 
+    /* Summary Delete*/
+    public function showsummariesdelete(){
+
+        $sum= DB::table('summaries')
+            ->select('id','t_a_code','t_b_code','t_won','g_code','t_a_score','t_b_score','heading','summery')
+            ->orderBy('id','desc')
+            ->get();
+
+        $summaries = array();
+        foreach ($sum as $summary){
+            $tempsum = array();
+            foreach ($summary as $key => $value){
+                $tempsum[$key]=$value;
+            }
+            array_push($summaries,$tempsum);
+        }
+        return view('backend.showsummariesdelete',['summaries' => $summaries]);
+
+    }
+    public function savedeletedsummary(Request $request){
+        $num = $request->num;
+
+        for ($x=1;$x<=$num;$x++){
+
+            $selctedn = "selected".$x;
+
+            if ($request->$selctedn==1){
+
+                $idn='id'.$x;
+
+                DB::table('summaries')
+                    ->where('id', '=', $request->$idn)
+                    ->delete();
+            }
+
+        }
+        return view('backend.layout.success');
+    }
+    /* /Summary Delete*/
 
     /* /SUMMARIES*/
 

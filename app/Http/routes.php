@@ -79,7 +79,12 @@ Route::post('/savesummary','BackendController@savesummary');
 /* Summary editing */
 Route::get('/showsummariesedit','BackendController@showsummariesedit');
 Route::post('/saveeditedsummary','BackendController@saveeditedsummary');
-/* /points editing */
+/* /Summary editing */
+
+/* Summary deleting */
+Route::get('/showsummariesdelete','BackendController@showsummariesdelete');
+Route::post('/savedeletedsummary','BackendController@savedeletedsummary');
+/* /Summary editing */
 
 
 /* Add sports page */

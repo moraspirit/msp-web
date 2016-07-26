@@ -9,7 +9,7 @@
 @endsection
 
 @section('content3')
-    Edit summaries
+    Edit summaries :- select the checkboxes to edit
 @endsection
 
 

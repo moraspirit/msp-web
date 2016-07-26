@@ -9,7 +9,7 @@
 @endsection
 
 @section('content3')
-    Edit Points
+    Delete Points
 @endsection
 
 @section('formcontent')

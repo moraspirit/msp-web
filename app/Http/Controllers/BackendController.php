@@ -160,7 +160,7 @@ class BackendController extends Controller
         }
 
         else {
-            return view('backend.editpoints', array(
+            return view('backend.deletepoints', array(
                 'game' => $sport,
                 'category' => $category,
                 'scores0' => (string)$savedscores[0],

@@ -11,3 +11,8 @@
 @section('content3')
     For MoraSpirit
 @endsection
+
+@section('formcontent')
+    Points can be added, edited and deleted. <br>
+    Summaries can be added, edited and deleted.
+@endsection

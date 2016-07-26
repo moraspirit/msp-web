@@ -1,6 +1,12 @@
 @extends('frontend.layout')
 
-<title>SLUG 2016 - DRAWS</title>
+@section('meta')
+    <meta property="og:title" content="SLUG 2016 - DRAWS" />
+    <meta property="og:description" content="slug 2016 draws." />
+    <meta property="og:image" content="http://sports.moraspirit.com/images/social.png" />
+@stop
+@section('title', 'SLUG 2016 - DRAWS')
+
 @section('content')
 
     <div class="container draws-pg font-coda--bold text-uppercase" style="padding-top: 20px; padding-bottom: 20px;">

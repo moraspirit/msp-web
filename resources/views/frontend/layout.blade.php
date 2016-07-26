@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SLUG 2016 results / points">
     <meta name="author" content="moraspirit">
-    <title>SLUG 2016 MORASPIRIT</title>
+    @yield('meta')
+
+    <title>@yield('title')</title>
     {{--<!-- Bootstrap Core CSS -->--}}
     <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
     {{--<!-- Custom CSS -->--}}
@@ -21,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
+    @yield('css')
 
     {{--Favicon--}}
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -40,14 +42,45 @@
     <div class="container-fluid" id="banner">
         <div class="row" style="background-color: firebrick;">
             <div class="container" style="color: white">
-                <h5 class="pull-left" style="font-family: 'Coda', cursive;">www.sport.moraspirit.com</h5>
+                <h5 class="pull-left" style="font-family: 'Coda', cursive;"><a class="no-link" href="/">
+                        www.sports.moraspirit.com
+                    </a></h5>
                 <h5 class="pull-right text-uppercase" style="font-family: 'Coda', cursive;">Sri Lanka University Games -
                     2016</h5>
             </div>
+
         </div>
-        <div style="background-color: #fe0405; margin-left: -105px;margin-right: -15px;">
+        <div class="row header-image--wrapper" style="background-color: #5bc0de;">
+            <div class="container">
+                {{--<img src="{{URL::asset('images/header.png')}}" width="100%">--}}
+                <img class="pull-left" src="{{URL::asset('images/SLUG 2016 LOGO_cropped.png')}}" alt="SLUG 2016 logo" title="SLUG 2016 logo" height="60" style="margin-left: -6px; padding: 5px 0;">
+
+                {{--<img class="pull-right img-circle" src="{{URL::asset('images/MSP HiQuality LOGO (1).png')}}" height="60" style="margin-right: -7px; padding: 4px 0;">--}}
+                <div class="header-unis pull-right">
+                    <div class="uni-logo uni-logo-COL img-circle"></div>
+                    <div class="uni-logo uni-logo-EST img-circle"></div>
+                    <div class="uni-logo uni-logo-JAF img-circle"></div>
+                    <div class="uni-logo uni-logo-KEL img-circle"></div>
+                    <div class="uni-logo uni-logo-MOR img-circle"></div>
+                    <div class="uni-logo uni-logo-PER img-circle"></div>
+                    <div class="uni-logo uni-logo-RAJ img-circle"></div>
+                    <div class="uni-logo uni-logo-RHU img-circle"></div>
+                    <div class="uni-logo uni-logo-SAB img-circle"></div>
+                    <div class="uni-logo uni-logo-SEA img-circle"></div>
+                    <div class="uni-logo uni-logo-SJP img-circle"></div>
+                    <div class="uni-logo uni-logo-UVA img-circle"></div>
+                    <div class="uni-logo uni-logo-VPA img-circle"></div>
+                    <div class="uni-logo uni-logo-WAY img-circle"></div>
+                    <div class="uni-logo uni-logo-MSP img-circle"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {{--<div style="background-color: #fe0405; margin-left: -105px;margin-right: -15px;">
             <img class="pull-right" src="{{URL::asset('images/top.png')}}" alt="" width="100%">
-        </div>
+        </div>--}}
     </div>
 
     <!-- Navigation -->

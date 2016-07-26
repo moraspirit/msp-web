@@ -47,6 +47,14 @@ Route::get('/addpoints','BackendController@addpoints');
 /* Save points to DB*/
 Route::post('/savepoints','BackendController@savepoints');
 
+/* points editing */
+Route::get('/showselectpoints','BackendController@showselectpoints');
+Route::post('/editpoints','BackendController@editpoints');
+Route::post('/savepointsedited','BackendController@savepointsedited');
+/* /points editing */
+
+
+
 /* Add summaries */
 Route::get('/addsummary','BackendController@addsummary');
 

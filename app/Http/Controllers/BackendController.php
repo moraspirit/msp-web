@@ -44,6 +44,64 @@ class BackendController extends Controller
         return view('backend.layout.success');
     }
 
+    /* Render point editing */
+    public function showselectpoints(){
+        return view('backend.modifypoints');
+    }
+
+    public function editpoints(Request $request){
+        $sport = $request->Game;
+        $category = $request->Category;
+
+        $uniscrarray = ['MOR_scr','PER_scr','COL_scr','SJP_scr','KEL_scr','JAF_scr','RHU_scr','RAJ_scr','UVA_scr',
+            'SAB_scr','WAY_scr','SEA_scr','EST_scr','VPA_scr'];
+
+        $savedscores=array();
+
+        foreach ($uniscrarray as $uniscr){
+            $scr= DB::table('scores')->select('score')
+                ->where('g_code', '=', $sport)
+                ->where('category', '=', $category)
+                ->where('u_code', '=', explode('_',$uniscr)[0])
+                ->get();
+            array_push($savedscores,$scr[0]->score);
+        }
+
+        return view('backend.editpoints',array(
+            'game'=> $sport,
+            'category'=>$category,
+            'scores0' => (string)$savedscores[0],
+            'scores1' => (string)$savedscores[1],
+            'scores2' => (string)$savedscores[2],
+            'scores3' => (string)$savedscores[3],
+            'scores4' => (string)$savedscores[4],
+            'scores5' => (string)$savedscores[5],
+            'scores6' => (string)$savedscores[6],
+            'scores7' => (string)$savedscores[7],
+            'scores8' => (string)$savedscores[8],
+            'scores9' => (string)$savedscores[9],
+            'scores10' => (string)$savedscores[10],
+            'scores11' => (string)$savedscores[11],
+            'scores12' => (string)$savedscores[12],
+            'scores13' => (string)$savedscores[13],
+        ));
+    }
+
+    public function savepointsedited(Request $request){
+        $sport = $request->Game;
+        $category = $request->Category;
+        $uniscrarray = ['MOR_scr','PER_scr','COL_scr','SJP_scr','KEL_scr','JAF_scr','RHU_scr','RAJ_scr','UVA_scr',
+            'SAB_scr','WAY_scr','SEA_scr','EST_scr','VPA_scr'];
+
+        foreach ($uniscrarray as $uniscr){
+            DB::table('scores')->where('g_code', '=', $sport)
+                ->where('category', '=', $category)
+                ->where('u_code', '=', explode('_',$uniscr)[0])
+                ->update(array('score'=> $request->$uniscr));
+        }
+        return view('backend.layout.success');
+    }
+
     /* Render add summaries page*/
     public function addsummary(){
         return view('backend.addsummary');

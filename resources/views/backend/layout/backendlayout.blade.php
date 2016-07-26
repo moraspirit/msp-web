@@ -79,7 +79,7 @@
                             </li>
                             <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Add Points </a>
                             </li>
-                            <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Edit Points </a>
+                            <li><a href="/showselectpoints"><i class="fa fa-bar-chart-o"></i> Edit Points </a>
                             </li>
                             <li><a href="/addpoints"><i class="fa fa-bar-chart-o"></i> Delete Points </a>
                             </li>

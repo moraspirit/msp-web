@@ -12,6 +12,17 @@ use App\Sport;
 |
 */
 
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+
 Route::get('/','HomePageController@index');
 
 Route::get('/gallery', function (){
@@ -67,7 +78,11 @@ Route::get('/addsummary','BackendController@addsummary');
 /* Save summaries to DB*/
 Route::post('/savesummary','BackendController@savesummary');
 
-
+/* Summary editing */
+Route::get('/selectsummaryedit','BackendController@selectsummaryedit');
+Route::post('/showsummariesedit','BackendController@showsummariesedit');
+Route::post('/saveeditedsummary','BackendController@saveeditedsummary');
+/* /points editing */
 
 
 /* Add sports page */

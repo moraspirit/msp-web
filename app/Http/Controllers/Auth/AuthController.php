@@ -27,6 +27,9 @@ class AuthController extends Controller {
 	 * @param  \Illuminate\Contracts\Auth\Registrar  $registrar
 	 * @return void
 	 */
+
+	protected $redirectPath = '/bkhome';
+
 	public function __construct(Guard $auth, Registrar $registrar)
 	{
 		$this->auth = $auth;

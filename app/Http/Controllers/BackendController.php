@@ -13,14 +13,23 @@ use DB;
 use Illuminate\Support\Facades\Input;
 use App\Sport;
 use App\Entity\summaries;
+use app\Http\Middleware\Authenticate;
 
 class BackendController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /* load backend home */
     public function bkhome(){
         return view('backend.backendhome');
     }
 
+
+    /* POINTS */
     /* Load points adding page*/
     public function addpoints(){
         return view('backend.addpoints');
@@ -156,7 +165,9 @@ class BackendController extends Controller
         return view('backend.layout.success');
     }
     /* /point deletion*/
+    /* /POINTS */
 
+    /* SUMMARIES */
     /* Render add summaries page*/
     public function addsummary(){
         return view('backend.addsummary');
@@ -176,6 +187,38 @@ class BackendController extends Controller
             'summery' => $request->summary ));
         return view('backend.layout.success');
     }
+
+    public function selectsummaryedit(){
+        return view('backend.selectsummaryedit');
+    }
+
+    public function showsummariesedit(Request $request){
+
+        $sport = $request->Game;
+        $sum= DB::table('summaries')
+            ->select('id','t_a_code','t_b_code','t_won','t_a_score','t_b_score','heading','summery')
+            ->where('g_code', '=', $sport)
+            ->get();
+
+        $summaries = array();
+        foreach ($sum as $summary){
+            $tempsum = array();
+            foreach ($summary as $key => $value){
+                $tempsum[$key]=$value;
+            }
+            array_push($summaries,$tempsum);
+        }
+        /*print_r($summaries);*/
+        return view('backend.showsummariesedit',array(
+            'game'=> $sport))->with('summaries', $summaries);;
+    }
+    public function saveeditedsummary(Request $request){
+
+        return view('backend.layout.success');
+    }
+
+
+    /* /SUMMARIES*/
 
     public function loadpoints(){
         /*$pointstable = DB::connection('mongodb')->collection('msp')->get();*/

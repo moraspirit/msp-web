@@ -62,7 +62,7 @@
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>{{$user = Auth::user()->name}}</h2>
+                        <h2>Anthony Fernando</h2>
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -110,7 +110,7 @@
                     <a data-toggle="tooltip" data-placement="top" title="Lock">
                         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                     </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Logout" href="/auth/logout">
+                    <a data-toggle="tooltip" data-placement="top" title="Logout"  href="/auth/logout">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                     </a>
                 </div>
@@ -156,7 +156,7 @@
 
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="x_content" @yield('yoverflow')>
+                            <div class="x_content" style="overflow-y: scroll;">
 
                                 @yield('formcontent')
 
@@ -184,10 +184,10 @@
 </div>
 
 @section('con')
-@end
+    @end
 
 @section('script')
-    @show
+@show
 </body>
 
 </html>

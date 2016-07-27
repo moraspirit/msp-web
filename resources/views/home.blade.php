@@ -47,9 +47,9 @@
     {{--</div>--}}
 
     {{--Marquee to be load in Mobile /Tab--}}
-    <marquee id="marquee-mobile" class="" style="height: 85px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
+    <marquee id="marquee-mobile" class="" style="height: 95px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
         @foreach($summery as $mkey => $mvalue)
-            <div class="mblock" style="height: 76px;">
+            <div class="mblock" style="height: 86px;">
                 <center><h5 style=" font-size: 12px">
 
                         <img width="25px" height="25px" src="{{URL::asset('logos/'.$mvalue['logo1'])}}" alt="">
@@ -60,18 +60,20 @@
                     </h5>
                 </center>
                 <hr style="margin-top: -5px;margin-bottom:0px ; width: 80%   ">
-                <center><h5 style=" font-size: 12px;margin-top: 5px"><span
-                                class="label label-pill label-info pull-left">{{$mvalue['t_a_score']}}</span> {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}
-                        <span class="label label-pill label-info pull-right">{{$mvalue['t_b_score'].' '}}</span>
-                    </h5>
-                    <h5 class="text-uppercase"
-                        style="font-family: 'Open Sans', sans-serif;font-size: 10px;margin-bottom: 5px;margin-top: -8px"> {{$mvalue['summery']}}</h5></center>
+                <center><p style=" font-size: 12px;margin-top: 5px"><span
+                                class="label label-pill label-info pull-left marquee-points">{{$mvalue['t_a_score']}}</span> {{$mvalue['vs1'].' '}} {{' '.'vs'.' '}} {{ $mvalue['vs2'].' '}}
+                        <span class="label label-pill label-info pull-right marquee-points">{{$mvalue['t_b_score'].' '}}</span>
+                    </p>
+                </center>
+                <h5 class="text-uppercase"
+                    style="font-family: 'Open Sans', sans-serif;font-size: 10px; text-align: center;"> {{$mvalue['summery']}}</h5>
 
             </div>
         @endforeach
     </marquee>
 
     <!-- Top List -->
+{{--
     <div class="content-section-a">
 
         <div class="container">
@@ -165,9 +167,11 @@
                                             <span>{{' '.$vall['score']}}</span>
                                         </div>
 
-                                        {{--<h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
+                                        --}}
+{{--<h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
                                             <span class="pull-right"
-                                                  style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>--}}
+                                                  style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>--}}{{--
+
                                     </div>
 
                                 </div>
@@ -274,7 +278,14 @@
 
         </div>
     </div>
+--}}
     <!-- /.Top list -->
+
+    {{--Welcome text to show until points are available--}}
+    <div class="container text-center font-oswald" style="padding-top: 35px;">
+        <div style="font-size: 40px">WE ARE READY!</div>
+        <div style="font-size: 25px">STAY WITH US FOR EXCITING STUFFS AND SCORES.</div>
+    </div>
 
     <div class="container">
         <hr />
@@ -309,8 +320,8 @@
                         <div>
                             <center>
                                 <h4 class="prev-winners-card__year">2007</h4>
-                                <img src="{{URL::asset('logos/COL.png')}}" alt="" class="prev-winners-card__logo">
-                                <h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+                                <img src="{{URL::asset('logos/PER.png')}}" alt="" class="prev-winners-card__logo">
+                                <h5 class="prev-winners-card__winneruni">University of Peradeniya</h5>
                                 <hr class="prev-winners-card__hr">
                                 <p>Runners up</p>
                                 <p class="font-coda">-</p>
@@ -326,7 +337,7 @@
                             <center>
                                 <h4 class="prev-winners-card__year">2010</h4>
                                 <img src="{{URL::asset('logos/COL.png')}}" alt="" class="prev-winners-card__logo">
-                                <h5 class="prev-winners-card__winneruni">Unversity of Colombo</h5>
+                                <h5 class="prev-winners-card__winneruni">University of Colombo</h5>
                                 <hr class="prev-winners-card__hr">
                                 <p>Runners up</p>
                                 <p class="font-coda">University of Moratuwa</p>

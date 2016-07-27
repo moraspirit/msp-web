@@ -25,19 +25,17 @@
                         <span class="label label-default pull-right mw">M</span>
                     </a>
                 </li>
-                <li><a href="#hoc_m" data-toggle="tab">Hockey
-                        <span class="label label-default pull-right mw">M</span>
 
+                <li><a href="#ten_m" data-toggle="tab">Tennis
+                        <span class="label label-default pull-right mw">M</span>
                     </a>
                 </li>
-                <li><a href="#hoc_w" data-toggle="tab">Hockey
+
+                <li><a href="#ten_w" data-toggle="tab">Tennis
                         <span class="label label-default pull-right mw">W</span>
                     </a>
                 </li>
-                <li><a href="#ell_m" data-toggle="tab">Elle
-                        <span class="label label-default pull-right mw">M</span>
-                    </a>
-                </li>
+
             </ul>
         </div>
 
@@ -50,9 +48,11 @@
                 <div class="tab-pane" id="rug_m">
                     <img data-original="http://www.gliffy.com/go/publish/image/10901481/L.png" alt="" class="lazy img-responsive">
                 </div>
-                <div class="tab-pane" id="hoc_m">
-                    {{--this is an incorrect diagram--}}
-                    <img data-original="http://www.gliffy.com/go/publish/image/8270899/L.png" alt="" class="lazy img-responsive">
+                <div class="tab-pane" id="ten_m">
+                    <img data-original="http://www.gliffy.com/go/publish/image/10930587/L.png" alt="" class="lazy img-responsive">
+                </div>
+                <div class="tab-pane" id="ten_w">
+                    <img data-original="http://www.gliffy.com/go/publish/image/10930483/L.png" alt="" class="lazy img-responsive">
                 </div>
             </div>
         </div>

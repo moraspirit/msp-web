@@ -64,78 +64,78 @@
             <tr class="success">
                 <td>{!! Form::label('MOR','University of Moratuwa') !!}</td>
                 {{--<td> {!! Form::number('MOR_scr') !!}</td>--}}
-                <td> {!! Form::input('number','MOR_scr') !!}</td>
+                <td> {!! Form::input('float','MOR_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('PER','University of Peradeniya') !!} </td>
                 {{--<td> {!! Form::number('PER_scr') !!}</td>--}}
-                <td> {!! Form::input('number','PER_scr') !!}</td>
+                <td> {!! Form::input('float','PER_scr') !!}</td>
             </tr>
 
             <tr class="success">
                 <td>{!! Form::label('COL','University of Colombo') !!}</td>
                 {{--<td> {!! Form::number('COL_scr') !!}</td>--}}
-                <td> {!! Form::input('number','COL_scr') !!}</td>
+                <td> {!! Form::input('float','COL_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('SJP','University of Sri Jayawardenapura') !!} </td>
                 {{--<td> {!! Form::number('SJP_scr') !!}</td>--}}
-                <td> {!! Form::input('number','SJP_scr') !!}</td>
+                <td> {!! Form::input('float','SJP_scr') !!}</td>
             </tr>
 
             <tr class="success">
                 <td>{!! Form::label('KEL','University of Kelaniya') !!}</td>
                 {{--<td> {!! Form::number('KEL_scr') !!}</td>--}}
-                <td> {!! Form::input('number','KEL_scr') !!}</td>
+                <td> {!! Form::input('float','KEL_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('JAF','University of Jaffna') !!} </td>
                 {{--<td> {!! Form::number('JAF_scr') !!}</td>--}}
-                <td> {!! Form::input('number','JAF_scr') !!}</td>
+                <td> {!! Form::input('float','JAF_scr') !!}</td>
             </tr>
 
             <tr class="success">
                 <td>{!! Form::label('RHU','University of Ruhuna') !!}</td>
                 {{--<td> {!! Form::number('RHU_scr') !!}</td>--}}
-                <td> {!! Form::input('number','RHU_scr') !!}</td>
+                <td> {!! Form::input('float','RHU_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('RAJ','Rajarata University') !!} </td>
                 {{--<td> {!! Form::number('RAJ_scr') !!}</td>--}}
-                <td> {!! Form::input('number','RAJ_scr') !!}</td>
+                <td> {!! Form::input('float','RAJ_scr') !!}</td>
             </tr>
 
             <tr class="success">
                 <td>{!! Form::label('UVA','Uva Wellassa University') !!}</td>
                 {{--<td> {!! Form::number('UVA_scr') !!}</td>--}}
-                <td> {!! Form::input('number','UVA_scr') !!}</td>
+                <td> {!! Form::input('float','UVA_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('SAB','Sabaragamuwa University') !!} </td>
                 {{--<td> {!! Form::number('SAB_scr') !!}</td>--}}
-                <td> {!! Form::input('number','SAB_scr') !!}</td>
+                <td> {!! Form::input('float','SAB_scr') !!}</td>
             </tr>
 
             <tr class="success">
                 <td>{!! Form::label('WAY','Wayamba University') !!}</td>
                 {{--td> {!! Form::number('WAY_scr') !!}</td>--}}
-                <td> {!! Form::input('number','WAY_scr') !!}</td>
+                <td> {!! Form::input('float','WAY_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('SEA','South Eastern University') !!} </td>
                 {{--<td> {!! Form::number('SEA_scr') !!}</td>--}}
-                <td> {!! Form::input('number','SEA_scr') !!}</td>
+                <td> {!! Form::input('float','SEA_scr') !!}</td>
             </tr>
 
             <tr class="success">
                 <td>{!! Form::label('EST','Eastern University') !!}</td>
                 {{--<td> {!! Form::number('EST_scr') !!}</td>--}}
-                <td> {!! Form::input('number','EST_scr') !!}</td>
+                <td> {!! Form::input('float','EST_scr') !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('VPA','Visual Performing Arts University') !!} </td>
                 {{--<td> {!! Form::number('VPA_scr') !!}</td>--}}
-                <td> {!! Form::input('number','VPA_scr') !!}</td>
+                <td> {!! Form::input('float','VPA_scr') !!}</td>
             </tr>
 
             </tbody>

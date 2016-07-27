@@ -86,9 +86,9 @@
                             </li>
                             <li><a href="/addsummary"><i class="fa fa-edit"></i> Add Summary </a>
                             </li>
-                            <li><a href="/selectsummaryedit"><i class="fa fa-edit"></i> Edit Summary </a>
+                            <li><a href="/showsummariesedit"><i class="fa fa-edit"></i> Edit Summary </a>
                             </li>
-                            <li><a href="/addsummary"><i class="fa fa-edit"></i> Delete Summary </a>
+                            <li><a href="/showsummariesdelete"><i class="fa fa-edit"></i> Delete Summary </a>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Draws </a>
                             </li>

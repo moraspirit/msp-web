@@ -1,7 +1,7 @@
 @extends('backend.layout.backendlayout')
 
 @section('content1')
-    Home
+    No Record
 @endsection
 
 @section('content2')
@@ -9,10 +9,9 @@
 @endsection
 
 @section('content3')
-    For MoraSpirit
+    Your Last Operation was unsuccessful
 @endsection
 
 @section('formcontent')
-    Points can be added, edited and deleted. <br>
-    Summaries can be added, edited and deleted.
+
 @endsection

@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SLUG 2016 | </title>
+    <title>SLUG 2016 | SUMMARIES</title>
 
     {{--<!-- Bootstrap Core CSS -->--}}
     <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -58,7 +58,7 @@
                 <!-- menu prile quick info -->
                 <div class="profile">
                     <div class="profile_pic">
-                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                        <img src="images/MSP_LOGO.png" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>

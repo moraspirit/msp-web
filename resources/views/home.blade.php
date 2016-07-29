@@ -47,7 +47,7 @@
     {{--</div>--}}
 
     {{--Marquee to be load in Mobile /Tab--}}
-    <marquee id="marquee-mobile" class="" style="height: 95px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
+    <marquee id="marquee-mobile" class="hidden-xs hidden-sm" style="height: 95px; background-color:#e6e6e6; font-family: 'Coda', cursive; max-width: 100%">
         @foreach($summery as $mkey => $mvalue)
             <div class="mblock" style="height: 86px;">
                 <center><h5 style=" font-size: 12px">

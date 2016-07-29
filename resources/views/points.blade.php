@@ -28,7 +28,7 @@
 
         </style>--}}
 
-    <div class="container" data-ng-controller="controller as ctrl">
+    <div class="container" data-ng-app="app" data-ng-controller="controller as ctrl">
         <h1 class="font-oswald side-lines text-center text-uppercase">Points Table</h1>
         <br>
 

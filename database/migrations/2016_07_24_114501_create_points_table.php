@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateScoresTable extends Migration {
+class CreatePointsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateScoresTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('scores', function(Blueprint $table)
+		Schema::create('points', function(Blueprint $table)
 		{
 			$table->increments('id');
 
@@ -23,15 +23,16 @@ class CreateScoresTable extends Migration {
 				->onDelete('restrict')
 				->onUpdate('restrict');
 
-			$table->string('u_code',5);
+			$table->string('u_code',10);
 			$table->foreign('u_code')
 				->references('uni_code')
 				->on('universities')
 				->onDelete('restrict')
 				->onUpdate('restrict');
 
-			$table->string('score',8);
-			$table->enum('category', array('M', 'F','U'));
+			$table->float('points',8,1);
+			$table->enum('category', array('M','F'));
+
 		});
 	}
 
@@ -42,7 +43,7 @@ class CreateScoresTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('scores');
+		Schema::drop('points');
 	}
 
 }

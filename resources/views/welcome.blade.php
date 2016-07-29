@@ -2,10 +2,12 @@
 
 @section('content')
 
-	@foreach($ovmen as $k => $v)
-		@foreach ($v as $key => $value)
-			{{ $key . ' => ' . $value }}
-		@endforeach
+	@if(isset($points))
+	@foreach($points as $value)
+		{{ $value["g_code"] }}
 	@endforeach
+	@else
+
+	@endif
 
 @endsection

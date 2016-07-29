@@ -40,6 +40,9 @@ Route::get('/events',function (){
 
 Route::get('/getdata','HomePageController@getdata');
 
+/*Load live page*/
+Route::get('/live','HomePageController@getlive');
+
 Route::get('/db',function(){
 	$dbdata = Sport::all();
 	print_r($dbdata);
@@ -96,7 +99,7 @@ Route::post('/savesports','BackendController@saveSports');
 /* /end backend routs */
 
 /* Load points table*/
-Route::get('/loadpointstable','PointstableController@showPoints');
+Route::get('/points','PointstableController@showPoints');
 
 
 Route::get('/draws','DrawsController@index');

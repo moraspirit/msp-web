@@ -73,7 +73,6 @@
     </marquee>
 
     <!-- Top List -->
-{{--
     <div class="content-section-a">
 
         <div class="container">
@@ -81,8 +80,10 @@
             <div class="row">
                 <div class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
 
+                    @if(isset($ovmen))
                     <center><h4 class="section-heading text-uppercase font-oswald">Men</h4></center>
                     <hr>
+                    @endif
                     @if(isset($ovmen))
                     <div class="panel panel-primary">
 
@@ -147,8 +148,10 @@
 
                 </div>
                 <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
-                    <center><h3 class="side-lines text-uppercase font-oswald">&nbsp;Top Rankings&nbsp;</h3></center>
+                    @if(isset($ovall))
 
+                    <center><h3 class="side-lines text-uppercase font-oswald">&nbsp;Top Rankings&nbsp;</h3></center>
+                    @endif
                     @if(isset($ovall))
                     @foreach($ovall as $kall => $vall)
                         @if($kall==0)
@@ -166,11 +169,6 @@
                                         <div class="col-md-3 col-xs-4 points">
                                             <span>{{' '.$vall['score']}}</span>
                                         </div>
-
-                                        --}}
-{{--<h4 style="font-family: 'Coda', cursive;font-size: 1.7em;">{{$vall['name'].' '}}
-                                            <span class="pull-right"
-                                                  style="margin-right: 20px">{{' '.$vall['score']}}</span></h4>--}}{{--
 
                                     </div>
 
@@ -206,8 +204,11 @@
 
 
                 <div class="col-xs-12 col-lg-3 col-sm-3 col-md-3">
+                    @if(isset($ovwomen))
+
                     <center><h4 class="section-heading text-uppercase font-oswald">Women</h4></center>
                     <hr>
+                    @endif
                     @if(isset($ovwomen))
                         <div class="panel panel-primary">
 
@@ -267,9 +268,6 @@
 
                         </div>
                     @else
-                        <div class="no-scores-text">
-                            let's wait till points available
-                        </div>
                     @endif
                 </div>
 
@@ -278,7 +276,6 @@
 
         </div>
     </div>
---}}
     <!-- /.Top list -->
 
     {{--Welcome text to show until points are available--}}

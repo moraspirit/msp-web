@@ -1,0 +1,65 @@
+
+/*
+score table
+*/
+
+.tbl_col{
+    width: 7.142857143%;
+    float: left;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.odd_col{
+    /*background-color: lavenderblush;*/
+    background-color: #ffffff;
+}
+
+.even_col{
+    background-color: #d5d5d5;
+}
+
+/*
+body{
+    background-color: #000000;
+}*/
+
+.game_name{
+    float: left;
+    width: 80%;
+    padding-left: 5px;
+}
+
+.game_gender{
+    float: right;
+    width: 20%;
+    text-align: center;
+    height: 100%;
+}
+
+.uni_codes{
+    font-weight: bolder;
+}
+
+.sub_title{
+    color: white;
+    /*font-family: Lobster;*/
+    text-shadow: #d5d5d5 2px 2px 20px;
+
+
+}
+
+.main_title{
+    font-family: 'Oswald', sans-serif;
+    /*color: #ac2925;*/
+    color: rgb(234, 46, 43);
+
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.result-scores{
+    color: rgb(234, 46, 43);
+}

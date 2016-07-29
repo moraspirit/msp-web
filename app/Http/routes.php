@@ -99,10 +99,17 @@ Route::post('/savesports','BackendController@saveSports');
 /* /end backend routs */
 
 /* Load points table*/
-Route::get('/points','PointstableController@showPoints');
+Route::get('/points',function (){
+	return view('points');
+});
 
 
 Route::get('/draws','DrawsController@index');
+
+Route::get('/api/scores', array('middleware' => 'cors', 'uses' => 'ApiController@scores'));
+Route::get('/api/unis', array('middleware' => 'cors', 'uses' =>'ApiController@unis'));
+Route::get('/api/games', array('middleware' => 'cors', 'uses' => 'ApiController@games'));
+
 
 Route::get('/test',function(){
 	return view('welcome');

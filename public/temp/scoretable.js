@@ -17,17 +17,17 @@ app.controller("controller", function ($scope, $http) {
     $scope.selectValue= 0;
     $scope.scores = [];
     $scope.games = [];
-    $http.get("http://localhost:8000/api/scores")
+    $http.get("/api/scores")
         .success(function(response) {
             $scope.scores = response[0];
             console.log($scope.scores);
 
-            $http.get("http://localhost:8000/api/unis")
+            $http.get("/api/unis")
                 .success(function(response) {
                     $scope.unis = response[0];
                     console.log($scope.unis);
 
-                    $http.get("http://localhost:8000/api/games")
+                    $http.get("/api/games")
                         .success(function(response) {
                             $scope.games = response[0];
                             console.log($scope.games);

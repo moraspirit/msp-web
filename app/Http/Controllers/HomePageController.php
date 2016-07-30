@@ -49,7 +49,7 @@ class HomePageController extends Controller {
         }
 
 
-       $summeryitems = DB::table('summaries')->orderBy('id', 'desc')->take(15)->get();
+        $summeryitems = DB::table('summaries')->orderBy('id', 'desc')->take(10)->get();
 
         foreach($summeryitems as $summeryitem){
 
@@ -68,13 +68,15 @@ class HomePageController extends Controller {
             }
 
 
+
            $summery [] = ['title'=>$summeryitem->heading, 'vs1'=> $summeryitem->t_a_code, 'vs2'=> $summeryitem->t_b_code,
                             'logo1'=>$logo1, 'logo2'=> $logo2 , 'dvs' => $name1.' '.'vs'.' '.$name2, 'won'=> $summeryitem->t_won,
                             'summery'=> $summeryitem->summery, 't_a_score'=>$summeryitem->t_a_score,'t_b_score'=> $summeryitem->t_b_score
 
             ];
         }
-    return serialize($summery);
+
+
         return view('home',compact('summery','ovwomen','ovmen','ovall'));
     }
 

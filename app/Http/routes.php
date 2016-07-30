@@ -12,6 +12,15 @@ use App\Sport;
 |
 */
 
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+
+
+
+
 Route::get('/','HomePageController@index');
 
 Route::get('/gallery', function (){
@@ -39,17 +48,55 @@ Route::get('/db',function(){
 	print_r($dbdata);
 });
 
+/* Backend routs */
+
+/* Backend home */
+Route::get('/bkhome','BackendController@bkhome');
+
 /* Add points page*/
 Route::get('/addpoints','BackendController@addpoints');
 
 /* Save points to DB*/
 Route::post('/savepoints','BackendController@savepoints');
 
+/* points editing */
+Route::get('/showselectpoints','BackendController@showselectpoints');
+Route::post('/editpoints','BackendController@editpoints');
+Route::post('/savepointsedited','BackendController@savepointsedited');
+/* /points editing */
+
+/* points deletion*/
+Route::get('/showdeletpoints','BackendController@showdeletpoints');
+Route::post('/dletepoints','BackendController@dletepoints');
+Route::post('/savepointsdeleted','BackendController@savepointsdeleted');
+/* /points deletion*/
+
+
+
+/* Add summaries */
+Route::get('/addsummary','BackendController@addsummary');
+
+/* Save summaries to DB*/
+Route::post('/savesummary','BackendController@savesummary');
+
+/* Summary editing */
+Route::get('/showsummariesedit','BackendController@showsummariesedit');
+Route::post('/saveeditedsummary','BackendController@saveeditedsummary');
+/* /Summary editing */
+
+/* Summary deleting */
+Route::get('/showsummariesdelete','BackendController@showsummariesdelete');
+Route::post('/savedeletedsummary','BackendController@savedeletedsummary');
+/* /Summary editing */
+
+
 /* Add sports page */
 Route::get('/addsports','BackendController@addSports');
 
 /* Save sports to database */
 Route::post('/savesports','BackendController@saveSports');
+
+/* /end backend routs */
 
 /* Load points table*/
 Route::get('/points','PointstableController@showPoints');

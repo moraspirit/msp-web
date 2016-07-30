@@ -44,8 +44,8 @@ class CreateSummariesTable extends Migration {
 				->onDelete('restrict')
 				->onUpdate('restrict');
 
-			$table->float('t_a_score');
-			$table->float('t_b_score');
+			$table->string('t_a_score',8);
+			$table->string('t_b_score',8);
 			$table->string('heading');
 			$table->string('summery');
 		});

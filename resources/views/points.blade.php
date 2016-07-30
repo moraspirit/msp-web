@@ -28,7 +28,7 @@
 
         </style>--}}
 
-    <div class="container" data-ng-app="app" data-ng-controller="controller as ctrl">
+    <div class="container" data-ng-app="app" data-ng-controller="controller as ctrl" style="padding-bottom: 60px;">
         <h1 class="font-oswald side-lines text-center text-uppercase">Points Table</h1>
         <br>
 
@@ -272,6 +272,13 @@
 
         <!--end of total scores and standings-->
 
+        <div class="row">
+            <div class="col-md-7 col-md-offset-5">
+                <div id="disqus_thread"></div>
+
+            </div>
+        </div>
+
     </div>
 
 @endsection
@@ -281,5 +288,22 @@
 
     <script src="{{ URL::asset('temp/angular.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('temp/scoretable.js')}}"></script>
+    <script>
+
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+        var disqus_config = function () {
+            this.page.url = $("link[rel='canonical']").attr("href");  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "points_table"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '//msp-slug2016.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>please enable javascript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
 
 @endsection

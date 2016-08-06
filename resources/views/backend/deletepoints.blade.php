@@ -67,75 +67,69 @@
                 <td> {!! Form::text('MOR_scr',$scores0) !!}</td>
             </tr>
             <tr class="danger">
-                <td>{!! Form::label('PER','University of Peradeniya') !!} </td>
-                {{--<td> {!! Form::number('PER_scr') !!}</td>--}}
-                <td> {!! Form::text('PER_scr',$scores1) !!}</td>
-            </tr>
-
-            <tr class="success">
                 <td>{!! Form::label('COL','University of Colombo') !!}</td>
                 {{--<td> {!! Form::number('COL_scr') !!}</td>--}}
                 <td> {!! Form::text('COL_scr',$scores2) !!}</td>
+            </tr>
+            <tr class="success">
+                <td>{!! Form::label('PER','University of Peradeniya') !!} </td>
+                {{--<td> {!! Form::number('PER_scr') !!}</td>--}}
+                <td> {!! Form::text('PER_scr',$scores1) !!}</td>
             </tr>
             <tr class="danger">
                 <td>{!! Form::label('SJP','University of Sri Jayawardenapura') !!} </td>
                 {{--<td> {!! Form::number('SJP_scr') !!}</td>--}}
                 <td> {!! Form::text('SJP_scr',$scores3) !!}</td>
             </tr>
-
             <tr class="success">
                 <td>{!! Form::label('KEL','University of Kelaniya') !!}</td>
                 {{--<td> {!! Form::number('KEL_scr') !!}</td>--}}
                 <td> {!! Form::text('KEL_scr',$scores4) !!}</td>
             </tr>
             <tr class="danger">
-                <td>{!! Form::label('JAF','University of Jaffna') !!} </td>
-                {{--<td> {!! Form::number('JAF_scr') !!}</td>--}}
-                <td> {!! Form::text('JAF_scr',$scores5) !!}</td>
-            </tr>
-
-            <tr class="success">
-                <td>{!! Form::label('RHU','University of Ruhuna') !!}</td>
-                {{--<td> {!! Form::number('RHU_scr') !!}</td>--}}
-                <td> {!! Form::text('RHU_scr',$scores6) !!}</td>
-            </tr>
-            <tr class="danger">
                 <td>{!! Form::label('RAJ','Rajarata University') !!} </td>
                 {{--<td> {!! Form::number('RAJ_scr') !!}</td>--}}
                 <td> {!! Form::text('RAJ_scr',$scores7) !!}</td>
             </tr>
-
             <tr class="success">
                 <td>{!! Form::label('UVA','Uva Wellassa University') !!}</td>
                 {{--<td> {!! Form::number('UVA_scr') !!}</td>--}}
                 <td> {!! Form::text('UVA_scr',$scores8) !!}</td>
             </tr>
             <tr class="danger">
+                <td>{!! Form::label('JAF','University of Jaffna') !!} </td>
+                {{--<td> {!! Form::number('JAF_scr') !!}</td>--}}
+                <td> {!! Form::text('JAF_scr',$scores5) !!}</td>
+            </tr>
+            <tr class="success">
                 <td>{!! Form::label('SAB','Sabaragamuwa University') !!} </td>
                 {{--<td> {!! Form::number('SAB_scr') !!}</td>--}}
                 <td> {!! Form::text('SAB_scr',$scores9) !!}</td>
             </tr>
-
+            <tr class="danger">
+                <td>{!! Form::label('RHU','University of Ruhuna') !!}</td>
+                {{--<td> {!! Form::number('RHU_scr') !!}</td>--}}
+                <td> {!! Form::text('RHU_scr',$scores6) !!}</td>
+            </tr>
             <tr class="success">
-                <td>{!! Form::label('WAY','Wayamba University') !!}</td>
-                {{--td> {!! Form::number('WAY_scr') !!}</td>--}}
-                <td> {!! Form::text('WAY_scr',$scores10) !!}</td>
+                <td>{!! Form::label('VPA','Visual Performing Arts University') !!} </td>
+                {{--<td> {!! Form::number('VPA_scr') !!}</td>--}}
+                <td> {!! Form::text('VPA_scr',$scores13) !!}</td>
             </tr>
             <tr class="danger">
-                <td>{!! Form::label('SEA','South Eastern University') !!} </td>
-                {{--<td> {!! Form::number('SEA_scr') !!}</td>--}}
-                <td> {!! Form::text('SEA_scr',$scores11) !!}</td>
-            </tr>
-
-            <tr class="success">
                 <td>{!! Form::label('EST','Eastern University') !!}</td>
                 {{--<td> {!! Form::number('EST_scr') !!}</td>--}}
                 <td> {!! Form::text('EST_scr',$scores12) !!}</td>
             </tr>
+            <tr class="success">
+                <td>{!! Form::label('SEA','South Eastern University') !!} </td>
+                {{--<td> {!! Form::number('SEA_scr') !!}</td>--}}
+                <td> {!! Form::text('SEA_scr',$scores11) !!}</td>
+            </tr>
             <tr class="danger">
-                <td>{!! Form::label('VPA','Visual Performing Arts University') !!} </td>
-                {{--<td> {!! Form::number('VPA_scr') !!}</td>--}}
-                <td> {!! Form::text('VPA_scr',$scores13) !!}</td>
+                <td>{!! Form::label('WAY','Wayamba University') !!}</td>
+                {{--td> {!! Form::number('WAY_scr') !!}</td>--}}
+                <td> {!! Form::text('WAY_scr',$scores10) !!}</td>
             </tr>
 
             </tbody>

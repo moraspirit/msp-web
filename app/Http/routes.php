@@ -98,6 +98,12 @@ Route::post('/savesports','BackendController@saveSports');
 
 /* /end backend routs */
 
+/* Mobile URL */
+
+Route::get('/getscores','MobileController@getmobileScores');
+
+/* /Mobile*/
+
 /* Load points table*/
 Route::get('/points',function (){
 	return view('points');

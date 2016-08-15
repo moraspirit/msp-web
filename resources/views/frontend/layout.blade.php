@@ -117,6 +117,9 @@
                         <a href="{{url('/gallery')}}">Gallery</a>
                     </li>
                     <li>
+                        <a href="{{url('/videos')}}">Videos</a>
+                    </li>
+                    <li>
                         <a href="{{url('/live')}}">Live</a>
                     </li>
                     <li>

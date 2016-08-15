@@ -26,6 +26,10 @@ Route::get('/','HomePageController@index');
 Route::get('/gallery', function (){
 	return view('gallery');
 });
+
+Route::get('/videos', function (){
+	return view('videos');
+});
 /*event page controlling routes*/
 
 /*Route::get('/events','EventController@viewEvents');

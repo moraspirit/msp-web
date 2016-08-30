@@ -105,6 +105,7 @@ Route::post('/savesports','BackendController@saveSports');
 /* Mobile URL */
 
 Route::get('/getscores','MobileController@getmobileScores');
+Route::get('/getsummaries/{index}','MobileController@getmobileSummaries');
 
 /* /Mobile*/
 

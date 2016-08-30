@@ -20,9 +20,6 @@ class MobileController extends Controller
             'SAB_scr','WAY_scr','SEA_scr','EST_scr','VPA_scr'];
 
         $allscores=array();
-
-
-
         foreach ($uniscrarray as $uniscr) {
             $scr = DB::table('scores')
                 ->select('score','u_code')
@@ -33,27 +30,34 @@ class MobileController extends Controller
             $score=array();
             $score["name"]=explode('_', $uniscr)[0];
             $score["points"]=$scr;
-
-
-                //$allscores[explode('_', $uniscr)[0]]=$scr;
             array_push($allscores,$score);
-
         }
-
-        /*function sortPoints($a, $b){
-            return strcmp($a["points"],$b["points"]);
-        }
-
-        //usort($allscores,sortPoints($allscores[0][0],$allscores[0][1]));
-        usort($allscores,array($this, "MobileController::sortPoints"));*/
-
-        return array(
-            $allscores
-        );
-
-        /*return Response::json(array('key' => 'value'));*/
-        /*return Response::json($allscores);*/
-        /*return view('test');*/
+        return array($allscores);
     }
 
+    public function getmobileSummaries($index){
+
+        $summaries = DB::table('summaries')
+            ->get();
+
+        $allsummaries = array();
+        foreach($summaries as $summary){
+            $onesummary=array();
+            $onesummary["gameSummary"] = $summary->summery;
+            $onesummary["heading"] = $summary->heading;
+            $onesummary["t_won"] = $summary->t_won;
+            if($onesummary["t_won"] == $summary->t_a_code){
+                $onesummary["t_lost"] = $summary->t_b_code;
+                $onesummary["t_won_score"] = $summary->t_a_score;
+                $onesummary["t_lost_score"] = $summary->t_b_score;
+            }
+            else{
+                $onesummary["t_lost"] = $summary->t_a_code;
+                $onesummary["t_won_score"] = $summary->t_b_score;
+                $onesummary["t_lost_score"] = $summary->t_a_score;
+            }
+            array_push($allsummaries,$onesummary);
+        }
+        return array($allsummaries);
+    }
 }

@@ -30,6 +30,21 @@ Route::get('/gallery', function (){
 Route::get('/videos', function (){
 	return view('videos');
 });
+
+Route::get('/downloads', function (){
+	return view('downloads');
+});
+
+Route::get('/download', function (){
+	$file= public_path(). "/images/img.png";
+
+	$headers = array(
+		'Content-Type: application/png',
+	);
+
+	return Response::download($file, 'img.png', $headers);
+});
+
 /*event page controlling routes*/
 
 /*Route::get('/events','EventController@viewEvents');

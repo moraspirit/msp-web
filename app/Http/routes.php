@@ -30,6 +30,10 @@ Route::get('/gallery', function (){
 Route::get('/videos', function (){
 	return view('videos');
 });
+
+Route::get('/downloads', function (){
+	return view('downloads');
+});
 /*event page controlling routes*/
 
 /*Route::get('/events','EventController@viewEvents');

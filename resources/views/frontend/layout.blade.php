@@ -123,6 +123,9 @@
                         <a href="{{url('/live')}}">Live</a>
                     </li>
                     <li>
+                        <a href="{{url('/downloads')}}">Downloads</a>
+                    </li>
+                    <li>
                         <a target="_blank" href="http://moraspirit.com/">Moraspirit</a>
                     </li>
                     <li>

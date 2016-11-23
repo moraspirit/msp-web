@@ -61,7 +61,7 @@ return [
 			'host'      => 'localhost',
 			'database'  => 'msp',
 			'username'  => 'root',
-			'password'  => '12345',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
